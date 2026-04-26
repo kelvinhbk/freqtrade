@@ -392,6 +392,334 @@ class FreqaiDataKitchen:
 
         return df
 
+    def principal_component_analysis(self) -> None:
+        """
+        Performs Principal Component Analysis on the data for dimensionality reduction
+        and outlier detection (see self.remove_outliers())
+        No parameters or returns, it acts on the data_dictionary held by the DataHandler.
+        """
+
+        from sklearn.decomposition import PCA  # avoid importing if we dont need it
+
+        n_components = self.data_dictionary["train_features"].shape[1]
+        pca = PCA(n_components=n_components)
+        pca = pca.fit(self.data_dictionary["train_features"])
+        n_keep_components = np.argmin(pca.explained_variance_ratio_.cumsum() < 0.999)
+        pca2 = PCA(n_components=n_keep_components)
+        self.data["n_kept_components"] = n_keep_components
+        pca2 = pca2.fit(self.data_dictionary["train_features"])
+        logger.info("reduced feature dimension by %s", n_components - n_keep_components)
+        logger.info("explained variance %f", np.sum(pca2.explained_variance_ratio_))
+        train_components = pca2.transform(self.data_dictionary["train_features"])
+        test_components = pca2.transform(self.data_dictionary["test_features"])
+
+        self.data_dictionary["train_features"] = pd.DataFrame(
+            data=train_components,
+            columns=["PC" + str(i) for i in range(0, n_keep_components)],
+            index=self.data_dictionary["train_features"].index,
+        )
+
+        # keeping a copy of the non-transformed features so we can check for errors during
+        # model load from disk
+        self.data["training_features_list_raw"] = copy.deepcopy(self.training_features_list)
+        self.training_features_list = self.data_dictionary["train_features"].columns
+
+        if self.freqai_config.get('data_split_parameters', {}).get('test_size', 0.1) != 0:
+            self.data_dictionary["test_features"] = pd.DataFrame(
+                data=test_components,
+                columns=["PC" + str(i) for i in range(0, n_keep_components)],
+                index=self.data_dictionary["test_features"].index,
+            )
+
+        self.data["n_kept_components"] = n_keep_components
+        self.pca = pca2
+
+        logger.info(f"PCA reduced total features from  {n_components} to {n_keep_components}")
+
+        if not self.data_path.is_dir():
+            self.data_path.mkdir(parents=True, exist_ok=True)
+
+        return None
+
+    def pca_transform(self, filtered_dataframe: DataFrame) -> None:
+        """
+        Use an existing pca transform to transform data into components
+        :params:
+        filtered_dataframe: DataFrame = the cleaned dataframe
+        """
+        pca_components = self.pca.transform(filtered_dataframe)
+        self.data_dictionary["prediction_features"] = pd.DataFrame(
+            data=pca_components,
+            columns=["PC" + str(i) for i in range(0, self.data["n_kept_components"])],
+            index=filtered_dataframe.index,
+        )
+
+    def compute_distances(self) -> float:
+        """
+        Compute distances between each training point and every other training
+        point. This metric defines the neighborhood of trained data and is used
+        for prediction confidence in the Dissimilarity Index
+        """
+        # logger.info("computing average mean distance for all training points")
+        pairwise = pairwise_distances(
+            self.data_dictionary["train_features"], n_jobs=self.thread_count)
+        avg_mean_dist = pairwise.mean(axis=1).mean()
+
+        return avg_mean_dist
+
+    def use_SVM_to_remove_outliers(self, predict: bool) -> None:
+        """
+        Build/inference a Support Vector Machine to detect outliers
+        in training data and prediction
+        :params:
+        predict: bool = If true, inference an existing SVM model, else construct one
+        """
+
+        if self.keras:
+            logger.warning(
+                "SVM outlier removal not currently supported for Keras based models. "
+                "Skipping user requested function."
+            )
+            if predict:
+                self.do_predict = np.ones(len(self.data_dictionary["prediction_features"]))
+            return
+
+        if predict:
+            if not self.svm_model:
+                logger.warning("No svm model available for outlier removal")
+                return
+            y_pred = self.svm_model.predict(self.data_dictionary["prediction_features"])
+            do_predict = np.where(y_pred == -1, 0, y_pred)
+
+            if (len(do_predict) - do_predict.sum()) > 0:
+                logger.info(f"SVM tossed {len(do_predict) - do_predict.sum()} predictions.")
+            self.do_predict += do_predict
+            self.do_predict -= 1
+
+        else:
+            # use SGDOneClassSVM to increase speed?
+            svm_params = self.freqai_config["feature_parameters"].get(
+                "svm_params", {"shuffle": False, "nu": 0.1})
+            self.svm_model = linear_model.SGDOneClassSVM(**svm_params).fit(
+                self.data_dictionary["train_features"]
+            )
+            y_pred = self.svm_model.predict(self.data_dictionary["train_features"])
+            dropped_points = np.where(y_pred == -1, 0, y_pred)
+            # keep_index = np.where(y_pred == 1)
+            self.data_dictionary["train_features"] = self.data_dictionary["train_features"][
+                (y_pred == 1)
+            ]
+            self.data_dictionary["train_labels"] = self.data_dictionary["train_labels"][
+                (y_pred == 1)
+            ]
+            self.data_dictionary["train_weights"] = self.data_dictionary["train_weights"][
+                (y_pred == 1)
+            ]
+
+            logger.info(
+                f"SVM tossed {len(y_pred) - dropped_points.sum()}"
+                f" train points from {len(y_pred)} total points."
+            )
+
+            # same for test data
+            # TODO: This (and the part above) could be refactored into a separate function
+            # to reduce code duplication
+            if self.freqai_config['data_split_parameters'].get('test_size', 0.1) != 0:
+                y_pred = self.svm_model.predict(self.data_dictionary["test_features"])
+                dropped_points = np.where(y_pred == -1, 0, y_pred)
+                self.data_dictionary["test_features"] = self.data_dictionary["test_features"][
+                    (y_pred == 1)
+                ]
+                self.data_dictionary["test_labels"] = self.data_dictionary["test_labels"][(
+                    y_pred == 1)]
+                self.data_dictionary["test_weights"] = self.data_dictionary["test_weights"][
+                    (y_pred == 1)
+                ]
+
+            logger.info(
+                f"SVM tossed {len(y_pred) - dropped_points.sum()}"
+                f" test points from {len(y_pred)} total points."
+            )
+
+        return
+
+    def use_DBSCAN_to_remove_outliers(self, predict: bool, eps=None) -> None:
+        """
+        Use DBSCAN to cluster training data and remove "noisy" data (read outliers).
+        User controls this via the config param `DBSCAN_outlier_pct` which indicates the
+        pct of training data that they want to be considered outliers.
+        :params:
+        predict: bool = If False (training), iterate to find the best hyper parameters to match
+        user requested outlier percent target. If True (prediction), use the parameters
+        determined from the previous training to estimate if the current prediction point
+        is an outlier.
+        """
+
+        if predict:
+            train_ft_df = self.data_dictionary['train_features']
+            pred_ft_df = self.data_dictionary['prediction_features']
+            num_preds = len(pred_ft_df)
+            df = pd.concat([train_ft_df, pred_ft_df], axis=0, ignore_index=True)
+            clustering = DBSCAN(eps=self.data['DBSCAN_eps'],
+                                min_samples=self.data['DBSCAN_min_samples'],
+                                n_jobs=self.thread_count
+                                ).fit(df)
+            do_predict = np.where(clustering.labels_[-num_preds:] == -1, 0, 1)
+
+            if (len(do_predict) - do_predict.sum()) > 0:
+                logger.info(f"DBSCAN tossed {len(do_predict) - do_predict.sum()} predictions")
+            self.do_predict += do_predict
+            self.do_predict -= 1
+
+        else:
+
+            MinPts = len(self.data_dictionary['train_features'].columns) * 2
+            # measure pairwise distances to train_features.shape[1]*2 nearest neighbours
+            neighbors = NearestNeighbors(
+                n_neighbors=MinPts, n_jobs=self.thread_count)
+            neighbors_fit = neighbors.fit(self.data_dictionary['train_features'])
+            distances, _ = neighbors_fit.kneighbors(self.data_dictionary['train_features'])
+            distances = np.sort(distances, axis=0)
+            index_ten_pct = int(len(distances[:, 1]) * 0.1)
+            distances = distances[index_ten_pct:, 1]
+            epsilon = distances[-1]
+
+            clustering = DBSCAN(eps=epsilon, min_samples=MinPts,
+                                n_jobs=int(self.thread_count)).fit(
+                                                    self.data_dictionary['train_features']
+                                                )
+
+            logger.info(f'DBSCAN found eps of {epsilon}.')
+
+            self.data['DBSCAN_eps'] = epsilon
+            self.data['DBSCAN_min_samples'] = MinPts
+            dropped_points = np.where(clustering.labels_ == -1, 1, 0)
+
+            self.data_dictionary['train_features'] = self.data_dictionary['train_features'][
+                (clustering.labels_ != -1)
+            ]
+            self.data_dictionary["train_labels"] = self.data_dictionary["train_labels"][
+                (clustering.labels_ != -1)
+            ]
+            self.data_dictionary["train_weights"] = self.data_dictionary["train_weights"][
+                (clustering.labels_ != -1)
+            ]
+
+            logger.info(
+                f"DBSCAN tossed {dropped_points.sum()}"
+                f" train points from {len(clustering.labels_)}"
+            )
+
+        return
+
+    def compute_inlier_metric(self, set_='train') -> None:
+        """
+
+        Compute inlier metric from backwards distance distributions.
+        This metric defines how well features from a timepoint fit
+        into previous timepoints.
+        """
+
+        import scipy.stats as ss
+
+        no_prev_pts = self.freqai_config["feature_parameters"]["inlier_metric_window"]
+        weib_pct = self.freqai_config["feature_parameters"]["inlier_metric_weibull_cutoff"]
+
+        if set_ == 'train':
+            compute_df = copy.deepcopy(self.data_dictionary['train_features'])
+        elif set_ == 'test':
+            compute_df = copy.deepcopy(self.data_dictionary['test_features'])
+        else:
+            compute_df = copy.deepcopy(self.data_dictionary['prediction_features'])
+
+        compute_df_reindexed = compute_df.reindex(
+            index=np.flip(compute_df.index)
+        )
+
+        pairwise = pd.DataFrame(
+            np.triu(
+                pairwise_distances(compute_df_reindexed, n_jobs=self.thread_count)
+            ),
+            columns=compute_df_reindexed.index,
+            index=compute_df_reindexed.index
+        )
+        pairwise = pairwise.round(5)
+
+        column_labels = [
+            '{}{}'.format('d', i) for i in range(1, no_prev_pts + 1)
+        ]
+        distances = pd.DataFrame(
+            columns=column_labels, index=compute_df.index
+        )
+
+        for index in compute_df.index[no_prev_pts:]:
+            current_row = pairwise.loc[[index]]
+            current_row_no_zeros = current_row.loc[
+                :, (current_row != 0).any(axis=0)
+            ]
+            distances.loc[[index]] = current_row_no_zeros.iloc[
+                :, :no_prev_pts
+            ]
+        distances = distances.replace([np.inf, -np.inf], np.nan)
+        drop_index = pd.isnull(distances).any(1)
+        distances = distances[drop_index == 0]
+
+        inliers = pd.DataFrame(index=distances.index)
+        for key in distances.keys():
+            current_distances = distances[key].dropna()
+            fit_params = ss.weibull_min.fit(current_distances)
+            cutoff = ss.weibull_min.ppf(weib_pct, *fit_params)
+            is_inlier = np.where(
+                current_distances <= cutoff, 1, 0
+            )
+            df_inlier = pd.DataFrame(
+                {key + '_IsInlier': is_inlier}, index=distances.index
+            )
+            inliers = pd.concat(
+                [inliers, df_inlier], axis=1
+            )
+
+        inlier_metric = pd.DataFrame(
+            data=inliers.sum(axis=1) / no_prev_pts,
+            columns=['inlier_metric'],
+            index=compute_df.index
+        )
+
+        inlier_metric = 2 * (inlier_metric - inlier_metric.min()) / \
+            (inlier_metric.max() - inlier_metric.min()) - 1
+
+        if set_ in ('train', 'test'):
+            inlier_metric = inlier_metric.iloc[no_prev_pts:]
+            compute_df = compute_df.iloc[no_prev_pts:]
+            self.remove_beginning_points_from_data_dict(set_, no_prev_pts)
+            self.data_dictionary[f'{set_}_features'] = pd.concat(
+                [compute_df, inlier_metric], axis=1)
+        else:
+            self.data_dictionary['prediction_features'] = pd.concat(
+                [compute_df, inlier_metric], axis=1)
+            self.data_dictionary['prediction_features'].fillna(0, inplace=True)
+
+        return None
+
+    def remove_beginning_points_from_data_dict(self, set_='train', no_prev_pts: int = 10):
+        features = self.data_dictionary[f'{set_}_features']
+        weights = self.data_dictionary[f'{set_}_weights']
+        labels = self.data_dictionary[f'{set_}_labels']
+        self.data_dictionary[f'{set_}_weights'] = weights[no_prev_pts:]
+        self.data_dictionary[f'{set_}_features'] = features.iloc[no_prev_pts:]
+        self.data_dictionary[f'{set_}_labels'] = labels.iloc[no_prev_pts:]
+
+    def add_noise_to_training_features(self) -> None:
+        """
+        Add noise to train features to reduce the risk of overfitting.
+        """
+        mu = 0  # no shift
+        sigma = self.freqai_config["feature_parameters"]["noise_standard_deviation"]
+        compute_df = self.data_dictionary['train_features']
+        noise = np.random.normal(mu, sigma, [compute_df.shape[0], compute_df.shape[1]])
+        self.data_dictionary['train_features'] += noise
+        return
+
     def find_features(self, dataframe: DataFrame) -> None:
         """
         Find features in the strategy provided dataframe

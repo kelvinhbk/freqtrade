@@ -86,7 +86,9 @@ class IFreqaiModel(ABC):
             self.ft_params["DI_threshold"] = 0
             logger.warning("DI threshold is not configured for Keras models yet. Deactivating.")
 
-        self.CONV_WIDTH = self.freqai_info.get("conv_width", 1)
+        self.CONV_WIDTH = self.freqai_info.get("conv_width", 2)
+        if self.ft_params.get("inlier_metric_window", 0):
+            self.CONV_WIDTH = self.ft_params.get("inlier_metric_window", 0) * 2
         self.class_names: list[str] = []  # used in classification subclasses
         self.pair_it = 0
         self.pair_it_train = 0
@@ -556,6 +558,10 @@ class IFreqaiModel(ABC):
         sigma = self.freqai_info["feature_parameters"].get("noise_standard_deviation", 0)
         if sigma:
             pipe_steps.append(("noise", ds.Noise(sigma=sigma)))
+
+        if ft_params.get('inlier_metric_window', 0):
+            pipe_steps.append(("inlier", ds.InlierMetric(
+                window=ft_params['inlier_metric_window'], n_jobs=threads)))
 
         return Pipeline(pipe_steps)
 
