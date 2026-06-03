@@ -9,6 +9,11 @@ user_data/*
 !user_data/notebooks
 !user_data/models
 !user_data/freqaimodels
+!user_data/autoresearch/
+!user_data/autoresearch/**
+user_data/autoresearch/.env
+user_data/autoresearch/results/
+user_data/autoresearch/**/*.log
 user_data/freqaimodels/*
 user_data/models/*
 user_data/notebooks/*

@@ -1,0 +1,75 @@
+{
+  "llm": {
+    "default_provider": "kimi",
+    "fallback_order": ["kimi", "glm", "deepseek"],
+    "temperature": 0.7,
+    "max_tokens": 32768,
+    "request_timeout": 120,
+    "max_retries": 3,
+    "providers": {
+      "kimi": {
+        "base_url": "https://api.kimi.com/coding",
+        "api_key_env": "KIMI_API_KEY",
+        "model": "kimi-2.6"
+      },
+      "glm": {
+        "base_url": "https://open.bigmodel.cn/api/anthropic",
+        "api_key_env": "GLM_API_KEY",
+        "model": "glm-5.1"
+      },
+      "deepseek": {
+        "base_url": "https://api.deepseek.com/anthropic",
+        "api_key_env": "DEEPSEEK_API_KEY",
+        "model": "deepseek-v4-pro"
+      }
+    }
+  },
+  "strategy_path": "user_data/strategies/autoresearch/AutoResearch_iter0002_E0010_E0014.py",
+  "strategy_output_dir": "user_data/strategies/autoresearch",
+  "timeframe": "5m",
+  "pairs": [
+    "DOT/USDT:USDT",
+    "ENJ/USDT:USDT",
+    "RENDER/USDT:USDT",
+    "SOL/USDT:USDT",
+    "TAO/USDT:USDT",
+    "TON/USDT:USDT",
+    "WLD/USDT:USDT",
+    "ZEC/USDT:USDT"
+  ],
+  "in_sample_timerange": "20240701-20260201",
+  "out_of_sample_timerange": "20260201-20260501",
+  "max_iterations": 50,
+  "max_walltime_hours": 24,
+  "hyperopt": {
+    "loss_function": "AutoResearchMultiMetricLoss",
+    "epochs": 500,
+    "spaces": ["buy", "sell", "roi", "stoploss"],
+    "jobs": 8,
+    "analyze_per_epoch": true,
+    "min_trades": 30,
+    "early_stop": 100
+  },
+  "safety": {
+    "max_drawdown_pct": 0.30,
+    "min_trade_count": 30,
+    "min_oos_trade_count": 10,
+    "max_oos_drawdown_pct": 0.25,
+    "require_oos_positive": true,
+    "max_sharpe_degradation": 5.0,
+    "walk_forward_splits": 3,
+    "min_walk_forward_profitable": 2,
+    "min_walk_forward_trades": 10
+  },
+  "score_weights": {
+    "profit": 0.30,
+    "sharpe": 0.25,
+    "profit_factor": 0.15,
+    "drawdown": 0.15,
+    "trade_count": 0.10,
+    "win_rate": 0.05,
+    "calmar": 0.0,
+    "in_sample": 0.25,
+    "out_of_sample": 0.75
+  }
+}
