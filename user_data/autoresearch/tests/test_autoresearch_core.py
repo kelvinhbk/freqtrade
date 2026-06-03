@@ -799,7 +799,7 @@ def test_provider_config_effective_max_context_tokens() -> None:
         api_key_env="K",
         model="m2",
     )
-    assert no_override.effective_max_context_tokens(defaults) == 200000
+    assert no_override.effective_max_context_tokens(defaults) == 262144
 
 
 def test_load_config_parses_max_context_tokens(tmp_path: Path) -> None:

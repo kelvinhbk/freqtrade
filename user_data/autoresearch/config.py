@@ -61,7 +61,7 @@ class LLMProviderConfig:
         return self.max_retries if self.max_retries is not None else defaults.max_retries
 
     def effective_max_context_tokens(self, defaults: "LLMConfig") -> int:
-        return self.max_context_tokens if self.max_context_tokens is not None else 200000
+        return self.max_context_tokens if self.max_context_tokens is not None else 262144
 
 
 @dataclass(frozen=True)
