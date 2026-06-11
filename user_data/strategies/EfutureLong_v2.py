@@ -47,28 +47,28 @@ class EfutureLong_v2(IStrategy):
     trailing_stop = False
     use_custom_stoploss = True
 
-    # --- Long entry parameters (mean-reversion) ---
-    buy_rsi_fast = IntParameter(20, 70, default=40, space="buy", optimize=True)
-    buy_rsi = IntParameter(15, 50, default=49, space="buy", optimize=True)
+    # --- Long entry parameters (mean-reversion, buy-optimized) ---
+    buy_rsi_fast = IntParameter(20, 70, default=43, space="buy", optimize=True)
+    buy_rsi = IntParameter(15, 50, default=32, space="buy", optimize=True)
     buy_sma15_ratio = DecimalParameter(
-        0.90, 1.0, default=0.98, decimals=3, space="buy", optimize=True
+        0.90, 1.0, default=0.974, decimals=3, space="buy", optimize=True
     )
-    buy_cti = DecimalParameter(-1, 1, default=-0.34, decimals=2, space="buy", optimize=True)
+    buy_cti = DecimalParameter(-1, 1, default=0.04, decimals=2, space="buy", optimize=True)
     buy_24h_min_pct = DecimalParameter(
-        -30.0, 0.0, default=-19.2, decimals=1, space="buy", optimize=True
+        -30.0, 0.0, default=-9.6, decimals=1, space="buy", optimize=True
     )
     buy_24h_max_pct = DecimalParameter(
-        0.0, 200.0, default=182.2, decimals=1, space="buy", optimize=True
+        0.0, 200.0, default=184.5, decimals=1, space="buy", optimize=True
     )
     buy_volume_sma = DecimalParameter(
-        0.8, 1.5, default=1.09, decimals=2, space="buy", optimize=True
+        0.8, 1.5, default=1.03, decimals=2, space="buy", optimize=True
     )
-    buy_adx = IntParameter(15, 40, default=23, space="buy", optimize=True)
+    buy_adx = IntParameter(15, 40, default=38, space="buy", optimize=True)
 
-    # --- Trend-following entry parameters ---
-    buy_tf_adx = IntParameter(15, 45, default=37, space="buy", optimize=True)
-    buy_tf_rsi_min = IntParameter(30, 55, default=44, space="buy", optimize=True)
-    buy_tf_rsi_max = IntParameter(55, 80, default=56, space="buy", optimize=True)
+    # --- Trend-following entry parameters (buy-optimized) ---
+    buy_tf_adx = IntParameter(15, 45, default=36, space="buy", optimize=True)
+    buy_tf_rsi_min = IntParameter(30, 55, default=40, space="buy", optimize=True)
+    buy_tf_rsi_max = IntParameter(55, 80, default=67, space="buy", optimize=True)
 
     # --- Sell parameters ---
     sell_fastx = IntParameter(50, 100, default=59, space="sell", optimize=True)
@@ -112,14 +112,14 @@ class EfutureLong_v2(IStrategy):
         -0.02, 0.04, default=0.001, decimals=3, space="sell", optimize=True
     )
 
-    # --- Volatility filter parameters ---
+    # --- Volatility filter parameters (buy-optimized) ---
     buy_atr_ratio = DecimalParameter(
-        0.005, 0.03, default=0.028, decimals=3, space="buy", optimize=True
+        0.005, 0.03, default=0.027, decimals=3, space="buy", optimize=True
     )
-    buy_atr_sma_period = IntParameter(10, 50, default=33, space="buy", optimize=True)
+    buy_atr_sma_period = IntParameter(10, 50, default=46, space="buy", optimize=True)
 
-    # --- Strong trend filter parameters ---
-    buy_trend_strength = IntParameter(20, 40, default=28, space="buy", optimize=True)
+    # --- Strong trend filter parameters (buy-optimized) ---
+    buy_trend_strength = IntParameter(20, 40, default=32, space="buy", optimize=True)
 
     # --- Exit Filter Parameters ---
     exit_adx_filter = IntParameter(15, 35, default=26, space="sell", optimize=True)
@@ -136,9 +136,6 @@ class EfutureLong_v2(IStrategy):
     protection_stopguard_lookback = IntParameter(30, 120, default=60, space="protection", optimize=True)
     protection_stopguard_trade_limit = IntParameter(2, 5, default=3, space="protection", optimize=True)
 
-    # Protections re-enabled after buy optimization
-    # MaxDrawdown: pause when account drawdown exceeds threshold
-    # StoplossGuard: pause after consecutive stoploss hits
     @property
     def protections(self):
         return [
@@ -148,16 +145,16 @@ class EfutureLong_v2(IStrategy):
             },
             {
                 "method": "MaxDrawdown",
-                "lookback_period_candles": 2880,  # 10 days on 5m
+                "lookback_period_candles": 2880,
                 "trade_limit": 15,
-                "stop_duration_candles": 288,  # 24 hours
+                "stop_duration_candles": 288,
                 "max_allowed_drawdown": 0.15,
             },
             {
                 "method": "StoplossGuard",
-                "lookback_period_candles": 1440,  # 5 days on 5m
+                "lookback_period_candles": 1440,
                 "trade_limit": 3,
-                "stop_duration_candles": 288,  # 24 hours
+                "stop_duration_candles": 288,
                 "only_per_pair": False,
             },
         ]
