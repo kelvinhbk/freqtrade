@@ -97,7 +97,7 @@ class CompositeCryptoLoss(IHyperOptLoss):
 
         if "stoploss" in config:
             stoploss_val = abs(config["stoploss"])
-            if stoploss_val > 0.10:
+            if stoploss_val > 0.15:
                 return 100.0
 
         loss = -composite * 10 + drawdown_penalty + pf_penalty + trade_penalty

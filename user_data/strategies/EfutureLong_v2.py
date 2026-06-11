@@ -127,19 +127,45 @@ class EfutureLong_v2(IStrategy):
         0.8, 2.0, default=1.6, decimals=1, space="sell", optimize=True
     )
 
+    # --- Protection parameters ---
+    protection_cooldown = IntParameter(10, 100, default=48, space="protection", optimize=True)
+    protection_maxdrawdown_lookback = IntParameter(50, 300, default=200, space="protection", optimize=True)
+    protection_maxdrawdown_threshold = DecimalParameter(
+        0.10, 0.30, default=0.20, decimals=2, space="protection", optimize=True
+    )
+    protection_stopguard_lookback = IntParameter(30, 120, default=60, space="protection", optimize=True)
+    protection_stopguard_trade_limit = IntParameter(2, 5, default=3, space="protection", optimize=True)
+
+    # Protections re-enabled after buy optimization
+    # MaxDrawdown: pause when account drawdown exceeds threshold
+    # StoplossGuard: pause after consecutive stoploss hits
     @property
     def protections(self):
         return [
             {
                 "method": "CooldownPeriod",
                 "stop_duration_candles": 48,
-            }
+            },
+            {
+                "method": "MaxDrawdown",
+                "lookback_period_candles": 2880,  # 10 days on 5m
+                "trade_limit": 15,
+                "stop_duration_candles": 288,  # 24 hours
+                "max_allowed_drawdown": 0.15,
+            },
+            {
+                "method": "StoplossGuard",
+                "lookback_period_candles": 1440,  # 5 days on 5m
+                "trade_limit": 3,
+                "stop_duration_candles": 288,  # 24 hours
+                "only_per_pair": False,
+            },
         ]
 
     def leverage(self, pair: str, current_time: datetime, current_rate: float,
                  proposed_leverage: float, max_leverage: float,
                  entry_tag: str | None, side: str, **kwargs) -> float:
-        return 3.0
+        return 2.0
 
     def populate_indicators(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
         dataframe["sma_15"] = ta.SMA(dataframe, timeperiod=15)
@@ -265,8 +291,7 @@ class EfutureLong_v2(IStrategy):
         atr = current_candle["atr"]
         elapsed = (current_time - trade.open_date_utc).total_seconds() / 60
 
-        # --- Fix #2: Hard loss cap to prevent catastrophic single-trade loss ---
-        # Cap at -40% (leveraged) = ~-13% price move for 3x leverage
+        # Hard loss cap to prevent catastrophic single-trade loss
         if current_profit < -0.40:
             return -0.40
 
