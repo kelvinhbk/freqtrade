@@ -112,6 +112,10 @@ target/
 
 .pytest_cache/
 .mypy_cache/
+.ruff_cache/
+
+# Playwright MCP 临时测试产物
+.playwright-mcp/
 
 #exceptions
 !*.gitkeep
