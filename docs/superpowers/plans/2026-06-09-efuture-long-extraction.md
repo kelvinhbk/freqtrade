@@ -1,0 +1,500 @@
+# EfutureLong Strategy Extraction Implementation Plan
+
+> **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
+
+**Goal:** Extract the long-only portion of the `AutoResearch_iter0002_E0010_E0014_E0033` strategy into a new pure-long strategy `EfutureLong.py` with optimal hyperparameters as defaults.
+
+**Architecture:** Single strategy file creation based on the existing dual-direction strategy. Remove all short-related parameters, indicators, entry/exit logic, and simplify stoploss/exit handlers to long-only branches. All default parameter values come from the hyperopt result JSON.
+
+**Tech Stack:** Python, freqtrade strategy framework, pandas_ta, talib
+
+---
+
+## File Structure
+
+| File | Action | Responsibility |
+|------|--------|--------------|
+| `user_data/strategies/EfutureLong.py` | Create | New pure-long strategy with optimal defaults |
+| `tests/strategy/test_efuture_long.py` | Create | Unit test: verify strategy loads, has correct defaults, and `can_short=False` |
+
+---
+
+### Task 1: Write the Strategy Loading Test
+
+**Files:**
+- Create: `tests/strategy/test_efuture_long.py`
+
+- [ ] **Step 1: Write the failing test**
+
+```python
+import sys
+from pathlib import Path
+
+import pytest
+
+# Add project root to path
+project_root = Path(__file__).parent.parent.parent
+sys.path.insert(0, str(project_root))
+
+from freqtrade.resolvers.strategy_resolver import StrategyResolver
+
+
+def test_efuture_long_strategy_loads():
+    """Verify EfutureLong strategy can be loaded from user_data/strategies."""
+    config = {
+        "strategy": "EfutureLong",
+        "strategy_path": str(project_root / "user_data" / "strategies"),
+        "timeframe": "5m",
+        "stake_currency": "USDT",
+        "trading_mode": "futures",
+    }
+    strategy = StrategyResolver.load_strategy(config)
+    assert strategy is not None
+    assert strategy.__class__.__name__ == "EfutureLong"
+
+
+def test_efuture_long_is_not_shortable():
+    """Verify EfutureLong has can_short=False."""
+    config = {
+        "strategy": "EfutureLong",
+        "strategy_path": str(project_root / "user_data" / "strategies"),
+        "timeframe": "5m",
+        "stake_currency": "USDT",
+        "trading_mode": "futures",
+    }
+    strategy = StrategyResolver.load_strategy(config)
+    assert strategy.can_short is False
+
+
+def test_efuture_long_optimal_defaults():
+    """Verify key parameters use optimal defaults from hyperopt JSON."""
+    config = {
+        "strategy": "EfutureLong",
+        "strategy_path": str(project_root / "user_data" / "strategies"),
+        "timeframe": "5m",
+        "stake_currency": "USDT",
+        "trading_mode": "futures",
+    }
+    strategy = StrategyResolver.load_strategy(config)
+
+    # Buy params
+    assert strategy.buy_rsi_fast.value == 40
+    assert strategy.buy_rsi.value == 49
+    assert strategy.buy_sma15_ratio.value == 0.98
+    assert strategy.buy_cti.value == -0.34
+    assert strategy.buy_24h_min_pct.value == -19.2
+    assert strategy.buy_24h_max_pct.value == 182.2
+    assert strategy.buy_volume_sma.value == 1.09
+    assert strategy.buy_adx.value == 23
+    assert strategy.buy_tf_adx.value == 37
+    assert strategy.buy_tf_rsi_min.value == 44
+    assert strategy.buy_tf_rsi_max.value == 56
+    assert strategy.buy_trend_strength.value == 28
+
+    # Sell params
+    assert strategy.sell_fastx.value == 55
+    assert strategy.sell_macd_profit.value == 0.02
+    assert strategy.time_exit_1_hours.value == 7
+    assert strategy.time_exit_1_threshold.value == -0.05
+    assert strategy.time_exit_2_hours.value == 10
+    assert strategy.time_exit_2_threshold.value == -0.10
+    assert strategy.csl_mid_ratio.value == 1.0
+    assert strategy.csl_late.value == -0.058
+```
+
+- [ ] **Step 2: Run test to verify it fails**
+
+Run: `pytest tests/strategy/test_efuture_long.py -v`
+
+Expected: FAIL with `Strategy not found: EfutureLong`
+
+---
+
+### Task 2: Create EfutureLong Strategy File
+
+**Files:**
+- Create: `user_data/strategies/EfutureLong.py`
+
+- [ ] **Step 3: Write the strategy file**
+
+```python
+import warnings
+from datetime import datetime, timedelta
+
+import pandas_ta as pta
+import talib.abstract as ta
+from pandas import DataFrame
+
+from freqtrade.persistence import Trade
+from freqtrade.strategy import (
+    DecimalParameter,
+    IntParameter,
+)
+from freqtrade.strategy.interface import IStrategy
+
+
+warnings.simplefilter(action="ignore", category=RuntimeWarning)
+
+
+class EfutureLong(IStrategy):
+    can_short = False
+
+    minimal_roi = {
+        "0": 0.137,
+        "20": 0.097,
+        "57": 0.034,
+        "169": 0,
+    }
+
+    timeframe = "5m"
+    process_only_new_candles = True
+    startup_candle_count = 310
+
+    order_types = {
+        "entry": "market",
+        "exit": "market",
+        "emergency_exit": "market",
+        "force_entry": "market",
+        "force_exit": "market",
+        "stoploss": "market",
+        "stoploss_on_exchange": False,
+        "stoploss_on_exchange_interval": 60,
+        "stoploss_on_exchange_market_ratio": 0.99,
+    }
+
+    stoploss = -0.10
+    trailing_stop = False
+    use_custom_stoploss = True
+
+    # --- Long entry parameters (mean-reversion) ---
+    buy_rsi_fast = IntParameter(20, 70, default=40, space="buy", optimize=True)
+    buy_rsi = IntParameter(15, 50, default=49, space="buy", optimize=True)
+    buy_sma15_ratio = DecimalParameter(
+        0.90, 1.0, default=0.98, decimals=3, space="buy", optimize=True
+    )
+    buy_cti = DecimalParameter(-1, 1, default=-0.34, decimals=2, space="buy", optimize=True)
+    buy_24h_min_pct = DecimalParameter(
+        -30.0, 0.0, default=-19.2, decimals=1, space="buy", optimize=True
+    )
+    buy_24h_max_pct = DecimalParameter(
+        0.0, 200.0, default=182.2, decimals=1, space="buy", optimize=True
+    )
+    buy_volume_sma = DecimalParameter(
+        0.8, 1.5, default=1.09, decimals=2, space="buy", optimize=True
+    )
+    buy_adx = IntParameter(15, 40, default=23, space="buy", optimize=True)
+
+    # --- Trend-following entry parameters ---
+    buy_tf_adx = IntParameter(15, 45, default=37, space="buy", optimize=True)
+    buy_tf_rsi_min = IntParameter(30, 55, default=44, space="buy", optimize=True)
+    buy_tf_rsi_max = IntParameter(55, 80, default=56, space="buy", optimize=True)
+
+    # --- Sell parameters ---
+    sell_fastx = IntParameter(50, 100, default=55, space="sell", optimize=True)
+    sell_trend_filter = IntParameter(5, 20, default=10, space="sell", optimize=True)
+    sell_macd_profit = DecimalParameter(
+        0.005, 0.10, default=0.02, decimals=3, space="sell", optimize=True
+    )
+    sell_bb_middle_profit = DecimalParameter(
+        0.005, 0.05, default=0.015, decimals=3, space="sell", optimize=True
+    )
+
+    # --- Time exit parameters ---
+    time_exit_1_hours = IntParameter(4, 12, default=7, space="sell", optimize=True)
+    time_exit_1_threshold = DecimalParameter(
+        -0.08, -0.02, default=-0.05, decimals=3, space="sell", optimize=True
+    )
+    time_exit_2_hours = IntParameter(8, 16, default=10, space="sell", optimize=True)
+    time_exit_2_threshold = DecimalParameter(
+        -0.15, -0.05, default=-0.10, decimals=3, space="sell", optimize=True
+    )
+
+    # --- Custom stoploss parameters ---
+    csl_initial = -0.10
+    csl_mid_ratio = DecimalParameter(
+        1.0, 3.0, default=1.0, decimals=1, space="sell", optimize=True
+    )
+    csl_late = DecimalParameter(
+        -0.08, -0.01, default=-0.058, decimals=3, space="sell", optimize=True
+    )
+
+    # --- Volatility filter parameters ---
+    buy_atr_ratio = DecimalParameter(
+        0.005, 0.03, default=0.028, decimals=3, space="buy", optimize=True
+    )
+    buy_atr_sma_period = IntParameter(10, 50, default=33, space="buy", optimize=True)
+
+    # --- Strong trend filter parameters ---
+    buy_trend_strength = IntParameter(20, 40, default=28, space="buy", optimize=True)
+
+    # --- Exit Filter Parameters ---
+    exit_adx_filter = IntParameter(15, 35, default=25, space="sell", optimize=True)
+    exit_volatility_filter = DecimalParameter(
+        0.8, 2.0, default=1.5, decimals=1, space="sell", optimize=True
+    )
+
+    @property
+    def protections(self):
+        return [
+            {
+                "method": "CooldownPeriod",
+                "stop_duration_candles": 48,
+            }
+        ]
+
+    def leverage(self, pair: str, current_time: datetime, current_rate: float,
+                 proposed_leverage: float, max_leverage: float,
+                 entry_tag: str | None, side: str, **kwargs) -> float:
+        return 3.0
+
+    def populate_indicators(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
+        dataframe["sma_15"] = ta.SMA(dataframe, timeperiod=15)
+        dataframe["volume_sma"] = ta.SMA(dataframe, timeperiod=20)
+        dataframe["cti"] = pta.cti(dataframe["close"], length=20)
+        dataframe["rsi"] = ta.RSI(dataframe, timeperiod=14)
+        dataframe["rsi_fast"] = ta.RSI(dataframe, timeperiod=4)
+        dataframe["rsi_slow"] = ta.RSI(dataframe, timeperiod=20)
+        dataframe["24h_change_pct"] = dataframe["close"].pct_change(periods=288) * 100
+
+        stoch_fast = ta.STOCHF(dataframe, 5, 3, 0, 3, 0)
+        dataframe["fastk"] = stoch_fast["fastk"]
+        dataframe["cci"] = ta.CCI(dataframe, timeperiod=20)
+
+        dataframe["atr"] = ta.ATR(dataframe, timeperiod=14)
+        dataframe["adx"] = ta.ADX(dataframe, timeperiod=14)
+
+        # ATR-based volatility filter
+        dataframe["atr_sma"] = ta.SMA(dataframe["atr"], timeperiod=self.buy_atr_sma_period.value)
+        dataframe["atr_ratio"] = dataframe["atr"] / dataframe["close"]
+        dataframe["high_volatility"] = dataframe["atr_ratio"] > dataframe["atr_ratio"].rolling(50).mean() * 1.5
+
+        # Trend EMAs for trend filter and exit filter
+        dataframe["ema_50"] = ta.EMA(dataframe, timeperiod=50)
+        dataframe["ema_200"] = ta.EMA(dataframe, timeperiod=200)
+        dataframe["ema_50_uptrend"] = (
+            dataframe["ema_50"] > dataframe["ema_50"].shift(self.sell_trend_filter.value)
+        )
+        dataframe["ema_200_uptrend"] = (
+            dataframe["ema_200"] > dataframe["ema_200"].shift(self.sell_trend_filter.value)
+        )
+
+        # MACD for trend-following entries and reversal exits
+        macd_result = ta.MACD(dataframe, fastperiod=12, slowperiod=26, signalperiod=9)
+        dataframe["macd"] = macd_result["macd"]
+        dataframe["macd_signal"] = macd_result["macdsignal"]
+        dataframe["macd_hist"] = macd_result["macdhist"]
+
+        # Pre-compute MACD crossover signals
+        dataframe["macd_cross_up"] = (
+            (dataframe["macd"] > dataframe["macd_signal"])
+            & (dataframe["macd"].shift(1) <= dataframe["macd_signal"].shift(1))
+        )
+        dataframe["macd_cross_down"] = (
+            (dataframe["macd"] < dataframe["macd_signal"])
+            & (dataframe["macd"].shift(1) >= dataframe["macd_signal"].shift(1))
+        )
+
+        # Strong trend filter using ADX
+        dataframe["strong_uptrend"] = dataframe["adx"] > self.buy_trend_strength.value
+
+        # Exit filters
+        dataframe["weak_trend"] = dataframe["adx"] < self.exit_adx_filter.value
+        dataframe["low_volatility"] = dataframe["atr_ratio"] < dataframe["atr_ratio"].rolling(50).mean() * self.exit_volatility_filter.value
+
+        return dataframe
+
+    def populate_entry_trend(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
+        dataframe.loc[:, "enter_tag"] = ""
+
+        # Volume filter for all entries
+        volume_filter = dataframe["volume"] > dataframe["volume_sma"] * 1.2
+
+        # Volatility filter - avoid high volatility periods
+        volatility_filter = ~dataframe["high_volatility"]
+
+        # --- Long: Mean-reversion (oversold bounce with volume + ADX + volatility filter) ---
+        long_mr_conditions = (
+            volume_filter
+            & volatility_filter
+            & (dataframe["rsi"] < self.buy_rsi.value)
+            & (dataframe["rsi_fast"] < self.buy_rsi_fast.value)
+            & (dataframe["close"] < dataframe["sma_15"] * self.buy_sma15_ratio.value)
+            & (dataframe["cti"] < self.buy_cti.value)
+            & (dataframe["24h_change_pct"] > self.buy_24h_min_pct.value)
+            & (dataframe["24h_change_pct"] < self.buy_24h_max_pct.value)
+            & (dataframe["adx"] > self.buy_adx.value)
+            & (dataframe["strong_uptrend"])  # Strong trend filter
+        )
+        dataframe.loc[long_mr_conditions, "enter_tag"] += "long_mr"
+        dataframe.loc[long_mr_conditions, "enter_long"] = 1
+
+        # --- Long: Trend-following (MACD crossover + strong trend filter + momentum + volatility filter) ---
+        long_tf_conditions = (
+            volume_filter
+            & volatility_filter
+            & (dataframe["macd_cross_up"])
+            & (dataframe["ema_50"] > dataframe["ema_200"])
+            & (dataframe["ema_50_uptrend"])
+            & (dataframe["ema_200_uptrend"])
+            & (dataframe["adx"] > self.buy_tf_adx.value)
+            & (dataframe["rsi"] > self.buy_tf_rsi_min.value)
+            & (dataframe["rsi"] < self.buy_tf_rsi_max.value)
+            & (dataframe["strong_uptrend"])  # Strong trend filter
+        )
+        dataframe.loc[
+            long_tf_conditions & (dataframe["enter_tag"] == ""), "enter_tag"
+        ] += "long_tf"
+        dataframe.loc[long_tf_conditions, "enter_long"] = 1
+
+        return dataframe
+
+    def custom_stoploss(
+        self,
+        pair: str,
+        trade: Trade,
+        current_time: datetime,
+        current_rate: float,
+        current_profit: float,
+        after_fill: bool,
+        **kwargs,
+    ) -> float:
+        dataframe, _ = self.dp.get_analyzed_dataframe(pair=pair, timeframe=self.timeframe)
+        if len(dataframe) < 1:
+            return self.stoploss
+
+        current_candle = dataframe.iloc[-1]
+        atr = current_candle["atr"]
+        elapsed = (current_time - trade.open_date_utc).total_seconds() / 60
+
+        atr_pct = max(-(atr / current_rate) * self.csl_mid_ratio.value, self.stoploss)
+
+        if elapsed < 30:
+            desired_pct = self.csl_initial
+        elif elapsed < 240:
+            desired_pct = atr_pct
+        else:
+            desired_pct = max(self.csl_late.value, atr_pct)
+
+        leverage_val = trade.leverage or 1.0
+        desired_stop_price = trade.open_rate * (1 + desired_pct)
+        return leverage_val * (desired_stop_price / current_rate - 1)
+
+    def custom_exit(
+        self,
+        pair: str,
+        trade: Trade,
+        current_time: datetime,
+        current_rate: float,
+        current_profit: float,
+        **kwargs,
+    ):
+        dataframe, _ = self.dp.get_analyzed_dataframe(pair=pair, timeframe=self.timeframe)
+        if len(dataframe) < 1:
+            return None
+        current_candle = dataframe.iloc[-1]
+
+        # Check trend direction using pre-computed columns
+        bearish = not current_candle["ema_50_uptrend"] and not current_candle["ema_200_uptrend"]
+
+        # Layer 1: Trend filter exit - exit when trend weakens and volatility is low
+        if current_candle["weak_trend"] and current_candle["low_volatility"]:
+            if current_candle["ema_50_uptrend"]:
+                return "trend_exit_long"
+
+        # Layer 2: Profit exits
+        if current_profit > 0:
+            # Fastk-based profit exit
+            if current_candle["fastk"] > self.sell_fastx.value:
+                return "fastk_profit_sell"
+
+            # MACD reversal exit: lock in profit when momentum reverses
+            if current_profit > self.sell_macd_profit.value:
+                if current_candle["macd_cross_down"]:
+                    return "macd_reversal_long"
+
+        # Layer 3: Loss mitigation exits
+        if -0.03 < current_profit < 0:
+            if current_candle["cci"] > 80 and bearish:
+                return "cci_loss_sell"
+
+        # Layer 4: Time-based loss cuts
+        if current_time - timedelta(hours=self.time_exit_1_hours.value) > trade.open_date_utc:
+            if current_profit >= self.time_exit_1_threshold.value:
+                return "time_loss_1"
+
+        if current_time - timedelta(hours=self.time_exit_2_hours.value) > trade.open_date_utc:
+            if current_profit >= self.time_exit_2_threshold.value:
+                return "time_loss_2"
+
+        return None
+
+    def populate_exit_trend(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
+        dataframe.loc[:, ["exit_long", "exit_short", "exit_tag"]] = (0, 0, "")
+        return dataframe
+```
+
+- [ ] **Step 4: Run ruff to lint the new strategy**
+
+Run: `ruff check user_data/strategies/EfutureLong.py`
+
+Expected: No errors (or fix any that appear with `ruff check --fix`)
+
+---
+
+### Task 3: Run Tests and Verify
+
+**Files:**
+- Test: `tests/strategy/test_efuture_long.py`
+
+- [ ] **Step 5: Run the tests**
+
+Run: `pytest tests/strategy/test_efuture_long.py -v`
+
+Expected: All tests PASS
+
+- [ ] **Step 6: Commit**
+
+```bash
+git add user_data/strategies/EfutureLong.py tests/strategy/test_efuture_long.py
+git commit -m "feat: add EfutureLong pure-long strategy with optimal defaults
+
+Extract long-only portion from AutoResearch_iter0002_E0010_E0014_E0033.
+- Remove all short entry/exit/stoploss logic
+- Remove all short_ prefixed parameters
+- Set can_short = False
+- Use optimal hyperparameter defaults from JSON result
+- Add unit tests for strategy loading and defaults"
+```
+
+---
+
+## Spec Coverage Check
+
+| Spec Requirement | Implementing Task |
+|------------------|-------------------|
+| 类名 `EfutureLong` | Task 2 |
+| `can_short = False` | Task 2 + Task 1 test |
+| 保留做多参数，删除 short_ 参数 | Task 2 |
+| `minimal_roi` 使用 JSON 最优值 | Task 2 |
+| 所有参数默认值来自 JSON | Task 2 |
+| 删除 `strong_downtrend` | Task 2 |
+| 仅保留 long_mr / long_tf 入场 | Task 2 |
+| custom_stoploss 删除做空分支 | Task 2 |
+| custom_exit 删除做空分支 | Task 2 |
+| 保存到 `user_data/strategies/` | Task 2 |
+| 测试策略加载和默认值 | Task 1 + Task 3 |
+
+## Placeholder Scan
+
+- [x] No TBD/TODO/fill in later
+- [x] No vague "add error handling" without code
+- [x] All test code is complete
+- [x] All strategy code is complete
+- [x] File paths are exact
+
+## Type Consistency Check
+
+- [x] `buy_24h_max_pct` default: JSON says 182.2, range is 0.0-200.0, default=182.2 in strategy
+- [x] `csl_late` default: JSON says -0.058, range is -0.08--0.01, default=-0.058 in strategy
+- [x] `sell_macd_profit` default: JSON says 0.02, strategy default=0.02 (unchanged from original)
+- [x] All other parameter names and types match between spec and plan
