@@ -42,6 +42,13 @@ def load_base_config(config: EvolutionConfig) -> dict:
     }
     if config.hyperopt.fee is not None:
         args["fee"] = config.hyperopt.fee
+
+    # Inject db-url for trade persistence
+    db_dir = config.db_path_resolved
+    db_dir.mkdir(parents=True, exist_ok=True)
+    db_file = db_dir / f"{config.strategy_name}.sqlite"
+    args["db_url"] = f"sqlite:///{db_file}"
+
     return setup_optimize_configuration(args, RunMode.BACKTEST)
 
 

@@ -1,0 +1,128 @@
+{
+  "rules": [
+    {
+      "id": "BL001",
+      "pattern": "adding_trend_filter",
+      "description": "Adding EMA/SMA trend filter as entry gate",
+      "reason": "Detected from 4 consecutive failures: DD 67.6% > 30.0%; OOS unprofitable: -89.40; DD 57.3% > 30.0%; 'upper'",
+      "created_at": "2026-06-02",
+      "failed_count": 4,
+      "source_experiments": [
+        "ar-0008-89a9",
+        "ar-0018-fa9a",
+        "ar-0022-f5a1",
+        "ar-0004-4ef3"
+      ]
+    },
+    {
+      "id": "BL002",
+      "pattern": "adding_trend_filter",
+      "description": "Adding EMA/SMA trend filter as entry gate",
+      "reason": "Detected from 5 consecutive failures: DD 67.6% > 30.0%; OOS unprofitable: -89.40; DD 57.3% > 30.0%; 'upper'; OOS unprofitable: -81.04",
+      "created_at": "2026-06-02",
+      "failed_count": 5,
+      "source_experiments": [
+        "ar-0008-89a9",
+        "ar-0018-fa9a",
+        "ar-0022-f5a1",
+        "ar-0004-4ef3",
+        "ar-0008-ae12"
+      ]
+    },
+    {
+      "id": "BL003",
+      "pattern": "adding_trend_filter",
+      "description": "Adding EMA/SMA trend filter as entry gate",
+      "reason": "Detected from 7 consecutive failures: DD 67.6% > 30.0%; OOS unprofitable: -89.40; DD 57.3% > 30.0%; 'upper'; OOS unprofitable: -81.04",
+      "created_at": "2026-06-02",
+      "failed_count": 7,
+      "source_experiments": [
+        "ar-0008-89a9",
+        "ar-0018-fa9a",
+        "ar-0022-f5a1",
+        "ar-0004-4ef3",
+        "ar-0008-ae12",
+        "ar-0015-6730",
+        "ar-0019-948b"
+      ]
+    },
+    {
+      "id": "BL004",
+      "pattern": "adding_trend_filter",
+      "description": "Adding EMA/SMA trend filter as entry gate",
+      "reason": "Detected from 9 consecutive failures: DD 67.6% > 30.0%; OOS unprofitable: -89.40; DD 57.3% > 30.0%; 'upper'; OOS unprofitable: -81.04",
+      "created_at": "2026-06-03",
+      "failed_count": 9,
+      "source_experiments": [
+        "ar-0008-89a9",
+        "ar-0018-fa9a",
+        "ar-0022-f5a1",
+        "ar-0004-4ef3",
+        "ar-0008-ae12",
+        "ar-0015-6730",
+        "ar-0019-948b",
+        "ar-0028-c55d",
+        "ar-0004-0e3f"
+      ]
+    },
+    {
+      "id": "BL005",
+      "pattern": "adding_trend_filter",
+      "description": "Adding EMA/SMA trend filter as entry gate",
+      "reason": "Detected from 9 consecutive failures: DD 67.6% > 30.0%; OOS unprofitable: -89.40; DD 57.3% > 30.0%; 'upper'; OOS unprofitable: -81.04",
+      "created_at": "2026-06-03",
+      "failed_count": 9,
+      "source_experiments": [
+        "ar-0008-89a9",
+        "ar-0018-fa9a",
+        "ar-0022-f5a1",
+        "ar-0004-4ef3",
+        "ar-0008-ae12",
+        "ar-0015-6730",
+        "ar-0019-948b",
+        "ar-0028-c55d",
+        "ar-0004-0e3f"
+      ]
+    },
+    {
+      "id": "BL006",
+      "pattern": "adding_trend_filter",
+      "description": "Adding EMA/SMA trend filter as entry gate",
+      "reason": "Detected from 11 consecutive failures: DD 67.6% > 30.0%; OOS unprofitable: -89.40; DD 57.3% > 30.0%; 'upper'; OOS unprofitable: -81.04",
+      "created_at": "2026-06-03",
+      "failed_count": 11,
+      "source_experiments": [
+        "ar-0008-89a9",
+        "ar-0018-fa9a",
+        "ar-0022-f5a1",
+        "ar-0004-4ef3",
+        "ar-0008-ae12",
+        "ar-0015-6730",
+        "ar-0019-948b",
+        "ar-0028-c55d",
+        "ar-0004-0e3f",
+        "ar-0015-2b89"
+      ]
+    },
+    {
+      "id": "BL007",
+      "pattern": "adding_trend_filter",
+      "description": "Adding EMA/SMA trend filter as entry gate",
+      "reason": "Detected from 12 consecutive failures: DD 67.6% > 30.0%; OOS unprofitable: -89.40; DD 57.3% > 30.0%; 'upper'; OOS unprofitable: -81.04",
+      "created_at": "2026-06-04",
+      "failed_count": 12,
+      "source_experiments": [
+        "ar-0008-89a9",
+        "ar-0018-fa9a",
+        "ar-0022-f5a1",
+        "ar-0004-4ef3",
+        "ar-0008-ae12",
+        "ar-0015-6730",
+        "ar-0019-948b",
+        "ar-0028-c55d",
+        "ar-0004-0e3f",
+        "ar-0015-2b89"
+      ]
+    }
+  ]
+}

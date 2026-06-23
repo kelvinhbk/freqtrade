@@ -1,0 +1,101 @@
+{
+  "llm": {
+    "default_provider": "kimi",
+    "fallback_order": ["kimi", "glm", "deepseek"],
+    "temperature": 0.7,
+    "max_tokens": 32768,
+    "request_timeout": 120,
+    "max_retries": 3,
+    "providers": {
+      "kimi": {
+        "base_url": "https://api.kimi.com/coding",
+        "api_key_env": "KIMI_API_KEY",
+        "model": "kimi-2.6"
+      },
+      "glm": {
+        "base_url": "https://open.bigmodel.cn/api/anthropic",
+        "api_key_env": "GLM_API_KEY",
+        "model": "glm-5.1"
+      },
+      "deepseek": {
+        "base_url": "https://api.deepseek.com/anthropic",
+        "api_key_env": "DEEPSEEK_API_KEY",
+        "model": "deepseek-v4-pro"
+      }
+    }
+  },
+  "strategy_path": "user_data/strategies/EfutureShort.py",
+  "base_config_path": "user_data/config_EfutureIter_live.json",
+  "strategy_output_dir": "user_data/strategies/autoresearch_efuture_short",
+  "results_file": "user_data/autoresearch/results/efuture_short_experiments.jsonl",
+  "timeframe": "5m",
+  "pairs": [
+    "SOL/USDT:USDT",
+    "DOT/USDT:USDT",
+    "RENDER/USDT:USDT",
+    "WLD/USDT:USDT",
+    "TON/USDT:USDT",
+    "ZEC/USDT:USDT",
+    "TAO/USDT:USDT",
+    "ENJ/USDT:USDT"
+  ],
+  "in_sample_timerange": "20240701-20260201",
+  "out_of_sample_timerange": "20260201-20260526",
+  "max_iterations": 50,
+  "max_walltime_hours": 24,
+  "evolution_mode": "parameter_first",
+  "param_convergence_rounds": 3,
+  "param_improvement_threshold": 0.05,
+  "stagnation_limit": 10,
+  "max_restarts": 3,
+  "epochs_floor": 200,
+  "epochs_ceiling": 1000,
+  "global_blacklist_threshold": 3,
+  "mutation_focus": "This is a pure short-only strategy (no long entries). Focus on improving ALL aspects of short-side trading: (1) improve short mean-reversion entry (short_mr) by adjusting short_rsi, short_rsi_fast, short_cti, short_adx thresholds; (2) improve short trend-following entry (short_tf) by tuning short_tf_adx, short_tf_rsi_min, short_tf_rsi_max; (3) improve exit timing via custom_exit() - consider adding new exit conditions specific to short positions; (4) improve custom_stoploss parameters; (5) add new short-specific indicators if current ones are insufficient; (6) since there are no long entries, feel free to add completely new short entry strategies.",
+  "mutation_constraints": [
+    "This is a SHORT-ONLY strategy. Never add any long entry logic (no enter_long assignments).",
+    "You MAY modify all short entry parameters and indicators freely.",
+    "You MAY add new short-specific indicators in populate_indicators().",
+    "You MAY add or modify short-specific exit conditions in custom_exit().",
+    "You MAY add new short entry signal types beyond short_mr and short_tf.",
+    "You MAY modify custom_stoploss logic."
+  ],
+  "hyperopt": {
+    "loss_function": "AutoResearchMultiMetricLoss",
+    "epochs": 500,
+    "spaces": ["buy", "sell"],
+    "jobs": 8,
+    "analyze_per_epoch": true,
+    "min_trades": 30,
+    "early_stop": 100
+  },
+  "safety": {
+    "max_drawdown_pct": 0.30,
+    "min_trade_count": 30,
+    "min_oos_trade_count": 10,
+    "max_oos_drawdown_pct": 0.25,
+    "require_oos_positive": true,
+    "max_sharpe_degradation": 5.0,
+    "walk_forward_splits": 3,
+    "min_walk_forward_profitable": 2,
+    "min_walk_forward_trades": 10,
+    "min_oos_profit_vs_baseline": 1.0,
+    "min_oos_sharpe_vs_baseline": 0.85,
+    "min_oos_profit_factor_vs_baseline": 0.8,
+    "max_oos_drawdown_vs_baseline": 1.2,
+    "min_oos_trades_vs_baseline": 0.4,
+    "min_is_profit_vs_baseline": 0.6,
+    "min_is_sharpe_vs_baseline": 0.6
+  },
+  "score_weights": {
+    "profit": 0.30,
+    "sharpe": 0.25,
+    "profit_factor": 0.15,
+    "drawdown": 0.15,
+    "trade_count": 0.10,
+    "win_rate": 0.05,
+    "calmar": 0.0,
+    "in_sample": 0.25,
+    "out_of_sample": 0.75
+  }
+}

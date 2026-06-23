@@ -21,6 +21,7 @@ def run_hyperopt(
     timerange: str,
     spaces: list[str] | None = None,
     iteration: int = 0,
+    epochs_override: int | None = None,
 ) -> dict:
     """
     Run freqtrade hyperopt for the given strategy and timerange.
@@ -30,6 +31,8 @@ def run_hyperopt(
 
     Parameters are automatically exported to:
         user_data/strategies/{strategy_name}.json
+
+    :param epochs_override: Override the config's epoch count for dynamic epochs.
     """
     from freqtrade.commands.optimize_commands import setup_optimize_configuration
     from freqtrade.enums import RunMode
@@ -42,7 +45,12 @@ def run_hyperopt(
     hc = config.hyperopt
     spaces_to_use = list(spaces or hc.spaces)
 
-    args = _build_hyperopt_args(config, strategy_name, timerange, spaces_to_use)
+    # Use dynamic epochs if provided, otherwise fall back to config default
+    effective_epochs = epochs_override if epochs_override is not None else hc.epochs
+
+    args = _build_hyperopt_args(
+        config, strategy_name, timerange, spaces_to_use, epochs=effective_epochs,
+    )
 
     hyperopt_config = setup_optimize_configuration(args, RunMode.HYPEROPT)
 
@@ -55,7 +63,7 @@ def run_hyperopt(
         hyperopt_config["freqai"]["identifier"] = f"autoresearch-hyperopt-{iteration:04d}"
 
     logger.info(
-        f"Hyperopt {strategy_name}: epochs={hc.epochs} spaces={spaces_to_use} "
+        f"Hyperopt {strategy_name}: epochs={effective_epochs} spaces={spaces_to_use} "
         f"loss={hc.loss_function} jobs={hc.jobs}"
     )
     logger.info(f"Hyperopt args: {args}")
@@ -116,9 +124,11 @@ def _build_hyperopt_args(
     strategy_name: str,
     timerange: str,
     spaces_to_use: list[str],
+    epochs: int | None = None,
 ) -> dict:
     """Build freqtrade hyperopt args for a generated strategy candidate."""
     hc = config.hyperopt
+    effective_epochs = epochs if epochs is not None else hc.epochs
     args: dict = {
         "config": [str(Path(config.base_config_path))],
         "strategy": strategy_name,
@@ -126,7 +136,7 @@ def _build_hyperopt_args(
         "timeframe": config.timeframe,
         "pairs": list(config.pairs),
         "timerange": timerange,
-        "epochs": hc.epochs,
+        "epochs": effective_epochs,
         "spaces": spaces_to_use,
         "hyperopt_loss": hc.loss_function,
         "hyperopt_jobs": hc.jobs,

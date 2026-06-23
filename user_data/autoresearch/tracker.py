@@ -93,6 +93,9 @@ class ExperimentTracker:
         self.results_path = config.results_path
         self._records: list[ExperimentRecord] = []
         self._best_snapshot: StrategySnapshot | None = None
+        self._stagnation_count: int = 0
+        self._restart_count: int = 0
+        self._restart_history: list[dict[str, Any]] = []
         self._load_existing()
 
     def _load_existing(self) -> None:
@@ -204,6 +207,7 @@ class ExperimentTracker:
         source_code: str,
         iteration: int,
     ) -> None:
+        self.reset_stagnation()
         gen = self._generation + 1
         path = Path(self.config.strategy_output_dir) / f"{is_metrics.strategy_name}.py"
         self._best_snapshot = StrategySnapshot(
@@ -286,6 +290,38 @@ class ExperimentTracker:
     def current_best_score(self) -> float:
         return self._best_snapshot.composite_score if self._best_snapshot else 0.0
 
+    @property
+    def stagnation_count(self) -> int:
+        return self._stagnation_count
+
+    @property
+    def restart_count(self) -> int:
+        return self._restart_count
+
+    @property
+    def restart_history(self) -> list[dict[str, Any]]:
+        return self._restart_history
+
+    def record_stagnation(self) -> None:
+        """Increment consecutive stagnation counter."""
+        self._stagnation_count += 1
+
+    def reset_stagnation(self) -> None:
+        """Reset stagnation counter after an improvement."""
+        self._stagnation_count = 0
+
+    def record_restart(self, reason: str, direction: str = "") -> None:
+        """Record a smart restart event."""
+        self._restart_count += 1
+        self._stagnation_count = 0
+        self._restart_history.append({
+            "restart_number": self._restart_count,
+            "timestamp": self._now_iso(),
+            "reason": reason,
+            "direction": direction,
+            "generation_at_restart": self._generation,
+        })
+
     def history(self, last_n: int = 20) -> list[ExperimentRecord]:
         return self._records[-last_n:]
 
@@ -304,6 +340,7 @@ class ExperimentTracker:
             f"Total iterations: {len(self._records)}",
             f"Improvements: {improvements}  Regressions: {regressions}  "
             f"Rejections: {rejections}  Errors: {errors}",
+            f"Stagnation: {self._stagnation_count}  Restarts: {self._restart_count}",
             "",
         ]
         if self._best_snapshot:
