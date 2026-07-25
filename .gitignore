@@ -4,16 +4,29 @@ config*.json
 *.sqlite-shm
 *.sqlite-wal
 logfile.txt
+# user_data: 默认忽略，按目录豁免（代码/配置进 git，数据/产物忽略）
 user_data/*
-!user_data/strategy/sample_strategy.py
+!user_data/strategies/
+!user_data/strategies/**
+!user_data/configs/
+!user_data/configs/**
+!user_data/archive/
+!user_data/archive/**
+!user_data/autoresearch/
+!user_data/autoresearch/**
 !user_data/notebooks
 !user_data/models
 !user_data/freqaimodels
-!user_data/autoresearch/
-!user_data/autoresearch/**
+!user_data/README.md
+
+# 密钥与本地私有配置永不入库
+user_data/configs/secrets.local.json
 user_data/autoresearch/.env
+
+# 产物与数据忽略（即使在被豁免目录内）
 user_data/autoresearch/results/
 user_data/autoresearch/**/*.log
+user_data/strategies/**/_loop_state.json
 user_data/freqaimodels/*
 user_data/models/*
 user_data/notebooks/*
