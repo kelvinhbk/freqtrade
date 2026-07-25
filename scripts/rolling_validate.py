@@ -14,7 +14,7 @@ from pathlib import Path
 
 ROOT = Path("/Users/kelvin/projects/freqtrade")
 STRATEGY = sys.argv[1] if len(sys.argv) > 1 else "EfutureLongKelvin_v10"
-CONFIG = "user_data/config_EfutureIter_kelvin.json"
+CONFIG = "user_data/configs/dryrun/EfutureIter.json"
 WINDOWS = [
     ("20240601", "20241130"),
     ("20240801", "20250131"),

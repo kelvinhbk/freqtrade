@@ -1,7 +1,11 @@
 {
   "llm": {
     "default_provider": "kimi",
-    "fallback_order": ["kimi", "glm", "deepseek"],
+    "fallback_order": [
+      "kimi",
+      "glm",
+      "deepseek"
+    ],
     "temperature": 0.7,
     "max_tokens": 32768,
     "request_timeout": 120,
@@ -24,8 +28,8 @@
       }
     }
   },
-  "strategy_path": "user_data/strategies/autoresearch/AutoResearch_iter0002_E0010_E0014.py",
-  "strategy_output_dir": "user_data/strategies/autoresearch",
+  "strategy_path": "user_data/strategies/experiments/autoresearch/AutoResearch_iter0002_E0010_E0014.py",
+  "strategy_output_dir": "user_data/strategies/experiments/autoresearch",
   "timeframe": "5m",
   "pairs": [
     "DOT/USDT:USDT",
@@ -44,14 +48,19 @@
   "hyperopt": {
     "loss_function": "AutoResearchMultiMetricLoss",
     "epochs": 500,
-    "spaces": ["buy", "sell", "roi", "stoploss"],
+    "spaces": [
+      "buy",
+      "sell",
+      "roi",
+      "stoploss"
+    ],
     "jobs": 8,
     "analyze_per_epoch": true,
     "min_trades": 30,
     "early_stop": 100
   },
   "safety": {
-    "max_drawdown_pct": 0.30,
+    "max_drawdown_pct": 0.3,
     "min_trade_count": 30,
     "min_oos_trade_count": 10,
     "max_oos_drawdown_pct": 0.25,
@@ -62,11 +71,11 @@
     "min_walk_forward_trades": 10
   },
   "score_weights": {
-    "profit": 0.30,
+    "profit": 0.3,
     "sharpe": 0.25,
     "profit_factor": 0.15,
     "drawdown": 0.15,
-    "trade_count": 0.10,
+    "trade_count": 0.1,
     "win_rate": 0.05,
     "calmar": 0.0,
     "in_sample": 0.25,

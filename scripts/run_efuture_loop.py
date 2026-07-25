@@ -2,7 +2,7 @@
 
 Flow: hyperopt (v1-neighborhood, buy/sell/stoploss spaces; roi fixed to v1) ->
 parse best params from .fthypt -> OOS backtest -> compare to baseline ->
-save new version to Efuturelong/ if improved -> update state.
+save new version to efuture-long-kelvin/ if improved -> update state.
 
 Usage:
     python run_iteration.py <iteration> <seed> [--dry-run]
@@ -25,12 +25,12 @@ DRY_RUN = "--dry-run" in sys.argv
 REUSE = "--reuse" in sys.argv  # reuse latest search fthypt, skip hyperopt
 
 ROOT = Path("/Users/kelvin/projects/freqtrade")
-STATE = ROOT / "user_data/strategies/Efuturelong/_loop_state.json"
-CONFIG = "user_data/config_EfutureIter_kelvin.json"
+STATE = ROOT / "user_data/strategies/efuture-long-kelvin/_loop_state.json"
+CONFIG = "user_data/configs/dryrun/EfutureIter.json"
 SEARCH = "EfutureLongKelvin_search"
-SEARCH_PY = ROOT / f"user_data/strategies/{SEARCH}.py"
-SEARCH_JSON = ROOT / f"user_data/strategies/{SEARCH}.json"
-LONG_DIR = ROOT / "user_data/strategies/Efuturelong"
+SEARCH_PY = ROOT / f"user_data/strategies/efuture-long-kelvin/{SEARCH}.py"
+SEARCH_JSON = ROOT / f"user_data/strategies/efuture-long-kelvin/{SEARCH}.json"
+LONG_DIR = ROOT / "user_data/strategies/efuture-long-kelvin"
 FTHYPT = f"{SEARCH}_{ITER}.fthypt"
 TRAIN = "20240801-20260430"
 OOS = "20260501-20260611"

@@ -21,12 +21,12 @@ SEED = int(sys.argv[2])
 REUSE = "--reuse" in sys.argv
 
 ROOT = Path("/Users/kelvin/projects/freqtrade")
-STATE = ROOT / "user_data/strategies/Efuturelong/_loop_state.json"
-CONFIG = "user_data/config_EfutureIter_kelvin.json"
+STATE = ROOT / "user_data/strategies/efuture-long-kelvin/_loop_state.json"
+CONFIG = "user_data/configs/dryrun/EfutureIter.json"
 SEARCH = "EfutureLongKelvin_search"
-SEARCH_PY = ROOT / f"user_data/strategies/{SEARCH}.py"
-SEARCH_JSON = ROOT / f"user_data/strategies/{SEARCH}.json"
-LONG_DIR = ROOT / "user_data/strategies/Efuturelong"
+SEARCH_PY = ROOT / f"user_data/strategies/efuture-long-kelvin/{SEARCH}.py"
+SEARCH_JSON = ROOT / f"user_data/strategies/efuture-long-kelvin/{SEARCH}.json"
+LONG_DIR = ROOT / "user_data/strategies/efuture-long-kelvin"
 TRAIN = "20240801-20251130"  # leave recent 6 months as holdout
 HOLDOUTS = [
     ("20251201", "20260131"),
