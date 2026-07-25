@@ -1,0 +1,55 @@
+{
+  "strategy_name": "EfutureLongKelvin_v12_2x",
+  "params": {
+    "trailing": {
+      "trailing_stop": false,
+      "trailing_stop_positive": null,
+      "trailing_stop_positive_offset": 0.0,
+      "trailing_only_offset_is_reached": false
+    },
+    "max_open_trades": {
+      "max_open_trades": 3
+    },
+    "buy": {
+      "buy_24h_max_pct": 143.5,
+      "buy_24h_min_pct": -16.7,
+      "buy_adx": 25,
+      "buy_atr_ratio": 0.024,
+      "buy_atr_sma_period": 31,
+      "buy_cti": -0.6699999999999999,
+      "buy_rsi": 49,
+      "buy_rsi_fast": 49,
+      "buy_sma15_ratio": 0.977,
+      "buy_tf_adx": 41,
+      "buy_tf_rsi_max": 58,
+      "buy_tf_rsi_min": 47,
+      "buy_trend_strength": 24,
+      "buy_volume_sma": 1.17
+    },
+    "sell": {
+      "csl_init_ratio": 3.0,
+      "csl_late_ratio": 0.8,
+      "csl_mid_ratio": 2.3,
+      "exit_adx_filter": 30,
+      "exit_volatility_filter": 1.4,
+      "sell_bb_middle_profit": 0.029,
+      "sell_fastx": 82,
+      "sell_macd_profit": 0.064,
+      "sell_trend_filter": 7,
+      "time_exit_1_hours": 11,
+      "time_exit_1_threshold": -0.067,
+      "time_exit_2_hours": 14,
+      "time_exit_2_threshold": -0.142,
+      "trail_tier1_distance": 0.038,
+      "trail_tier1_profit": 0.078,
+      "trail_tier2_distance": 0.009000000000000001,
+      "trail_tier2_profit": 0.128,
+      "trail_tier3_distance": 0.017,
+      "trail_tier3_profit": 0.212
+    },
+    "stoploss": {
+      "stoploss": -0.287
+    }
+  },
+  "ft_stratparam_v": 1
+}

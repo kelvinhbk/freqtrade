@@ -1,0 +1,71 @@
+{
+  "strategy_name": "AutoResearch_iter0002_E0010_E0014_E0006",
+  "params": {
+    "stoploss": {
+      "stoploss": -0.1
+    },
+    "trailing": {
+      "trailing_stop": false,
+      "trailing_stop_positive": null,
+      "trailing_stop_positive_offset": 0.0,
+      "trailing_only_offset_is_reached": false
+    },
+    "max_open_trades": {
+      "max_open_trades": 6
+    },
+    "sell": {
+      "csl_late": -0.058,
+      "csl_mid_ratio": 1.0,
+      "sell_bb_middle_profit": 0.015,
+      "sell_fastx": 55,
+      "sell_macd_profit": 0.02,
+      "sell_trend_filter": 10,
+      "time_exit_1_hours": 7,
+      "time_exit_1_threshold": -0.05,
+      "time_exit_2_hours": 10,
+      "time_exit_2_threshold": -0.1
+    },
+    "buy": {
+      "buy_24h_max_pct": 25.3,
+      "buy_24h_min_pct": -29.8,
+      "buy_adx": 37,
+      "buy_bb_adx": 20,
+      "buy_bb_rsi": 36,
+      "buy_bb_volume": 0.63,
+      "buy_bb_width_max": 0.152,
+      "buy_bb_width_min": 0.049,
+      "buy_cti": -0.42,
+      "buy_rsi": 27,
+      "buy_rsi_fast": 50,
+      "buy_sma15_ratio": 0.992,
+      "buy_tf_adx": 43,
+      "buy_tf_rsi_max": 63,
+      "buy_tf_rsi_min": 38,
+      "buy_volume_sma": 1.5,
+      "short_24h_max_pct": 14.0,
+      "short_24h_min_pct": -8.2,
+      "short_adx": 29,
+      "short_bb_adx": 23,
+      "short_bb_rsi": 76,
+      "short_bb_volume": 1.24,
+      "short_bb_width_max": 0.17,
+      "short_bb_width_min": 0.077,
+      "short_cti": 0.64,
+      "short_rsi": 62,
+      "short_rsi_fast": 49,
+      "short_sma15_ratio": 1.074,
+      "short_tf_adx": 31,
+      "short_tf_rsi_max": 52,
+      "short_tf_rsi_min": 43,
+      "short_volume_sma": 1.48
+    },
+    "roi": {
+      "0": 0.192,
+      "10": 0.073,
+      "63": 0.016,
+      "168": 0
+    }
+  },
+  "ft_stratparam_v": 1,
+  "export_time": "2026-05-16 09:55:36.995316+00:00"
+}

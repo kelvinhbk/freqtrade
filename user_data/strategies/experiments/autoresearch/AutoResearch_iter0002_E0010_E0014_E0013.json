@@ -1,0 +1,45 @@
+{
+  "strategy_name": "AutoResearch_iter0002_E0010_E0014_E0013",
+  "params": {
+    "stoploss": {
+      "stoploss": -0.1
+    },
+    "trailing": {
+      "trailing_stop": false,
+      "trailing_stop_positive": null,
+      "trailing_stop_positive_offset": 0.0,
+      "trailing_only_offset_is_reached": false
+    },
+    "max_open_trades": {
+      "max_open_trades": 6
+    },
+    "sell": {
+      "csl_late": -0.058,
+      "csl_mid_ratio": 1.0,
+      "sell_macd_profit": 0.02,
+      "sell_trend_filter": 10
+    },
+    "buy": {
+      "buy_atr_ratio": 0.009,
+      "buy_atr_sma_period": 40,
+      "buy_tf_adx": 41,
+      "buy_tf_momentum": 0.82,
+      "buy_tf_rsi_max": 66,
+      "buy_tf_rsi_min": 42,
+      "buy_tf_volume": 1.87,
+      "short_tf_adx": 32,
+      "short_tf_momentum": 0.92,
+      "short_tf_rsi_max": 56,
+      "short_tf_rsi_min": 45,
+      "short_tf_volume": 1.56
+    },
+    "roi": {
+      "0": 0.112,
+      "24": 0.08,
+      "84": 0.036,
+      "115": 0
+    }
+  },
+  "ft_stratparam_v": 1,
+  "export_time": "2026-05-16 12:13:59.662161+00:00"
+}

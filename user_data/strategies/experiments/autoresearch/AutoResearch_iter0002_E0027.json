@@ -1,0 +1,51 @@
+{
+  "strategy_name": "AutoResearch_iter0002_E0027",
+  "params": {
+    "stoploss": {
+      "stoploss": -0.1
+    },
+    "trailing": {
+      "trailing_stop": false,
+      "trailing_stop_positive": null,
+      "trailing_stop_positive_offset": 0.0,
+      "trailing_only_offset_is_reached": false
+    },
+    "max_open_trades": {
+      "max_open_trades": 6
+    },
+    "sell": {
+      "csl_late": -0.058,
+      "csl_mid_ratio": 1.0,
+      "sell_fastx": 55,
+      "sell_trend_filter": 10
+    },
+    "buy": {
+      "buy_24h_max_pct": 165.3,
+      "buy_24h_min_pct": -22.0,
+      "buy_adx": 34,
+      "buy_cti": 0.34,
+      "buy_mom": 19,
+      "buy_rsi": 35,
+      "buy_rsi_fast": 70,
+      "buy_sma15_ratio": 0.952,
+      "buy_volume_sma": 1.3,
+      "short_24h_max_pct": 29.7,
+      "short_24h_min_pct": -183.5,
+      "short_adx": 34,
+      "short_cti": 0.64,
+      "short_mom": 17,
+      "short_rsi": 54,
+      "short_rsi_fast": 36,
+      "short_sma15_ratio": 1.009,
+      "short_volume_sma": 0.83
+    },
+    "roi": {
+      "0": 0.215,
+      "39": 0.093,
+      "76": 0.023,
+      "101": 0
+    }
+  },
+  "ft_stratparam_v": 1,
+  "export_time": "2026-05-15 10:14:08.999106+00:00"
+}

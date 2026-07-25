@@ -1,0 +1,143 @@
+{
+    "$schema": "https://schema.freqtrade.io/schema.json",
+    "trading_mode": "futures",
+    "margin_mode": "isolated",
+    "max_open_trades": 3,
+    "stake_currency": "USDT",
+    "stake_amount": 200,
+    "tradable_balance_ratio": 1,
+    "fiat_display_currency": "USD",
+    "dry_run": true,
+    "timeframe": "15m",
+    "dry_run_wallet": 5000,
+    "cancel_open_orders_on_exit": true,
+    "unfilledtimeout": {
+        "entry": 10,
+        "exit": 30
+    },
+    "exchange": {
+        "name": "binance",
+        "key": "REDACTED",
+        "secret": "REDACTED",
+        "ccxt_config": {
+            "options": {
+                "defaultType": "swap"
+            },
+            "urls": {
+                "api": {
+                    "public": "https://fapi.binance.com/fapi/v1",
+                    "private": "https://fapi.binance.com/fapi/v1"
+                }
+            }
+        },
+        "ccxt_async_config": {
+            "options": {
+                "defaultType": "swap"
+            },
+            "proxies": {
+                "http": "http://127.0.0.1:1082",
+                "https": "http://127.0.0.1:1082"
+            },
+            "aiohttp_proxy": "http://127.0.0.1:1082"
+        },
+        "pair_whitelist": [
+            "BTC/USDT:USDT",
+            "ETH/USDT:USDT"
+        ],
+        "pair_blacklist": []
+    },
+    "entry_pricing": {
+        "price_side": "same",
+        "use_order_book": true,
+        "order_book_top": 1,
+        "price_last_balance": 0.0,
+        "check_depth_of_market": {
+            "enabled": false,
+            "bids_to_ask_delta": 1
+        }
+    },
+    "exit_pricing": {
+        "price_side": "other",
+        "use_order_book": true,
+        "order_book_top": 1
+    },
+    "pairlists": [
+        {
+            "method": "StaticPairList"
+        }
+    ],
+    "freqaimodel": "LightGBMRegressor",
+    "freqai": {
+        "enabled": true,
+        "purge_old_models": 2,
+        "train_period_days": 30,
+        "backtest_period_days": 7,
+        "live_retrain_hours": 24,
+        "identifier": "freqai-15m-v6",
+        "save_backtest_models": true,
+        "feature_parameters": {
+            "include_timeframes": [
+                "15m",
+                "1h",
+                "4h"
+            ],
+            "include_corr_pairlist": [
+                "BTC/USDT:USDT",
+                "ETH/USDT:USDT"
+            ],
+            "label_period_candles": 20,
+            "include_shifted_candles": 2,
+            "DI_threshold": 0.5,
+            "weight_factor": 0.9,
+            "principal_component_analysis": false,
+            "use_SVM_to_remove_outliers": true,
+            "indicator_periods_candles": [
+                10,
+                20
+            ],
+            "plot_feature_importances": 0,
+            "noise_standard_deviation": 0
+        },
+        "data_split_parameters": {
+            "test_size": 0.25,
+            "random_state": 42
+        },
+        "model_training_parameters": {
+            "n_estimators": 1000,
+            "learning_rate": 0.02,
+            "max_depth": 6,
+            "num_leaves": 63,
+            "min_child_samples": 15,
+            "reg_alpha": 0.15,
+            "reg_lambda": 0.15,
+            "colsample_bytree": 0.8,
+            "subsample": 0.8,
+            "subsample_freq": 1,
+            "n_jobs": 8,
+            "verbosity": -1
+        }
+    },
+    "bot_name": "freqai-v6",
+    "force_entry_enable": true,
+    "initial_state": "running",
+    "internals": {
+        "process_throttle_secs": 5
+    },
+    "api_server": {
+        "enabled": true,
+        "listen_ip_address": "0.0.0.0",
+        "listen_port": 8082,
+        "verbosity": "error",
+        "enable_openapi": false,
+        "jwt_secret_key": "freqai-v6-dryrun-local",
+        "CORS_origins": [
+            "http://localhost:8082"
+        ],
+        "username": "freqtrade",
+        "password": "REDACTED"
+    },
+    "ui_version": "latest",
+    "config_files": [
+        "user_data/freaiStr/config_freqai_v6.json"
+    ]
+}

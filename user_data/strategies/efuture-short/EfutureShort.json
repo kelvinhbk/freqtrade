@@ -1,0 +1,53 @@
+{
+  "strategy_name": "EfutureShort",
+  "params": {
+    "roi": {
+      "0": 0.15,
+      "30": 0.08,
+      "60": 0.05,
+      "120": 0.03
+    },
+    "stoploss": {
+      "stoploss": -0.1
+    },
+    "trailing": {
+      "trailing_stop": false,
+      "trailing_stop_positive": null,
+      "trailing_stop_positive_offset": 0.0,
+      "trailing_only_offset_is_reached": false
+    },
+    "max_open_trades": {
+      "max_open_trades": 3
+    },
+    "buy": {
+      "short_24h_max_pct": 8.5,
+      "short_24h_min_pct": -190.2,
+      "short_adx": 25,
+      "short_cti": -0.93,
+      "short_rsi": 84,
+      "short_rsi_fast": 80,
+      "short_sma15_ratio": 1.03,
+      "short_tf_adx": 39,
+      "short_tf_rsi_max": 64,
+      "short_tf_rsi_min": 43,
+      "short_trend_strength": 22,
+      "short_volume_sma": 1.49
+    },
+    "sell": {
+      "csl_late": -0.036,
+      "csl_mid_ratio": 2.1,
+      "exit_adx_filter": 25,
+      "exit_volatility_filter": 1.6,
+      "sell_bb_middle_profit": 0.005,
+      "sell_fastx": 57,
+      "sell_macd_profit": 0.061,
+      "sell_trend_filter": 13,
+      "time_exit_1_hours": 12,
+      "time_exit_1_threshold": -0.05,
+      "time_exit_2_hours": 13,
+      "time_exit_2_threshold": -0.074
+    }
+  },
+  "ft_stratparam_v": 1,
+  "export_time": "2026-06-04 05:08:55.108474+00:00"
+}

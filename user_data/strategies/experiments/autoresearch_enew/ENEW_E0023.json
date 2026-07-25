@@ -1,0 +1,43 @@
+{
+  "strategy_name": "ENEW_E0023",
+  "params": {
+    "trailing": {
+      "trailing_stop": false,
+      "trailing_stop_positive": null,
+      "trailing_stop_positive_offset": 0.0,
+      "trailing_only_offset_is_reached": false
+    },
+    "max_open_trades": {
+      "max_open_trades": 5
+    },
+    "buy": {
+      "buy_24h_max_pct": 25.6,
+      "buy_24h_min_pct": -14.8,
+      "buy_cti": -0.1,
+      "buy_ema_period": 94,
+      "buy_rsi": 32,
+      "buy_rsi_fast": 68,
+      "buy_sma15_ratio": 0.98,
+      "buy_trend_above": false,
+      "buy_volume_ratio": 0.7
+    },
+    "sell": {
+      "csl_late": -0.053,
+      "csl_mid_ratio": 1.1,
+      "sell_fastx": 90,
+      "sell_rsi": 50,
+      "sell_use_trend_exit": true
+    },
+    "roi": {
+      "0": 0.074,
+      "17": 0.035,
+      "47": 0.012,
+      "115": 0
+    },
+    "stoploss": {
+      "stoploss": -0.343
+    }
+  },
+  "ft_stratparam_v": 1,
+  "export_time": "2026-05-21 17:07:21.042438+00:00"
+}

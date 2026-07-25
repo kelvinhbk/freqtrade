@@ -1,0 +1,66 @@
+{
+  "strategy_name": "EfutureLong_v2",
+  "params": {
+    "roi": {
+      "0": 0.137,
+      "20": 0.097,
+      "57": 0.034,
+      "169": 0
+    },
+    "stoploss": {
+      "stoploss": -0.133
+    },
+    "trailing": {
+      "trailing_stop": false,
+      "trailing_stop_positive": null,
+      "trailing_stop_positive_offset": 0.0,
+      "trailing_only_offset_is_reached": false
+    },
+    "max_open_trades": {
+      "max_open_trades": 3
+    },
+    "sell": {
+      "csl_late": -0.064,
+      "csl_mid_ratio": 3.2,
+      "csl_profit_level_1": -0.026,
+      "csl_profit_level_2": 0.001,
+      "csl_profit_trigger_1": 0.034,
+      "csl_profit_trigger_2": 0.049,
+      "exit_adx_filter": 26,
+      "exit_volatility_filter": 1.6,
+      "sell_bb_middle_profit": 0.045,
+      "sell_fastx": 59,
+      "sell_macd_profit": 0.071,
+      "sell_trend_filter": 8,
+      "time_exit_1_hours": 6,
+      "time_exit_1_threshold": -0.035,
+      "time_exit_2_hours": 9,
+      "time_exit_2_threshold": -0.077
+    },
+    "protection": {
+      "protection_cooldown": 26,
+      "protection_maxdrawdown_lookback": 96,
+      "protection_maxdrawdown_threshold": 0.16,
+      "protection_stopguard_lookback": 77,
+      "protection_stopguard_trade_limit": 3
+    },
+    "buy": {
+      "buy_24h_max_pct": 184.5,
+      "buy_24h_min_pct": -9.6,
+      "buy_adx": 38,
+      "buy_atr_ratio": 0.027,
+      "buy_atr_sma_period": 46,
+      "buy_cti": 0.04,
+      "buy_rsi": 32,
+      "buy_rsi_fast": 43,
+      "buy_sma15_ratio": 0.974,
+      "buy_tf_adx": 36,
+      "buy_tf_rsi_max": 67,
+      "buy_tf_rsi_min": 40,
+      "buy_trend_strength": 32,
+      "buy_volume_sma": 1.03
+    }
+  },
+  "ft_stratparam_v": 1,
+  "export_time": "2026-06-13 03:23:18.011416+00:00"
+}
