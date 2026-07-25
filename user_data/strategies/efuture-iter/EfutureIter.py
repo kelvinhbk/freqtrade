@@ -318,12 +318,7 @@ class EfutureIter(IStrategy):
             desired_pct = max(self.csl_late.value, atr_pct)
 
         leverage_val = trade.leverage or 1.0
-        if trade.is_short:
-            desired_stop_price = trade.open_rate * (1 - desired_pct)
-            return leverage_val * (1 - desired_stop_price / current_rate)
-        else:
-            desired_stop_price = trade.open_rate * (1 + desired_pct)
-            return leverage_val * (desired_stop_price / current_rate - 1)
+        return leverage_val * desired_pct
 
     def custom_exit(
         self,
