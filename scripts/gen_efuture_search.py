@@ -11,7 +11,7 @@ import json
 import re
 from pathlib import Path
 
-STRAT_DIR = Path("user_data/strategies")
+STRAT_DIR = Path("user_data/strategies/efuture-long-kelvin")
 SRC = STRAT_DIR / "EfutureLongKelvin.py"
 V1_JSON = STRAT_DIR / "EfutureLongKelvin_v1.json"
 OUT = STRAT_DIR / "EfutureLongKelvin_search.py"
