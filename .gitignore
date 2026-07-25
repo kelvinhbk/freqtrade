@@ -23,6 +23,16 @@ user_data/*
 user_data/configs/secrets.local.json
 user_data/autoresearch/.env
 
+# 归档备份中含明文密钥的历史配置（T7 归档时剔除，待密钥轮换后再决定是否入库）
+user_data/archive/backup/config.json
+user_data/archive/backup/config_base.json
+user_data/archive/backup/config_enew.json
+user_data/archive/backup/config_enew_live copy.json
+user_data/archive/backup/config_enew_live.json
+user_data/archive/backup/config_freqai_v5.json
+user_data/archive/backup/config_freqai_v6.json
+user_data/archive/backup/config_macd_v4_live.json
+
 # 产物与数据忽略（即使在被豁免目录内）
 user_data/autoresearch/results/
 user_data/autoresearch/**/*.log

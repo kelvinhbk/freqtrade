@@ -1,0 +1,31 @@
+{
+  "strategy_name": "FreqaiExampleStrategy",
+  "params": {
+    "trailing": {
+      "trailing_stop": false,
+      "trailing_stop_positive": null,
+      "trailing_stop_positive_offset": 0.0,
+      "trailing_only_offset_is_reached": false
+    },
+    "max_open_trades": {
+      "max_open_trades": 5
+    },
+    "buy": {
+      "buy_threshold": -0.002
+    },
+    "sell": {
+      "sell_threshold": 0.006
+    },
+    "roi": {
+      "0": 0.181,
+      "87": 0.056,
+      "220": 0.017,
+      "315": 0
+    },
+    "stoploss": {
+      "stoploss": -0.331
+    }
+  },
+  "ft_stratparam_v": 1,
+  "export_time": "2026-04-26 15:04:18.346061+00:00"
+}

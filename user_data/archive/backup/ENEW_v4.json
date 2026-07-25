@@ -1,0 +1,40 @@
+{
+  "strategy_name": "ENEW_v4",
+  "params": {
+    "roi": {
+      "0": 0.15,
+      "30": 0.08,
+      "60": 0.05,
+      "120": 0.03
+    },
+    "stoploss": {
+      "stoploss": -0.1
+    },
+    "trailing": {
+      "trailing_stop": false,
+      "trailing_stop_positive": null,
+      "trailing_stop_positive_offset": 0.0,
+      "trailing_only_offset_is_reached": false
+    },
+    "max_open_trades": {
+      "max_open_trades": 5
+    },
+    "buy": {
+      "buy_24h_max_pct": 58.4,
+      "buy_24h_min_pct": -13.4,
+      "buy_cti": -0.51,
+      "buy_rsi": 18,
+      "buy_rsi_fast": 21,
+      "buy_sma15_ratio": 0.977
+    },
+    "sell": {
+      "csl_late": -0.047,
+      "csl_mid_ratio": 1.2,
+      "profit_guard_threshold": 0.05,
+      "sell_fastx": 91,
+      "trailing_guard_value": -0.001
+    }
+  },
+  "ft_stratparam_v": 1,
+  "export_time": "2026-05-06 06:45:29.863991+00:00"
+}
