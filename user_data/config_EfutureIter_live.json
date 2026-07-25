@@ -116,8 +116,8 @@
         "listen_ip_address": "0.0.0.0",
         "listen_port": 8080,
         "verbosity": "info",
-        "jwt_secret_key": "834a4c7416e249133fe51e1094f5f14bbfad1be8dccfdec2e0d8dd9abcf14d0e",
-        "ws_token": "-IucSLXiC3s3oROKszJhavR5kRfw0JT0sw",
+        "jwt_secret_key": "",
+        "ws_token": "",
         "CORS_origins": [],
         "username": "",
         "password": ""
