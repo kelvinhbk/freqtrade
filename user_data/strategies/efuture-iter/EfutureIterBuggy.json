@@ -1,15 +1,6 @@
 {
-  "strategy_name": "EfutureIterCslOpt",
+  "strategy_name": "EfutureIterBuggy",
   "params": {
-    "roi": {
-      "0": 0.227,
-      "13": 0.07,
-      "67": 0.014,
-      "133": 0
-    },
-    "stoploss": {
-      "stoploss": -0.19
-    },
     "trailing": {
       "trailing_stop": false,
       "trailing_stop_positive": null,
@@ -17,7 +8,7 @@
       "trailing_only_offset_is_reached": false
     },
     "max_open_trades": {
-      "max_open_trades": 5
+      "max_open_trades": 3
     },
     "buy": {
       "buy_24h_max_pct": 71.5,
@@ -48,6 +39,8 @@
       "short_volume_sma": 1.27
     },
     "sell": {
+      "csl_late": -0.046,
+      "csl_mid_ratio": 1.1,
       "exit_adx_filter": 33,
       "exit_volatility_filter": 1.7,
       "sell_bb_middle_profit": 0.029,
@@ -57,11 +50,18 @@
       "time_exit_1_hours": 5,
       "time_exit_1_threshold": -0.04,
       "time_exit_2_hours": 11,
-      "time_exit_2_threshold": -0.15,
-      "csl_late": -0.059,
-      "csl_mid_ratio": 2.1
+      "time_exit_2_threshold": -0.15
+    },
+    "roi": {
+      "0": 0.227,
+      "13": 0.07,
+      "67": 0.014,
+      "133": 0
+    },
+    "stoploss": {
+      "stoploss": -0.19
     }
   },
   "ft_stratparam_v": 1,
-  "export_time": "2026-07-25 15:44:25.827218+00:00"
+  "export_time": "2026-05-31 22:47:46.999494+00:00"
 }
