@@ -39,6 +39,7 @@ user_data/
 │   │   ├── EfutureIter.json
 │   │   └── LINEAGE.md
 │   ├── efuture-long-kelvin/     # 现 strategies/Efuturelong/
+│   ├── efuture-long/            # EfutureLong 非 Kelvin 系列（v1/v2/v4），单独成线
 │   ├── efuture-short/
 │   ├── enew/
 │   ├── freqai-v6/               # 现 freaiStr/
@@ -64,10 +65,12 @@ user_data/
 2. git 即历史：不保留 `v11_backup.py` 类文件；`_loop_state.json`、optimization_report 随代码提交
 3. 每条策略线目录下放 `LINEAGE.md`，三列表格：版本 | 来源（父版本/实验号）| OOS 结果一句话
 4. autoresearch 晋级规则：实验产物被采纳时才复制进策略线目录并改名升代；原实验目录保留在 experiments/ 或 autoresearch/results/ 下
+5. TopStr/ 的处理（2026-07-25 核实结论）：其内容 `AutoResearch_iter0002_E0010_E0014_E0033` 与 `before_live_bot/Efuture_260520` 部署快照逐字节相同，且是当前实盘 `EfutureIter` 的直接祖先（改名后代）。TopStr 不作为独立策略线保留——E0033 的 .py/.json 与 `E0033_审查报告.md` 移入 `strategies/efuture-iter/` 作为 LINEAGE.md 的谱系起点记录，TopStr/ 目录撤销
+6. **已知未修复缺陷（超出本次整理范围，需单独任务）**：E0033 审查报告（2026-05-25）指出的 `custom_stoploss` 公式错误（30-240 分钟阶段实际止损约 -0.83% 而非设计的 -1.65%）原样存在于实盘 `EfutureIter.py:322-326`。是否修复、何时修复由用户决策
 
 ## config 分类规则
 
-1. 环境 × 策略线 = 最多一个"当前" config。EfutureIter 的 4 个 live 变体由用户裁定真身，其余删除或转正
+1. 环境 × 策略线 = 最多一个"当前" config。EfutureIter 的 live 真身已确认为 `config_EfutureIter_live.json`（用户裁定 2026-07-25），其余 3 个变体（`_live_opt`/`_live_opt_noproxy`/`_kelvin`）核对差异后删除
 2. proxy 等环境差异移到 shell 环境变量，不复制整个 config
 3. config 内路径保持相对
 4. `live/` 修改单独 commit；加 pre-commit 检查：`live/*.json` 必须 `dry_run=false`，`dryrun/` 必须 `dry_run=true`
@@ -91,7 +94,7 @@ user_data/
 
 1. hyperopt_results 195G：先用脚本把每轮 top-5 参数导出为小 json 存 `archive/params-archive/`，然后每条线只保留最新一轮，其余删除
 2. autoresearch/results 32G：实验超 30 天无迭代 → 导出摘要 → 删原始产物；活跃实验不动
-3. 删除空壳 `strategies/autoresearch_efuture_short`；diff 后合并 `autoresearch0515-1/2`；backup/ 与 git 历史核对后清理
+3. 删除空壳 `strategies/autoresearch_efuture_short`；`autoresearch0515-1/2` 已确认完全相同（2026-07-25 diff 验证），删 0515-2；backup/ 与 git 历史核对后清理
 4. 新增 `scripts/clean_experiment.py`：实验结束时自动导出摘要 + 提示可删路径，使清理成为流程一部分
 
 总原则：git 存"结论"，磁盘只留"还会再用的证据"；回测/hyperopt 产物是数据和代码的函数，可重算，不囤积。
