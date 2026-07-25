@@ -88,7 +88,7 @@ ENEW 使用独立配置和输出目录，避免候选策略污染主策略目录
 | 项目 | 值 |
 |------|----|
 | 策略 | `user_data/strategies/ENEW.py` |
-| Freqtrade 配置 | `user_data/config_enew_backtest.json` |
+| Freqtrade 配置 | `user_data/config_enew_backtest.json`（**当前缺失**，运行 ENEW 线前必须自备 base config，路径可在 evolution_config 的 `base_config_path` 中调整） |
 | 进化配置 | `user_data/autoresearch/evolution_config_enew.json` |
 | 输出目录 | `user_data/strategies/autoresearch_enew/` |
 | 结果文件 | `user_data/autoresearch/results/enew_live_score_v2_experiments.jsonl` |
@@ -102,6 +102,8 @@ ENEW 使用独立配置和输出目录，避免候选策略污染主策略目录
 ### 先跑 Smoke 验证
 
 Smoke 配置只跑 1 次迭代、30 epochs，用来验证 LLM、策略写入、Hyperopt、IS/OOS、walk-forward、JSONL 记录是否完整跑通。
+
+注意：下列命令中的 `--freqtrade-config user_data/config_enew_backtest.json` 所指文件当前缺失，运行前必须自备 base config。
 
 ```bash
 cd /Users/kelvin/projects/freqtrade
@@ -123,7 +125,7 @@ Smoke 说明：候选策略质量不重要，重点是确认链路已跑通。�
 
 ### 启动正式 ENEW 进化
 
-推荐用 `tmux` 保活长任务，并同时写入日志：
+推荐用 `tmux` 保活长任务，并同时写入日志（注意：命令中的 `user_data/config_enew_backtest.json` 当前缺失，运行前必须自备 base config）：
 
 ```bash
 cd /Users/kelvin/projects/freqtrade
@@ -267,6 +269,8 @@ user_data/autoresearch/results/enew_experiments.jsonl
   "out_of_sample_timerange": "20260201-20260501"
 }
 ```
+
+注意：示例中的 `base_config_path`（`user_data/config_enew_backtest.json`）所指文件当前缺失，运行 ENEW 线前必须自备 base config。
 
 ### 配置字段说明
 
