@@ -17,8 +17,8 @@
     },
     "exchange": {
         "name": "binance",
-        "key": "REDACTED",
-        "secret": "REDACTED",
+        "key": "",
+        "secret": "",
         "ccxt_config": {
             "options": {
                 "defaultType": "swap"
@@ -67,6 +67,7 @@
         }
     ],
     "freqaimodel": "LightGBMRegressor",
+    "strategy_path": "user_data/strategies/freqai-v6",
     "freqai": {
         "enabled": true,
         "purge_old_models": 2,
@@ -129,15 +130,15 @@
         "listen_port": 8082,
         "verbosity": "error",
         "enable_openapi": false,
-        "jwt_secret_key": "freqai-v6-dryrun-local",
+        "jwt_secret_key": "",
         "CORS_origins": [
             "http://localhost:8082"
         ],
-        "username": "freqtrade",
-        "password": "REDACTED"
+        "username": "",
+        "password": ""
     },
     "ui_version": "latest",
     "config_files": [
-        "user_data/freaiStr/config_freqai_v6.json"
+        "user_data/configs/backtest/FreqaiV6.json"
     ]
 }

@@ -125,6 +125,7 @@
     "bot_name": "EfutureIterKelvin",
     "initial_state": "running",
     "force_entry_enable": false,
+    "strategy_path": "user_data/strategies/efuture-iter",
     "recursive_strategy_search": true,
     "internals": {
         "process_throttle_secs": 5
