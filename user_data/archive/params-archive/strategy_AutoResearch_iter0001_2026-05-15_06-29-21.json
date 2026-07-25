@@ -1,0 +1,131 @@
+{
+  "source_file": "strategy_AutoResearch_iter0001_2026-05-15_06-29-21.fthypt",
+  "total_epochs": 80,
+  "top": [
+    {
+      "loss": -0.5524478454839755,
+      "params": {
+        "buy_24h_max_pct": 74.9,
+        "buy_24h_min_pct": -0.7999999999999972,
+        "buy_cti": -0.25,
+        "buy_rsi": 34,
+        "buy_rsi_fast": 51,
+        "buy_sma15_ratio": 0.99,
+        "buy_trend_filter": 36,
+        "short_24h_max_pct": 19.3,
+        "short_24h_min_pct": -40.29999999999998,
+        "short_cti": 0.6300000000000001,
+        "short_rsi": 85,
+        "short_rsi_fast": 71,
+        "short_sma15_ratio": 1.074,
+        "short_trend_filter": 49,
+        "roi_t1": 35,
+        "roi_t2": 14,
+        "roi_t3": 12,
+        "roi_p1": 0.036000000000000004,
+        "roi_p2": 0.028999999999999998,
+        "roi_p3": 0.088
+      }
+    },
+    {
+      "loss": -0.13674146200262796,
+      "params": {
+        "buy_24h_max_pct": 45.7,
+        "buy_24h_min_pct": -0.7999999999999972,
+        "buy_cti": -0.25,
+        "buy_rsi": 34,
+        "buy_rsi_fast": 51,
+        "buy_sma15_ratio": 0.99,
+        "buy_trend_filter": 36,
+        "short_24h_max_pct": 19.3,
+        "short_24h_min_pct": -40.29999999999998,
+        "short_cti": 0.6300000000000001,
+        "short_rsi": 82,
+        "short_rsi_fast": 64,
+        "short_sma15_ratio": 1.044,
+        "short_trend_filter": 28,
+        "roi_t1": 35,
+        "roi_t2": 14,
+        "roi_t3": 16,
+        "roi_p1": 0.036000000000000004,
+        "roi_p2": 0.028999999999999998,
+        "roi_p3": 0.088
+      }
+    },
+    {
+      "loss": -0.12367520224186399,
+      "params": {
+        "buy_24h_max_pct": 74.9,
+        "buy_24h_min_pct": -27.5,
+        "buy_cti": 0.14000000000000012,
+        "buy_rsi": 36,
+        "buy_rsi_fast": 21,
+        "buy_sma15_ratio": 0.985,
+        "buy_trend_filter": 28,
+        "short_24h_max_pct": 1.9000000000000001,
+        "short_24h_min_pct": -59.900000000000006,
+        "short_cti": 0.10000000000000009,
+        "short_rsi": 85,
+        "short_rsi_fast": 71,
+        "short_sma15_ratio": 1.074,
+        "short_trend_filter": 49,
+        "roi_t1": 76,
+        "roi_t2": 44,
+        "roi_t3": 12,
+        "roi_p1": 0.027000000000000003,
+        "roi_p2": 0.05,
+        "roi_p3": 0.102
+      }
+    },
+    {
+      "loss": -0.12289700655994576,
+      "params": {
+        "buy_24h_max_pct": 104.7,
+        "buy_24h_min_pct": -24.4,
+        "buy_cti": 0.17999999999999994,
+        "buy_rsi": 33,
+        "buy_rsi_fast": 58,
+        "buy_sma15_ratio": 0.975,
+        "buy_trend_filter": 33,
+        "short_24h_max_pct": 5.5,
+        "short_24h_min_pct": -13.299999999999983,
+        "short_cti": -0.45999999999999996,
+        "short_rsi": 58,
+        "short_rsi_fast": 67,
+        "short_sma15_ratio": 1.017,
+        "short_trend_filter": 30,
+        "roi_t1": 24,
+        "roi_t2": 10,
+        "roi_t3": 11,
+        "roi_p1": 0.028000000000000004,
+        "roi_p2": 0.031,
+        "roi_p3": 0.037
+      }
+    },
+    {
+      "loss": -0.07537875382371413,
+      "params": {
+        "buy_24h_max_pct": 104.7,
+        "buy_24h_min_pct": -25.3,
+        "buy_cti": 0.17999999999999994,
+        "buy_rsi": 40,
+        "buy_rsi_fast": 58,
+        "buy_sma15_ratio": 0.975,
+        "buy_trend_filter": 33,
+        "short_24h_max_pct": 5.5,
+        "short_24h_min_pct": -13.299999999999983,
+        "short_cti": -0.45999999999999996,
+        "short_rsi": 58,
+        "short_rsi_fast": 67,
+        "short_sma15_ratio": 1.017,
+        "short_trend_filter": 30,
+        "roi_t1": 24,
+        "roi_t2": 10,
+        "roi_t3": 11,
+        "roi_p1": 0.015,
+        "roi_p2": 0.031,
+        "roi_p3": 0.037
+      }
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "source_file": "strategy_ENEW_2026-04-18_12-58-12.fthypt",
+  "total_epochs": 500,
+  "top": [
+    {
+      "loss": -2.4423409985736346,
+      "params": {
+        "csl_initial": -0.086,
+        "csl_late": -0.068,
+        "csl_mid_ratio": 2.8,
+        "sell_fastx": 92,
+        "trailing_stop": true,
+        "trailing_stop_positive": 0.166,
+        "trailing_stop_positive_offset_p1": 0.074,
+        "trailing_only_offset_is_reached": false
+      }
+    },
+    {
+      "loss": -2.4423409985736346,
+      "params": {
+        "csl_initial": -0.086,
+        "csl_late": -0.020000000000000004,
+        "csl_mid_ratio": 2.8,
+        "sell_fastx": 92,
+        "trailing_stop": true,
+        "trailing_stop_positive": 0.166,
+        "trailing_stop_positive_offset_p1": 0.047,
+        "trailing_only_offset_is_reached": true
+      }
+    },
+    {
+      "loss": -2.4423409985736346,
+      "params": {
+        "csl_initial": -0.086,
+        "csl_late": -0.068,
+        "csl_mid_ratio": 2.8,
+        "sell_fastx": 92,
+        "trailing_stop": true,
+        "trailing_stop_positive": 0.304,
+        "trailing_stop_positive_offset_p1": 0.047,
+        "trailing_only_offset_is_reached": false
+      }
+    },
+    {
+      "loss": -2.4423409985736346,
+      "params": {
+        "csl_initial": -0.086,
+        "csl_late": -0.035,
+        "csl_mid_ratio": 2.8,
+        "sell_fastx": 92,
+        "trailing_stop": true,
+        "trailing_stop_positive": 0.21800000000000003,
+        "trailing_stop_positive_offset_p1": 0.074,
+        "trailing_only_offset_is_reached": false
+      }
+    },
+    {
+      "loss": -2.4423409985736346,
+      "params": {
+        "csl_initial": -0.086,
+        "csl_late": -0.068,
+        "csl_mid_ratio": 2.8,
+        "sell_fastx": 92,
+        "trailing_stop": true,
+        "trailing_stop_positive": 0.304,
+        "trailing_stop_positive_offset_p1": 0.074,
+        "trailing_only_offset_is_reached": false
+      }
+    }
+  ]
+}

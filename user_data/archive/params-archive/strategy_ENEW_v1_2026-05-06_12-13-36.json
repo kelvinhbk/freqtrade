@@ -1,0 +1,56 @@
+{
+  "source_file": "strategy_ENEW_v1_2026-05-06_12-13-36.fthypt",
+  "total_epochs": 500,
+  "top": [
+    {
+      "loss": -2.099863688922264,
+      "params": {
+        "csl_late": -0.03,
+        "csl_mid_ratio": 1.7000000000000002,
+        "sell_fastx": 99,
+        "trailing_3pcs_value": -0.002,
+        "trailing_5pcs_value": -0.002
+      }
+    },
+    {
+      "loss": -2.032694946799406,
+      "params": {
+        "csl_late": -0.01,
+        "csl_mid_ratio": 1.7000000000000002,
+        "sell_fastx": 97,
+        "trailing_3pcs_value": -0.002,
+        "trailing_5pcs_value": -0.002
+      }
+    },
+    {
+      "loss": -2.030413654483364,
+      "params": {
+        "csl_late": -0.077,
+        "csl_mid_ratio": 1.7000000000000002,
+        "sell_fastx": 97,
+        "trailing_3pcs_value": -0.002,
+        "trailing_5pcs_value": -0.002
+      }
+    },
+    {
+      "loss": -2.030413654483364,
+      "params": {
+        "csl_late": -0.020000000000000004,
+        "csl_mid_ratio": 1.7000000000000002,
+        "sell_fastx": 97,
+        "trailing_3pcs_value": -0.002,
+        "trailing_5pcs_value": -0.002
+      }
+    },
+    {
+      "loss": -2.030413654483364,
+      "params": {
+        "csl_late": -0.044,
+        "csl_mid_ratio": 1.7000000000000002,
+        "sell_fastx": 97,
+        "trailing_3pcs_value": -0.002,
+        "trailing_5pcs_value": -0.002
+      }
+    }
+  ]
+}

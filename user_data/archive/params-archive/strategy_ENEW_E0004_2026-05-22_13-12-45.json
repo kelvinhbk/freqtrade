@@ -1,0 +1,81 @@
+{
+  "source_file": "strategy_ENEW_E0004_2026-05-22_13-12-45.fthypt",
+  "total_epochs": 500,
+  "top": [
+    {
+      "loss": -1.363377786620091,
+      "params": {
+        "csl_atr_mult": 3.8000000000000003,
+        "csl_profit_breakeven": 0.11,
+        "csl_profit_tighten": 0.04,
+        "sell_fastx": 52,
+        "roi_t1": 11,
+        "roi_t2": 19,
+        "roi_t3": 11,
+        "roi_p1": 0.015,
+        "roi_p2": 0.033,
+        "roi_p3": 0.188
+      }
+    },
+    {
+      "loss": -1.3582494197946409,
+      "params": {
+        "csl_atr_mult": 3.8000000000000003,
+        "csl_profit_breakeven": 0.11,
+        "csl_profit_tighten": 0.04,
+        "sell_fastx": 51,
+        "roi_t1": 11,
+        "roi_t2": 19,
+        "roi_t3": 11,
+        "roi_p1": 0.015,
+        "roi_p2": 0.024,
+        "roi_p3": 0.015
+      }
+    },
+    {
+      "loss": -1.3553986340026245,
+      "params": {
+        "csl_atr_mult": 3.8000000000000003,
+        "csl_profit_breakeven": 0.07,
+        "csl_profit_tighten": 0.09,
+        "sell_fastx": 50,
+        "roi_t1": 11,
+        "roi_t2": 15,
+        "roi_t3": 18,
+        "roi_p1": 0.026000000000000002,
+        "roi_p2": 0.034,
+        "roi_p3": 0.108
+      }
+    },
+    {
+      "loss": -1.3553986340026245,
+      "params": {
+        "csl_atr_mult": 3.8000000000000003,
+        "csl_profit_breakeven": 0.12000000000000001,
+        "csl_profit_tighten": 0.09999999999999999,
+        "sell_fastx": 50,
+        "roi_t1": 11,
+        "roi_t2": 15,
+        "roi_t3": 18,
+        "roi_p1": 0.026000000000000002,
+        "roi_p2": 0.034,
+        "roi_p3": 0.168
+      }
+    },
+    {
+      "loss": -1.3544711272395096,
+      "params": {
+        "csl_atr_mult": 3.8000000000000003,
+        "csl_profit_breakeven": 0.07,
+        "csl_profit_tighten": 0.04,
+        "sell_fastx": 50,
+        "roi_t1": 12,
+        "roi_t2": 15,
+        "roi_t3": 14,
+        "roi_p1": 0.02,
+        "roi_p2": 0.033,
+        "roi_p3": 0.108
+      }
+    }
+  ]
+}

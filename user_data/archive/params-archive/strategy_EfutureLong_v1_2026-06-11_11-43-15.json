@@ -1,0 +1,96 @@
+{
+  "source_file": "strategy_EfutureLong_v1_2026-06-11_11-43-15.fthypt",
+  "total_epochs": 240,
+  "top": [
+    {
+      "loss": -0.27497128837899076,
+      "params": {
+        "csl_late": -0.022,
+        "csl_mid_ratio": 1.0,
+        "exit_adx_filter": 20,
+        "exit_volatility_filter": 1.6,
+        "sell_bb_middle_profit": 0.021,
+        "sell_fastx": 59,
+        "sell_macd_profit": 0.083,
+        "sell_trend_filter": 16,
+        "time_exit_1_hours": 11,
+        "time_exit_1_threshold": -0.037,
+        "time_exit_2_hours": 15,
+        "time_exit_2_threshold": -0.11399999999999999,
+        "stoploss": -0.34199999999999997
+      }
+    },
+    {
+      "loss": -0.2282677459074378,
+      "params": {
+        "csl_late": -0.013999999999999999,
+        "csl_mid_ratio": 1.0,
+        "exit_adx_filter": 33,
+        "exit_volatility_filter": 1.7000000000000002,
+        "sell_bb_middle_profit": 0.02,
+        "sell_fastx": 59,
+        "sell_macd_profit": 0.016,
+        "sell_trend_filter": 13,
+        "time_exit_1_hours": 4,
+        "time_exit_1_threshold": -0.03,
+        "time_exit_2_hours": 15,
+        "time_exit_2_threshold": -0.103,
+        "stoploss": -0.258
+      }
+    },
+    {
+      "loss": -0.2282677459074378,
+      "params": {
+        "csl_late": -0.022,
+        "csl_mid_ratio": 1.0,
+        "exit_adx_filter": 29,
+        "exit_volatility_filter": 1.6,
+        "sell_bb_middle_profit": 0.021,
+        "sell_fastx": 59,
+        "sell_macd_profit": 0.083,
+        "sell_trend_filter": 16,
+        "time_exit_1_hours": 5,
+        "time_exit_1_threshold": -0.037,
+        "time_exit_2_hours": 16,
+        "time_exit_2_threshold": -0.11399999999999999,
+        "stoploss": -0.258
+      }
+    },
+    {
+      "loss": -0.2282677459074378,
+      "params": {
+        "csl_late": -0.013999999999999999,
+        "csl_mid_ratio": 1.0,
+        "exit_adx_filter": 33,
+        "exit_volatility_filter": 1.2000000000000002,
+        "sell_bb_middle_profit": 0.02,
+        "sell_fastx": 59,
+        "sell_macd_profit": 0.013000000000000001,
+        "sell_trend_filter": 16,
+        "time_exit_1_hours": 7,
+        "time_exit_1_threshold": -0.03,
+        "time_exit_2_hours": 16,
+        "time_exit_2_threshold": -0.125,
+        "stoploss": -0.258
+      }
+    },
+    {
+      "loss": -0.2282677459074378,
+      "params": {
+        "csl_late": -0.013999999999999999,
+        "csl_mid_ratio": 1.0,
+        "exit_adx_filter": 29,
+        "exit_volatility_filter": 1.6,
+        "sell_bb_middle_profit": 0.02,
+        "sell_fastx": 59,
+        "sell_macd_profit": 0.016,
+        "sell_trend_filter": 19,
+        "time_exit_1_hours": 4,
+        "time_exit_1_threshold": -0.03,
+        "time_exit_2_hours": 15,
+        "time_exit_2_threshold": -0.103,
+        "stoploss": -0.258
+      }
+    }
+  ]
+}

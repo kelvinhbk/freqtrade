@@ -1,0 +1,101 @@
+{
+  "source_file": "strategy_EfutureLong_v2_2026-06-11_14-30-24.fthypt",
+  "total_epochs": 40,
+  "top": [
+    {
+      "loss": 100.0,
+      "params": {
+        "buy_24h_max_pct": 118.5,
+        "buy_24h_min_pct": -28.7,
+        "buy_adx": 30,
+        "buy_atr_ratio": 0.009000000000000001,
+        "buy_atr_sma_period": 12,
+        "buy_cti": 0.9000000000000001,
+        "buy_rsi": 49,
+        "buy_rsi_fast": 61,
+        "buy_sma15_ratio": 0.93,
+        "buy_tf_adx": 18,
+        "buy_tf_rsi_max": 72,
+        "buy_tf_rsi_min": 41,
+        "buy_trend_strength": 22,
+        "buy_volume_sma": 1.1500000000000001
+      }
+    },
+    {
+      "loss": 100.0,
+      "params": {
+        "buy_24h_max_pct": 6.800000000000001,
+        "buy_24h_min_pct": -2.6999999999999993,
+        "buy_adx": 21,
+        "buy_atr_ratio": 0.022000000000000002,
+        "buy_atr_sma_period": 22,
+        "buy_cti": 0.040000000000000036,
+        "buy_rsi": 34,
+        "buy_rsi_fast": 29,
+        "buy_sma15_ratio": 0.997,
+        "buy_tf_adx": 39,
+        "buy_tf_rsi_max": 79,
+        "buy_tf_rsi_min": 53,
+        "buy_trend_strength": 32,
+        "buy_volume_sma": 1.4500000000000002
+      }
+    },
+    {
+      "loss": 100.0,
+      "params": {
+        "buy_24h_max_pct": 186.0,
+        "buy_24h_min_pct": -5.699999999999999,
+        "buy_adx": 31,
+        "buy_atr_ratio": 0.027,
+        "buy_atr_sma_period": 42,
+        "buy_cti": -0.63,
+        "buy_rsi": 47,
+        "buy_rsi_fast": 47,
+        "buy_sma15_ratio": 0.981,
+        "buy_tf_adx": 42,
+        "buy_tf_rsi_max": 63,
+        "buy_tf_rsi_min": 32,
+        "buy_trend_strength": 24,
+        "buy_volume_sma": 1.1
+      }
+    },
+    {
+      "loss": 100.0,
+      "params": {
+        "buy_24h_max_pct": 62.2,
+        "buy_24h_min_pct": -20.299999999999997,
+        "buy_adx": 33,
+        "buy_atr_ratio": 0.021,
+        "buy_atr_sma_period": 46,
+        "buy_cti": -0.05999999999999994,
+        "buy_rsi": 19,
+        "buy_rsi_fast": 56,
+        "buy_sma15_ratio": 0.976,
+        "buy_tf_adx": 32,
+        "buy_tf_rsi_max": 75,
+        "buy_tf_rsi_min": 42,
+        "buy_trend_strength": 30,
+        "buy_volume_sma": 1.1
+      }
+    },
+    {
+      "loss": 100.0,
+      "params": {
+        "buy_24h_max_pct": 154.5,
+        "buy_24h_min_pct": -24.1,
+        "buy_adx": 15,
+        "buy_atr_ratio": 0.026000000000000002,
+        "buy_atr_sma_period": 38,
+        "buy_cti": 0.45999999999999996,
+        "buy_rsi": 42,
+        "buy_rsi_fast": 23,
+        "buy_sma15_ratio": 0.936,
+        "buy_tf_adx": 18,
+        "buy_tf_rsi_max": 77,
+        "buy_tf_rsi_min": 46,
+        "buy_trend_strength": 26,
+        "buy_volume_sma": 0.8400000000000001
+      }
+    }
+  ]
+}

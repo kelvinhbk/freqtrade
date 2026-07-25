@@ -1,0 +1,111 @@
+{
+  "source_file": "strategy_macd_v4_E0003_2026-05-27_00-57-44.fthypt",
+  "total_epochs": 129,
+  "top": [
+    {
+      "loss": -1.4858594353926928,
+      "params": {
+        "extrema_order": 4,
+        "key_candle_window": 10,
+        "min_cont_strength": 0.6100000000000001,
+        "min_single_strength": 0.131,
+        "stake_base": 0.183,
+        "stake_trend_bonus": 0.121,
+        "atr_sl_mult": 2.279,
+        "tp1_atr_mult": 1.748,
+        "trail_atr_mult": 3.033,
+        "roi_t1": 140,
+        "roi_t2": 37,
+        "roi_t3": 93,
+        "roi_p1": 0.020999999999999998,
+        "roi_p2": 0.09,
+        "roi_p3": 0.246,
+        "stoploss": -0.043999999999999984
+      }
+    },
+    {
+      "loss": -1.377420023758976,
+      "params": {
+        "extrema_order": 4,
+        "key_candle_window": 10,
+        "min_cont_strength": 0.6100000000000001,
+        "min_single_strength": 0.30700000000000005,
+        "stake_base": 0.158,
+        "stake_trend_bonus": 0.013000000000000001,
+        "atr_sl_mult": 2.057,
+        "tp1_atr_mult": 1.427,
+        "trail_atr_mult": 3.9250000000000003,
+        "roi_t1": 140,
+        "roi_t2": 37,
+        "roi_t3": 93,
+        "roi_p1": 0.055,
+        "roi_p2": 0.09,
+        "roi_p3": 0.138,
+        "stoploss": -0.18099999999999997
+      }
+    },
+    {
+      "loss": -1.3594870114925397,
+      "params": {
+        "extrema_order": 4,
+        "key_candle_window": 5,
+        "min_cont_strength": 0.562,
+        "min_single_strength": 0.582,
+        "stake_base": 0.37,
+        "stake_trend_bonus": 0.062,
+        "atr_sl_mult": 1.768,
+        "tp1_atr_mult": 1.328,
+        "trail_atr_mult": 2.761,
+        "roi_t1": 241,
+        "roi_t2": 42,
+        "roi_t3": 41,
+        "roi_p1": 0.026,
+        "roi_p2": 0.103,
+        "roi_p3": 0.06,
+        "stoploss": -0.21499999999999997
+      }
+    },
+    {
+      "loss": -1.3242289001738097,
+      "params": {
+        "extrema_order": 4,
+        "key_candle_window": 9,
+        "min_cont_strength": 0.261,
+        "min_single_strength": 0.5760000000000001,
+        "stake_base": 0.22399999999999998,
+        "stake_trend_bonus": 0.061,
+        "atr_sl_mult": 1.1360000000000001,
+        "tp1_atr_mult": 1.328,
+        "trail_atr_mult": 2.6550000000000002,
+        "roi_t1": 101,
+        "roi_t2": 78,
+        "roi_t3": 120,
+        "roi_p1": 0.043,
+        "roi_p2": 0.028999999999999998,
+        "roi_p3": 0.06,
+        "stoploss": -0.244
+      }
+    },
+    {
+      "loss": -1.317089004923141,
+      "params": {
+        "extrema_order": 4,
+        "key_candle_window": 5,
+        "min_cont_strength": 0.562,
+        "min_single_strength": 0.314,
+        "stake_base": 0.37,
+        "stake_trend_bonus": 0.061,
+        "atr_sl_mult": 1.9020000000000001,
+        "tp1_atr_mult": 1.328,
+        "trail_atr_mult": 2.761,
+        "roi_t1": 241,
+        "roi_t2": 69,
+        "roi_t3": 67,
+        "roi_p1": 0.026,
+        "roi_p2": 0.041,
+        "roi_p3": 0.281,
+        "stoploss": -0.27099999999999996
+      }
+    }
+  ]
+}

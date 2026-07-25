@@ -1,0 +1,71 @@
+{
+  "source_file": "strategy_ENEW_2026-04-17_22-59-02.fthypt",
+  "total_epochs": 500,
+  "top": [
+    {
+      "loss": -1.5182766176340439,
+      "params": {
+        "csl_initial": -0.07899999999999999,
+        "csl_late": -0.062,
+        "csl_mid_ratio": 2.3,
+        "sell_fastx": 62,
+        "trailing_stop": true,
+        "trailing_stop_positive": 0.046000000000000006,
+        "trailing_stop_positive_offset_p1": 0.055,
+        "trailing_only_offset_is_reached": true
+      }
+    },
+    {
+      "loss": -1.4817094713113639,
+      "params": {
+        "csl_initial": -0.07799999999999999,
+        "csl_late": -0.038,
+        "csl_mid_ratio": 2.1,
+        "sell_fastx": 62,
+        "trailing_stop": true,
+        "trailing_stop_positive": 0.231,
+        "trailing_stop_positive_offset_p1": 0.1,
+        "trailing_only_offset_is_reached": false
+      }
+    },
+    {
+      "loss": -1.4817094713113639,
+      "params": {
+        "csl_initial": -0.07799999999999999,
+        "csl_late": -0.038,
+        "csl_mid_ratio": 2.3,
+        "sell_fastx": 62,
+        "trailing_stop": true,
+        "trailing_stop_positive": 0.231,
+        "trailing_stop_positive_offset_p1": 0.037000000000000005,
+        "trailing_only_offset_is_reached": true
+      }
+    },
+    {
+      "loss": -1.4817094713113639,
+      "params": {
+        "csl_initial": -0.07799999999999999,
+        "csl_late": -0.038,
+        "csl_mid_ratio": 2.3,
+        "sell_fastx": 62,
+        "trailing_stop": true,
+        "trailing_stop_positive": 0.231,
+        "trailing_stop_positive_offset_p1": 0.043000000000000003,
+        "trailing_only_offset_is_reached": true
+      }
+    },
+    {
+      "loss": -1.4817094713113639,
+      "params": {
+        "csl_initial": -0.07799999999999999,
+        "csl_late": -0.041,
+        "csl_mid_ratio": 2.0,
+        "sell_fastx": 62,
+        "trailing_stop": true,
+        "trailing_stop_positive": 0.231,
+        "trailing_stop_positive_offset_p1": 0.043000000000000003,
+        "trailing_only_offset_is_reached": true
+      }
+    }
+  ]
+}

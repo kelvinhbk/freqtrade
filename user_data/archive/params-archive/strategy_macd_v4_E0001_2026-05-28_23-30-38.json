@@ -1,0 +1,101 @@
+{
+  "source_file": "strategy_macd_v4_E0001_2026-05-28_23-30-38.fthypt",
+  "total_epochs": 369,
+  "top": [
+    {
+      "loss": 0.22900111742910248,
+      "params": {
+        "atr_sl_mult": 2.214,
+        "max_hold_hours": 10,
+        "stale_hours": 11,
+        "stale_max_profit": 0.006,
+        "stale_min_profit": -0.008,
+        "tp1_atr_mult": 1.798,
+        "trail_atr_mult": 2.871,
+        "roi_t1": 330,
+        "roi_t2": 46,
+        "roi_t3": 104,
+        "roi_p1": 0.047,
+        "roi_p2": 0.043,
+        "roi_p3": 0.20400000000000001,
+        "stoploss": -0.056999999999999995
+      }
+    },
+    {
+      "loss": 0.2656730643226267,
+      "params": {
+        "atr_sl_mult": 2.214,
+        "max_hold_hours": 10,
+        "stale_hours": 11,
+        "stale_max_profit": 0.006,
+        "stale_min_profit": -0.017,
+        "tp1_atr_mult": 1.798,
+        "trail_atr_mult": 2.871,
+        "roi_t1": 265,
+        "roi_t2": 46,
+        "roi_t3": 109,
+        "roi_p1": 0.048,
+        "roi_p2": 0.043,
+        "roi_p3": 0.20400000000000001,
+        "stoploss": -0.15799999999999997
+      }
+    },
+    {
+      "loss": 0.2692330720731577,
+      "params": {
+        "atr_sl_mult": 2.285,
+        "max_hold_hours": 10,
+        "stale_hours": 11,
+        "stale_max_profit": 0.005,
+        "stale_min_profit": -0.018000000000000002,
+        "tp1_atr_mult": 1.624,
+        "trail_atr_mult": 2.8049999999999997,
+        "roi_t1": 330,
+        "roi_t2": 92,
+        "roi_t3": 88,
+        "roi_p1": 0.047,
+        "roi_p2": 0.027,
+        "roi_p3": 0.18,
+        "stoploss": -0.056999999999999995
+      }
+    },
+    {
+      "loss": 0.2692330720731577,
+      "params": {
+        "atr_sl_mult": 2.285,
+        "max_hold_hours": 10,
+        "stale_hours": 15,
+        "stale_max_profit": 0.005,
+        "stale_min_profit": -0.018000000000000002,
+        "tp1_atr_mult": 1.624,
+        "trail_atr_mult": 2.8049999999999997,
+        "roi_t1": 330,
+        "roi_t2": 92,
+        "roi_t3": 88,
+        "roi_p1": 0.047,
+        "roi_p2": 0.027,
+        "roi_p3": 0.18,
+        "stoploss": -0.056999999999999995
+      }
+    },
+    {
+      "loss": 0.2692330720731577,
+      "params": {
+        "atr_sl_mult": 2.285,
+        "max_hold_hours": 10,
+        "stale_hours": 32,
+        "stale_max_profit": 0.005,
+        "stale_min_profit": -0.018000000000000002,
+        "tp1_atr_mult": 1.624,
+        "trail_atr_mult": 2.8049999999999997,
+        "roi_t1": 330,
+        "roi_t2": 92,
+        "roi_t3": 88,
+        "roi_p1": 0.047,
+        "roi_p2": 0.027,
+        "roi_p3": 0.18,
+        "stoploss": -0.056999999999999995
+      }
+    }
+  ]
+}

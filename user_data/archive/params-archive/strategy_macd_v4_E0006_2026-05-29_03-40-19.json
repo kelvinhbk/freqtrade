@@ -1,0 +1,101 @@
+{
+  "source_file": "strategy_macd_v4_E0006_2026-05-29_03-40-19.fthypt",
+  "total_epochs": 489,
+  "top": [
+    {
+      "loss": -0.11527426531816248,
+      "params": {
+        "leverage_value": 1.258,
+        "min_cont_strength": 0.88,
+        "min_single_strength": 0.558,
+        "atr_sl_mult": 2.273,
+        "be_atr_mult": 1.953,
+        "tp1_atr_mult": 1.609,
+        "trail_atr_mult": 1.31,
+        "roi_t1": 290,
+        "roi_t2": 123,
+        "roi_t3": 97,
+        "roi_p1": 0.061,
+        "roi_p2": 0.016,
+        "roi_p3": 0.262,
+        "stoploss": -0.13299999999999998
+      }
+    },
+    {
+      "loss": -0.10402852940560448,
+      "params": {
+        "leverage_value": 1.258,
+        "min_cont_strength": 0.88,
+        "min_single_strength": 0.558,
+        "atr_sl_mult": 2.273,
+        "be_atr_mult": 1.953,
+        "tp1_atr_mult": 1.609,
+        "trail_atr_mult": 1.214,
+        "roi_t1": 290,
+        "roi_t2": 123,
+        "roi_t3": 97,
+        "roi_p1": 0.06,
+        "roi_p2": 0.016,
+        "roi_p3": 0.262,
+        "stoploss": -0.285
+      }
+    },
+    {
+      "loss": -0.07669585537313633,
+      "params": {
+        "leverage_value": 1.258,
+        "min_cont_strength": 0.88,
+        "min_single_strength": 0.558,
+        "atr_sl_mult": 2.273,
+        "be_atr_mult": 1.953,
+        "tp1_atr_mult": 1.609,
+        "trail_atr_mult": 3.2640000000000002,
+        "roi_t1": 290,
+        "roi_t2": 123,
+        "roi_t3": 97,
+        "roi_p1": 0.061,
+        "roi_p2": 0.016,
+        "roi_p3": 0.262,
+        "stoploss": -0.13299999999999998
+      }
+    },
+    {
+      "loss": -0.07012295449872313,
+      "params": {
+        "leverage_value": 1.258,
+        "min_cont_strength": 0.88,
+        "min_single_strength": 0.558,
+        "atr_sl_mult": 2.273,
+        "be_atr_mult": 1.953,
+        "tp1_atr_mult": 1.609,
+        "trail_atr_mult": 2.418,
+        "roi_t1": 290,
+        "roi_t2": 123,
+        "roi_t3": 97,
+        "roi_p1": 0.061,
+        "roi_p2": 0.103,
+        "roi_p3": 0.189,
+        "stoploss": -0.13299999999999998
+      }
+    },
+    {
+      "loss": -0.05399549482324886,
+      "params": {
+        "leverage_value": 1.258,
+        "min_cont_strength": 0.88,
+        "min_single_strength": 0.558,
+        "atr_sl_mult": 2.273,
+        "be_atr_mult": 0.582,
+        "tp1_atr_mult": 1.609,
+        "trail_atr_mult": 1.31,
+        "roi_t1": 336,
+        "roi_t2": 123,
+        "roi_t3": 81,
+        "roi_p1": 0.061,
+        "roi_p2": 0.046,
+        "roi_p3": 0.191,
+        "stoploss": -0.13299999999999998
+      }
+    }
+  ]
+}

@@ -1,0 +1,106 @@
+{
+  "source_file": "strategy_macd_v4_E0008_2026-05-28_08-20-37.fthypt",
+  "total_epochs": 33,
+  "top": [
+    {
+      "loss": -0.04412943263075661,
+      "params": {
+        "ema_momentum_period": 7,
+        "min_cont_strength": 0.8680000000000001,
+        "min_single_strength": 0.5700000000000001,
+        "momentum_threshold_pct": 0.0,
+        "atr_sl_mult": 1.726,
+        "max_risk_pct": 0.059,
+        "tp1_atr_mult": 1.976,
+        "trail_atr_mult": 1.771,
+        "roi_t1": 297,
+        "roi_t2": 136,
+        "roi_t3": 76,
+        "roi_p1": 0.04,
+        "roi_p2": 0.068,
+        "roi_p3": 0.053,
+        "stoploss": -0.292
+      }
+    },
+    {
+      "loss": 0.849774371350158,
+      "params": {
+        "ema_momentum_period": 7,
+        "min_cont_strength": 0.591,
+        "min_single_strength": 0.267,
+        "momentum_threshold_pct": 0.001,
+        "atr_sl_mult": 1.244,
+        "max_risk_pct": 0.044,
+        "tp1_atr_mult": 1.506,
+        "trail_atr_mult": 2.966,
+        "roi_t1": 205,
+        "roi_t2": 53,
+        "roi_t3": 112,
+        "roi_p1": 0.028999999999999998,
+        "roi_p2": 0.083,
+        "roi_p3": 0.29200000000000004,
+        "stoploss": -0.33799999999999997
+      }
+    },
+    {
+      "loss": 0.9221940998983325,
+      "params": {
+        "ema_momentum_period": 3,
+        "min_cont_strength": 0.843,
+        "min_single_strength": 0.593,
+        "momentum_threshold_pct": 0.013000000000000001,
+        "atr_sl_mult": 2.113,
+        "max_risk_pct": 0.05,
+        "tp1_atr_mult": 2.879,
+        "trail_atr_mult": 3.067,
+        "roi_t1": 147,
+        "roi_t2": 107,
+        "roi_t3": 41,
+        "roi_p1": 0.031,
+        "roi_p2": 0.036000000000000004,
+        "roi_p3": 0.191,
+        "stoploss": -0.22099999999999997
+      }
+    },
+    {
+      "loss": 0.9442820196284325,
+      "params": {
+        "ema_momentum_period": 8,
+        "min_cont_strength": 0.8,
+        "min_single_strength": 0.541,
+        "momentum_threshold_pct": 0.011,
+        "atr_sl_mult": 1.609,
+        "max_risk_pct": 0.024,
+        "tp1_atr_mult": 1.8639999999999999,
+        "trail_atr_mult": 2.926,
+        "roi_t1": 243,
+        "roi_t2": 172,
+        "roi_t3": 96,
+        "roi_p1": 0.036000000000000004,
+        "roi_p2": 0.022,
+        "roi_p3": 0.21100000000000002,
+        "stoploss": -0.174
+      }
+    },
+    {
+      "loss": 0.9692125748221629,
+      "params": {
+        "ema_momentum_period": 7,
+        "min_cont_strength": 0.48500000000000004,
+        "min_single_strength": 0.494,
+        "momentum_threshold_pct": 0.002,
+        "atr_sl_mult": 2.2510000000000003,
+        "max_risk_pct": 0.054000000000000006,
+        "tp1_atr_mult": 2.1950000000000003,
+        "trail_atr_mult": 2.265,
+        "roi_t1": 293,
+        "roi_t2": 175,
+        "roi_t3": 39,
+        "roi_p1": 0.028999999999999998,
+        "roi_p2": 0.103,
+        "roi_p3": 0.20500000000000002,
+        "stoploss": -0.08399999999999996
+      }
+    }
+  ]
+}

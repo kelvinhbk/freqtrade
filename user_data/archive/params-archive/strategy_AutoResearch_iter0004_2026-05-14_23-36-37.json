@@ -1,0 +1,91 @@
+{
+  "source_file": "strategy_AutoResearch_iter0004_2026-05-14_23-36-37.fthypt",
+  "total_epochs": 500,
+  "top": [
+    {
+      "loss": 1.0746013570158346,
+      "params": {
+        "buy_adx": 40,
+        "buy_ema_filter": false,
+        "buy_rsi": 42,
+        "buy_sma50_ratio": 0.999,
+        "buy_volume_sma": 1.13,
+        "roi_t1": 16,
+        "roi_t2": 49,
+        "roi_t3": 12,
+        "roi_p1": 0.013000000000000001,
+        "roi_p2": 0.016,
+        "roi_p3": 0.17700000000000002,
+        "stoploss": -0.08999999999999997
+      }
+    },
+    {
+      "loss": 1.0978536646571164,
+      "params": {
+        "buy_adx": 40,
+        "buy_ema_filter": false,
+        "buy_rsi": 42,
+        "buy_sma50_ratio": 0.973,
+        "buy_volume_sma": 1.13,
+        "roi_t1": 76,
+        "roi_t2": 49,
+        "roi_t3": 12,
+        "roi_p1": 0.016,
+        "roi_p2": 0.012,
+        "roi_p3": 0.17700000000000002,
+        "stoploss": -0.257
+      }
+    },
+    {
+      "loss": 1.0978536646571164,
+      "params": {
+        "buy_adx": 40,
+        "buy_ema_filter": false,
+        "buy_rsi": 42,
+        "buy_sma50_ratio": 0.973,
+        "buy_volume_sma": 1.13,
+        "roi_t1": 68,
+        "roi_t2": 49,
+        "roi_t3": 12,
+        "roi_p1": 0.016,
+        "roi_p2": 0.012,
+        "roi_p3": 0.169,
+        "stoploss": -0.08999999999999997
+      }
+    },
+    {
+      "loss": 1.0978536646571164,
+      "params": {
+        "buy_adx": 40,
+        "buy_ema_filter": false,
+        "buy_rsi": 42,
+        "buy_sma50_ratio": 0.973,
+        "buy_volume_sma": 1.13,
+        "roi_t1": 87,
+        "roi_t2": 49,
+        "roi_t3": 12,
+        "roi_p1": 0.016,
+        "roi_p2": 0.012,
+        "roi_p3": 0.17700000000000002,
+        "stoploss": -0.08999999999999997
+      }
+    },
+    {
+      "loss": 1.0978536646571164,
+      "params": {
+        "buy_adx": 40,
+        "buy_ema_filter": false,
+        "buy_rsi": 42,
+        "buy_sma50_ratio": 0.973,
+        "buy_volume_sma": 1.3599999999999999,
+        "roi_t1": 76,
+        "roi_t2": 49,
+        "roi_t3": 12,
+        "roi_p1": 0.016,
+        "roi_p2": 0.012,
+        "roi_p3": 0.17700000000000002,
+        "stoploss": -0.257
+      }
+    }
+  ]
+}

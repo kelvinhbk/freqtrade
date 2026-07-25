@@ -1,0 +1,131 @@
+{
+  "source_file": "strategy_EfutureShort_E0019_2026-06-04_03-13-02.fthypt",
+  "total_epochs": 719,
+  "top": [
+    {
+      "loss": -0.4691707166927817,
+      "params": {
+        "short_24h_max_pct": 13.0,
+        "short_24h_min_pct": -137.2,
+        "short_adx": 27,
+        "short_cti": 0.26,
+        "short_rsi": 75,
+        "short_rsi_fast": 46,
+        "short_sma15_ratio": 1.069,
+        "short_tf_adx": 44,
+        "short_tf_rsi_max": 47,
+        "short_tf_rsi_min": 42,
+        "short_vol_atr_mult": 2.9000000000000004,
+        "short_vol_lookback": 32,
+        "short_vol_rsi_div": 79,
+        "short_volume_sma": 1.08,
+        "csl_late": -0.027999999999999997,
+        "csl_mid_ratio": 1.2,
+        "csl_volatility_adj": 0.9,
+        "sell_fastx": 77,
+        "sell_profit_threshold": 0.059000000000000004,
+        "sell_rsi_fast_cross": 57
+      }
+    },
+    {
+      "loss": -0.4524087660932915,
+      "params": {
+        "short_24h_max_pct": 13.0,
+        "short_24h_min_pct": -80.0,
+        "short_adx": 27,
+        "short_cti": 0.26,
+        "short_rsi": 75,
+        "short_rsi_fast": 58,
+        "short_sma15_ratio": 1.069,
+        "short_tf_adx": 43,
+        "short_tf_rsi_max": 47,
+        "short_tf_rsi_min": 42,
+        "short_vol_atr_mult": 2.9000000000000004,
+        "short_vol_lookback": 32,
+        "short_vol_rsi_div": 79,
+        "short_volume_sma": 1.08,
+        "csl_late": -0.059,
+        "csl_mid_ratio": 1.2,
+        "csl_volatility_adj": 0.9,
+        "sell_fastx": 77,
+        "sell_profit_threshold": 0.059000000000000004,
+        "sell_rsi_fast_cross": 53
+      }
+    },
+    {
+      "loss": -0.4524087660932915,
+      "params": {
+        "short_24h_max_pct": 13.0,
+        "short_24h_min_pct": -80.0,
+        "short_adx": 27,
+        "short_cti": 0.26,
+        "short_rsi": 75,
+        "short_rsi_fast": 46,
+        "short_sma15_ratio": 1.069,
+        "short_tf_adx": 43,
+        "short_tf_rsi_max": 47,
+        "short_tf_rsi_min": 42,
+        "short_vol_atr_mult": 2.9000000000000004,
+        "short_vol_lookback": 32,
+        "short_vol_rsi_div": 79,
+        "short_volume_sma": 1.08,
+        "csl_late": -0.027999999999999997,
+        "csl_mid_ratio": 1.2,
+        "csl_volatility_adj": 0.9,
+        "sell_fastx": 77,
+        "sell_profit_threshold": 0.059000000000000004,
+        "sell_rsi_fast_cross": 53
+      }
+    },
+    {
+      "loss": -0.4336884597812503,
+      "params": {
+        "short_24h_max_pct": 13.0,
+        "short_24h_min_pct": -137.2,
+        "short_adx": 26,
+        "short_cti": 0.26,
+        "short_rsi": 78,
+        "short_rsi_fast": 58,
+        "short_sma15_ratio": 1.06,
+        "short_tf_adx": 43,
+        "short_tf_rsi_max": 47,
+        "short_tf_rsi_min": 42,
+        "short_vol_atr_mult": 2.9000000000000004,
+        "short_vol_lookback": 49,
+        "short_vol_rsi_div": 79,
+        "short_volume_sma": 0.99,
+        "csl_late": -0.074,
+        "csl_mid_ratio": 1.9,
+        "csl_volatility_adj": 1.5,
+        "sell_fastx": 77,
+        "sell_profit_threshold": 0.068,
+        "sell_rsi_fast_cross": 53
+      }
+    },
+    {
+      "loss": -0.4336884597812503,
+      "params": {
+        "short_24h_max_pct": 13.0,
+        "short_24h_min_pct": -170.1,
+        "short_adx": 26,
+        "short_cti": 0.26,
+        "short_rsi": 78,
+        "short_rsi_fast": 58,
+        "short_sma15_ratio": 1.06,
+        "short_tf_adx": 43,
+        "short_tf_rsi_max": 47,
+        "short_tf_rsi_min": 42,
+        "short_vol_atr_mult": 2.9000000000000004,
+        "short_vol_lookback": 49,
+        "short_vol_rsi_div": 79,
+        "short_volume_sma": 1.1500000000000001,
+        "csl_late": -0.074,
+        "csl_mid_ratio": 1.9,
+        "csl_volatility_adj": 1.5,
+        "sell_fastx": 77,
+        "sell_profit_threshold": 0.059000000000000004,
+        "sell_rsi_fast_cross": 53
+      }
+    }
+  ]
+}

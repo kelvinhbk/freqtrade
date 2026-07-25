@@ -1,0 +1,71 @@
+{
+  "source_file": "strategy_FreqaiExampleStrategy_v6_2026-05-05_18-32-45.fthypt",
+  "total_epochs": 100,
+  "top": [
+    {
+      "loss": -5.5381604286335095,
+      "params": {
+        "buy_pred_threshold": 0.011,
+        "entry_score_threshold": -0.8,
+        "funding_weight_15m": 0.5,
+        "funding_weight_1h": 0.4,
+        "oi_weight_15m": 7.0,
+        "oi_weight_1h": 4.0,
+        "taker_weight_15m": 0.2,
+        "taker_weight_1h": 2.2
+      }
+    },
+    {
+      "loss": -5.5381604285990775,
+      "params": {
+        "buy_pred_threshold": 0.011,
+        "entry_score_threshold": -0.8,
+        "funding_weight_15m": 0.08,
+        "funding_weight_1h": 0.4,
+        "oi_weight_15m": 13.0,
+        "oi_weight_1h": 11.0,
+        "taker_weight_15m": 0.2,
+        "taker_weight_1h": 5.0
+      }
+    },
+    {
+      "loss": -5.256173309340696,
+      "params": {
+        "buy_pred_threshold": 0.011,
+        "entry_score_threshold": -0.8,
+        "funding_weight_15m": 0.08,
+        "funding_weight_1h": 0.1,
+        "oi_weight_15m": 13.0,
+        "oi_weight_1h": 11.0,
+        "taker_weight_15m": 0.2,
+        "taker_weight_1h": 1.0
+      }
+    },
+    {
+      "loss": -5.256173309324184,
+      "params": {
+        "buy_pred_threshold": 0.011,
+        "entry_score_threshold": -0.8,
+        "funding_weight_15m": 0.08,
+        "funding_weight_1h": 0.1,
+        "oi_weight_15m": 6.0,
+        "oi_weight_1h": 17.0,
+        "taker_weight_15m": 0.2,
+        "taker_weight_1h": 1.0
+      }
+    },
+    {
+      "loss": -5.256173309317393,
+      "params": {
+        "buy_pred_threshold": 0.011,
+        "entry_score_threshold": -0.8,
+        "funding_weight_15m": 0.22999999999999998,
+        "funding_weight_1h": 0.2,
+        "oi_weight_15m": 13.0,
+        "oi_weight_1h": 10.0,
+        "taker_weight_15m": 1.5,
+        "taker_weight_1h": 1.0
+      }
+    }
+  ]
+}

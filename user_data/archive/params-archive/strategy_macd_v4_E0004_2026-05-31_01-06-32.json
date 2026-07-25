@@ -1,0 +1,101 @@
+{
+  "source_file": "strategy_macd_v4_E0004_2026-05-31_01-06-32.fthypt",
+  "total_epochs": 500,
+  "top": [
+    {
+      "loss": -1.696638518050718,
+      "params": {
+        "extrema_order": 5,
+        "min_cont_strength": 0.6639999999999999,
+        "min_single_strength": 0.48,
+        "atr_sl_mult": 1.671,
+        "max_hold_candles": 61,
+        "tp1_atr_mult": 1.015,
+        "trail_atr_mult": 1.6360000000000001,
+        "roi_t1": 81,
+        "roi_t2": 31,
+        "roi_t3": 38,
+        "roi_p1": 0.025,
+        "roi_p2": 0.020999999999999998,
+        "roi_p3": 0.055,
+        "stoploss": -0.33899999999999997
+      }
+    },
+    {
+      "loss": -1.6949910340500094,
+      "params": {
+        "extrema_order": 5,
+        "min_cont_strength": 0.6639999999999999,
+        "min_single_strength": 0.475,
+        "atr_sl_mult": 1.671,
+        "max_hold_candles": 62,
+        "tp1_atr_mult": 1.015,
+        "trail_atr_mult": 1.654,
+        "roi_t1": 81,
+        "roi_t2": 31,
+        "roi_t3": 38,
+        "roi_p1": 0.025,
+        "roi_p2": 0.020999999999999998,
+        "roi_p3": 0.055,
+        "stoploss": -0.19499999999999998
+      }
+    },
+    {
+      "loss": -1.6946474384638992,
+      "params": {
+        "extrema_order": 5,
+        "min_cont_strength": 0.6639999999999999,
+        "min_single_strength": 0.475,
+        "atr_sl_mult": 1.671,
+        "max_hold_candles": 61,
+        "tp1_atr_mult": 1.015,
+        "trail_atr_mult": 1.499,
+        "roi_t1": 81,
+        "roi_t2": 31,
+        "roi_t3": 38,
+        "roi_p1": 0.025,
+        "roi_p2": 0.020999999999999998,
+        "roi_p3": 0.055,
+        "stoploss": -0.19499999999999998
+      }
+    },
+    {
+      "loss": -1.6939274995724787,
+      "params": {
+        "extrema_order": 5,
+        "min_cont_strength": 0.6639999999999999,
+        "min_single_strength": 0.45699999999999996,
+        "atr_sl_mult": 1.671,
+        "max_hold_candles": 62,
+        "tp1_atr_mult": 1.015,
+        "trail_atr_mult": 1.654,
+        "roi_t1": 81,
+        "roi_t2": 31,
+        "roi_t3": 38,
+        "roi_p1": 0.025,
+        "roi_p2": 0.020999999999999998,
+        "roi_p3": 0.055,
+        "stoploss": -0.07299999999999995
+      }
+    },
+    {
+      "loss": -1.6937751585893985,
+      "params": {
+        "extrema_order": 5,
+        "min_cont_strength": 0.6639999999999999,
+        "min_single_strength": 0.45699999999999996,
+        "atr_sl_mult": 1.671,
+        "max_hold_candles": 61,
+        "tp1_atr_mult": 1.015,
+        "trail_atr_mult": 1.499,
+        "roi_t1": 81,
+        "roi_t2": 31,
+        "roi_t3": 38,
+        "roi_p1": 0.025,
+        "roi_p2": 0.020999999999999998,
+        "roi_p3": 0.055,
+        "stoploss": -0.07299999999999995
+      }
+    }
+  ]
+}

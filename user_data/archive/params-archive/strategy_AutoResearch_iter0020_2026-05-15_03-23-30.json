@@ -1,0 +1,111 @@
+{
+  "source_file": "strategy_AutoResearch_iter0020_2026-05-15_03-23-30.fthypt",
+  "total_epochs": 500,
+  "top": [
+    {
+      "loss": -2.310103216116329,
+      "params": {
+        "buy_adx_threshold": 24,
+        "buy_cti": -0.59,
+        "buy_di_threshold": 15,
+        "buy_rsi": 43,
+        "buy_sma15_ratio": 1.042,
+        "buy_volume_multiplier": 1.8,
+        "buy_volume_sma": 37,
+        "short_cti": -0.94,
+        "short_rsi": 57,
+        "short_sma15_ratio": 1.037,
+        "roi_t1": 105,
+        "roi_t2": 57,
+        "roi_t3": 23,
+        "roi_p1": 0.032,
+        "roi_p2": 0.044000000000000004,
+        "roi_p3": 0.088
+      }
+    },
+    {
+      "loss": -2.2802731454687772,
+      "params": {
+        "buy_adx_threshold": 24,
+        "buy_cti": -0.85,
+        "buy_di_threshold": 23,
+        "buy_rsi": 53,
+        "buy_sma15_ratio": 1.022,
+        "buy_volume_multiplier": 1.2,
+        "buy_volume_sma": 37,
+        "short_cti": -0.94,
+        "short_rsi": 57,
+        "short_sma15_ratio": 1.037,
+        "roi_t1": 105,
+        "roi_t2": 57,
+        "roi_t3": 23,
+        "roi_p1": 0.038,
+        "roi_p2": 0.035,
+        "roi_p3": 0.088
+      }
+    },
+    {
+      "loss": -2.272101784554264,
+      "params": {
+        "buy_adx_threshold": 24,
+        "buy_cti": -0.85,
+        "buy_di_threshold": 15,
+        "buy_rsi": 53,
+        "buy_sma15_ratio": 0.972,
+        "buy_volume_multiplier": 1.2,
+        "buy_volume_sma": 23,
+        "short_cti": -0.9,
+        "short_rsi": 57,
+        "short_sma15_ratio": 1.037,
+        "roi_t1": 70,
+        "roi_t2": 57,
+        "roi_t3": 23,
+        "roi_p1": 0.038,
+        "roi_p2": 0.069,
+        "roi_p3": 0.107
+      }
+    },
+    {
+      "loss": -2.271415382158118,
+      "params": {
+        "buy_adx_threshold": 24,
+        "buy_cti": -0.85,
+        "buy_di_threshold": 25,
+        "buy_rsi": 58,
+        "buy_sma15_ratio": 1.048,
+        "buy_volume_multiplier": 1.8,
+        "buy_volume_sma": 37,
+        "short_cti": -0.9,
+        "short_rsi": 57,
+        "short_sma15_ratio": 1.037,
+        "roi_t1": 105,
+        "roi_t2": 57,
+        "roi_t3": 23,
+        "roi_p1": 0.038,
+        "roi_p2": 0.069,
+        "roi_p3": 0.044000000000000004
+      }
+    },
+    {
+      "loss": -2.2696011161002274,
+      "params": {
+        "buy_adx_threshold": 24,
+        "buy_cti": -0.81,
+        "buy_di_threshold": 15,
+        "buy_rsi": 43,
+        "buy_sma15_ratio": 0.972,
+        "buy_volume_multiplier": 1.2,
+        "buy_volume_sma": 23,
+        "short_cti": -0.9,
+        "short_rsi": 57,
+        "short_sma15_ratio": 1.037,
+        "roi_t1": 70,
+        "roi_t2": 57,
+        "roi_t3": 23,
+        "roi_p1": 0.038,
+        "roi_p2": 0.069,
+        "roi_p3": 0.107
+      }
+    }
+  ]
+}

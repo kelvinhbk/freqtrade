@@ -1,0 +1,126 @@
+{
+  "source_file": "strategy_ENEW_v2_2026-05-05_21-27-05.fthypt",
+  "total_epochs": 500,
+  "top": [
+    {
+      "loss": -312.3824526863816,
+      "params": {
+        "buy_24h_max_pct": 93.7,
+        "buy_24h_min_pct": -20.299999999999997,
+        "buy_cti": 0.15999999999999992,
+        "buy_rsi": 34,
+        "buy_rsi_fast": 70,
+        "buy_sma15_ratio": 0.982,
+        "use_trend_filter": false,
+        "use_volume_filter": false,
+        "csl_late": -0.012999999999999998,
+        "csl_mid_ratio": 2.7,
+        "exit_loss_cci_profit_max": 0.012,
+        "exit_loss_cci_profit_min": -0.029,
+        "exit_loss_cci_threshold": 82,
+        "exit_profit_fastk": 0.039,
+        "exit_time1_hours": 9,
+        "exit_time1_profit": -0.07700000000000001,
+        "exit_time2_hours": 14,
+        "exit_time2_profit": -0.061,
+        "sell_fastx": 96
+      }
+    },
+    {
+      "loss": -312.3824526863816,
+      "params": {
+        "buy_24h_max_pct": 93.7,
+        "buy_24h_min_pct": -20.299999999999997,
+        "buy_cti": 0.15999999999999992,
+        "buy_rsi": 34,
+        "buy_rsi_fast": 65,
+        "buy_sma15_ratio": 0.982,
+        "use_trend_filter": false,
+        "use_volume_filter": false,
+        "csl_late": -0.012999999999999998,
+        "csl_mid_ratio": 2.7,
+        "exit_loss_cci_profit_max": 0.012,
+        "exit_loss_cci_profit_min": -0.029,
+        "exit_loss_cci_threshold": 82,
+        "exit_profit_fastk": 0.039,
+        "exit_time1_hours": 9,
+        "exit_time1_profit": -0.07800000000000001,
+        "exit_time2_hours": 14,
+        "exit_time2_profit": -0.056999999999999995,
+        "sell_fastx": 96
+      }
+    },
+    {
+      "loss": -310.70215405589863,
+      "params": {
+        "buy_24h_max_pct": 46.6,
+        "buy_24h_min_pct": -29.3,
+        "buy_cti": 0.15999999999999992,
+        "buy_rsi": 34,
+        "buy_rsi_fast": 65,
+        "buy_sma15_ratio": 0.982,
+        "use_trend_filter": false,
+        "use_volume_filter": false,
+        "csl_late": -0.07100000000000001,
+        "csl_mid_ratio": 2.7,
+        "exit_loss_cci_profit_max": 0.01,
+        "exit_loss_cci_profit_min": -0.006999999999999999,
+        "exit_loss_cci_threshold": 56,
+        "exit_profit_fastk": 0.048,
+        "exit_time1_hours": 9,
+        "exit_time1_profit": -0.07700000000000001,
+        "exit_time2_hours": 14,
+        "exit_time2_profit": -0.056999999999999995,
+        "sell_fastx": 96
+      }
+    },
+    {
+      "loss": -307.42800088820286,
+      "params": {
+        "buy_24h_max_pct": 93.7,
+        "buy_24h_min_pct": -20.299999999999997,
+        "buy_cti": 0.15999999999999992,
+        "buy_rsi": 34,
+        "buy_rsi_fast": 70,
+        "buy_sma15_ratio": 0.982,
+        "use_trend_filter": false,
+        "use_volume_filter": false,
+        "csl_late": -0.012999999999999998,
+        "csl_mid_ratio": 2.7,
+        "exit_loss_cci_profit_max": 0.012,
+        "exit_loss_cci_profit_min": -0.029,
+        "exit_loss_cci_threshold": 58,
+        "exit_profit_fastk": 0.039,
+        "exit_time1_hours": 5,
+        "exit_time1_profit": -0.07700000000000001,
+        "exit_time2_hours": 14,
+        "exit_time2_profit": -0.056999999999999995,
+        "sell_fastx": 96
+      }
+    },
+    {
+      "loss": -306.0087587299604,
+      "params": {
+        "buy_24h_max_pct": 93.7,
+        "buy_24h_min_pct": -20.299999999999997,
+        "buy_cti": 0.15999999999999992,
+        "buy_rsi": 34,
+        "buy_rsi_fast": 65,
+        "buy_sma15_ratio": 0.982,
+        "use_trend_filter": false,
+        "use_volume_filter": false,
+        "csl_late": -0.07100000000000001,
+        "csl_mid_ratio": 2.7,
+        "exit_loss_cci_profit_max": 0.012,
+        "exit_loss_cci_profit_min": -0.029,
+        "exit_loss_cci_threshold": 56,
+        "exit_profit_fastk": 0.049,
+        "exit_time1_hours": 9,
+        "exit_time1_profit": -0.07700000000000001,
+        "exit_time2_hours": 14,
+        "exit_time2_profit": -0.056999999999999995,
+        "sell_fastx": 96
+      }
+    }
+  ]
+}

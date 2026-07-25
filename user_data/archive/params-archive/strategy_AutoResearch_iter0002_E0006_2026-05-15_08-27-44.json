@@ -1,0 +1,76 @@
+{
+  "source_file": "strategy_AutoResearch_iter0002_E0006_2026-05-15_08-27-44.fthypt",
+  "total_epochs": 292,
+  "top": [
+    {
+      "loss": 1.4097590614619107,
+      "params": {
+        "buy_adx_threshold": 35,
+        "buy_rsi": 20,
+        "buy_volume_sma": 13,
+        "roi_t1": 101,
+        "roi_t2": 39,
+        "roi_t3": 20,
+        "roi_p1": 0.013000000000000001,
+        "roi_p2": 0.011,
+        "roi_p3": 0.167
+      }
+    },
+    {
+      "loss": 1.4112294782489123,
+      "params": {
+        "buy_adx_threshold": 40,
+        "buy_rsi": 23,
+        "buy_volume_sma": 37,
+        "roi_t1": 101,
+        "roi_t2": 50,
+        "roi_t3": 20,
+        "roi_p1": 0.01,
+        "roi_p2": 0.069,
+        "roi_p3": 0.199
+      }
+    },
+    {
+      "loss": 1.439239723788035,
+      "params": {
+        "buy_adx_threshold": 38,
+        "buy_rsi": 20,
+        "buy_volume_sma": 13,
+        "roi_t1": 95,
+        "roi_t2": 57,
+        "roi_t3": 20,
+        "roi_p1": 0.013000000000000001,
+        "roi_p2": 0.011,
+        "roi_p3": 0.199
+      }
+    },
+    {
+      "loss": 1.44983043690356,
+      "params": {
+        "buy_adx_threshold": 38,
+        "buy_rsi": 20,
+        "buy_volume_sma": 24,
+        "roi_t1": 101,
+        "roi_t2": 45,
+        "roi_t3": 20,
+        "roi_p1": 0.015,
+        "roi_p2": 0.011,
+        "roi_p3": 0.167
+      }
+    },
+    {
+      "loss": 1.456535676825015,
+      "params": {
+        "buy_adx_threshold": 40,
+        "buy_rsi": 20,
+        "buy_volume_sma": 24,
+        "roi_t1": 101,
+        "roi_t2": 57,
+        "roi_t3": 20,
+        "roi_p1": 0.037,
+        "roi_p2": 0.011,
+        "roi_p3": 0.199
+      }
+    }
+  ]
+}

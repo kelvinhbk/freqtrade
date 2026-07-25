@@ -1,0 +1,86 @@
+{
+  "source_file": "strategy_ENEWv1_v1_2026-05-05_20-21-30.fthypt",
+  "total_epochs": 300,
+  "top": [
+    {
+      "loss": -2.746234295671484,
+      "params": {
+        "buy_24h_max_pct": 27.400000000000002,
+        "buy_24h_min_pct": -10.399999999999999,
+        "buy_cti": -0.5800000000000001,
+        "buy_rsi": 32,
+        "buy_rsi_fast": 44,
+        "buy_sma15_ratio": 0.979,
+        "csl_late": -0.076,
+        "csl_mid_ratio": 1.4,
+        "csl_profit_guard": 0.052000000000000005,
+        "csl_profit_trail_ratio": 2.9000000000000004,
+        "sell_fastx": 81
+      }
+    },
+    {
+      "loss": -2.6681699441962086,
+      "params": {
+        "buy_24h_max_pct": 27.400000000000002,
+        "buy_24h_min_pct": -10.399999999999999,
+        "buy_cti": -0.5800000000000001,
+        "buy_rsi": 32,
+        "buy_rsi_fast": 44,
+        "buy_sma15_ratio": 0.979,
+        "csl_late": -0.076,
+        "csl_mid_ratio": 1.4,
+        "csl_profit_guard": 0.047,
+        "csl_profit_trail_ratio": 2.9000000000000004,
+        "sell_fastx": 81
+      }
+    },
+    {
+      "loss": -2.613446000990089,
+      "params": {
+        "buy_24h_max_pct": 47.300000000000004,
+        "buy_24h_min_pct": -10.399999999999999,
+        "buy_cti": -0.5800000000000001,
+        "buy_rsi": 32,
+        "buy_rsi_fast": 41,
+        "buy_sma15_ratio": 0.978,
+        "csl_late": -0.076,
+        "csl_mid_ratio": 1.4,
+        "csl_profit_guard": 0.052000000000000005,
+        "csl_profit_trail_ratio": 1.5,
+        "sell_fastx": 76
+      }
+    },
+    {
+      "loss": -2.6029377847455986,
+      "params": {
+        "buy_24h_max_pct": 47.300000000000004,
+        "buy_24h_min_pct": -10.399999999999999,
+        "buy_cti": -0.5800000000000001,
+        "buy_rsi": 32,
+        "buy_rsi_fast": 41,
+        "buy_sma15_ratio": 0.979,
+        "csl_late": -0.024,
+        "csl_mid_ratio": 1.4,
+        "csl_profit_guard": 0.052000000000000005,
+        "csl_profit_trail_ratio": 1.5,
+        "sell_fastx": 76
+      }
+    },
+    {
+      "loss": -2.5696070783026936,
+      "params": {
+        "buy_24h_max_pct": 27.400000000000002,
+        "buy_24h_min_pct": -7.399999999999999,
+        "buy_cti": -0.5800000000000001,
+        "buy_rsi": 32,
+        "buy_rsi_fast": 41,
+        "buy_sma15_ratio": 0.978,
+        "csl_late": -0.043000000000000003,
+        "csl_mid_ratio": 1.4,
+        "csl_profit_guard": 0.047,
+        "csl_profit_trail_ratio": 2.1,
+        "sell_fastx": 67
+      }
+    }
+  ]
+}

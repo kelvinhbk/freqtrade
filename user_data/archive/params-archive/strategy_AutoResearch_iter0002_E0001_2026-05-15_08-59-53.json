@@ -1,0 +1,101 @@
+{
+  "source_file": "strategy_AutoResearch_iter0002_E0001_2026-05-15_08-59-53.fthypt",
+  "total_epochs": 500,
+  "top": [
+    {
+      "loss": -0.90673735772712,
+      "params": {
+        "buy_rsi": 33,
+        "buy_rsi_fast": 39,
+        "buy_trend_period": 30,
+        "buy_trend_strength": 0.9,
+        "buy_volume_filter": 1.37,
+        "short_rsi": 78,
+        "short_rsi_fast": 71,
+        "short_volume_filter": 1.21,
+        "roi_t1": 89,
+        "roi_t2": 23,
+        "roi_t3": 30,
+        "roi_p1": 0.020999999999999998,
+        "roi_p2": 0.012,
+        "roi_p3": 0.042
+      }
+    },
+    {
+      "loss": -0.90673735772712,
+      "params": {
+        "buy_rsi": 33,
+        "buy_rsi_fast": 39,
+        "buy_trend_period": 30,
+        "buy_trend_strength": 1.2000000000000002,
+        "buy_volume_filter": 1.37,
+        "short_rsi": 78,
+        "short_rsi_fast": 71,
+        "short_volume_filter": 1.21,
+        "roi_t1": 89,
+        "roi_t2": 23,
+        "roi_t3": 30,
+        "roi_p1": 0.020999999999999998,
+        "roi_p2": 0.012,
+        "roi_p3": 0.042
+      }
+    },
+    {
+      "loss": -0.8942664534244208,
+      "params": {
+        "buy_rsi": 33,
+        "buy_rsi_fast": 39,
+        "buy_trend_period": 30,
+        "buy_trend_strength": 0.9,
+        "buy_volume_filter": 1.37,
+        "short_rsi": 78,
+        "short_rsi_fast": 63,
+        "short_volume_filter": 1.21,
+        "roi_t1": 89,
+        "roi_t2": 44,
+        "roi_t3": 30,
+        "roi_p1": 0.020999999999999998,
+        "roi_p2": 0.012,
+        "roi_p3": 0.042
+      }
+    },
+    {
+      "loss": -0.8902248636604019,
+      "params": {
+        "buy_rsi": 33,
+        "buy_rsi_fast": 39,
+        "buy_trend_period": 30,
+        "buy_trend_strength": 1.0,
+        "buy_volume_filter": 1.37,
+        "short_rsi": 78,
+        "short_rsi_fast": 90,
+        "short_volume_filter": 0.88,
+        "roi_t1": 89,
+        "roi_t2": 58,
+        "roi_t3": 26,
+        "roi_p1": 0.020999999999999998,
+        "roi_p2": 0.012,
+        "roi_p3": 0.042
+      }
+    },
+    {
+      "loss": -0.8859315681149725,
+      "params": {
+        "buy_rsi": 33,
+        "buy_rsi_fast": 11,
+        "buy_trend_period": 41,
+        "buy_trend_strength": 1.0,
+        "buy_volume_filter": 1.37,
+        "short_rsi": 78,
+        "short_rsi_fast": 90,
+        "short_volume_filter": 0.88,
+        "roi_t1": 89,
+        "roi_t2": 29,
+        "roi_t3": 30,
+        "roi_p1": 0.020999999999999998,
+        "roi_p2": 0.012,
+        "roi_p3": 0.071
+      }
+    }
+  ]
+}

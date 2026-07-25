@@ -1,0 +1,91 @@
+{
+  "source_file": "strategy_ENEW_E0003_2026-05-22_13-06-10.fthypt",
+  "total_epochs": 121,
+  "top": [
+    {
+      "loss": -1.1999481290510376,
+      "params": {
+        "csl_late": -0.027999999999999997,
+        "csl_mid_ratio": 3.3000000000000003,
+        "csl_trail_atr_mult": 1.0,
+        "sell_fastx": 59,
+        "sell_rsi_exit": 64,
+        "sell_use_trailing": true,
+        "roi_t1": 107,
+        "roi_t2": 10,
+        "roi_t3": 25,
+        "roi_p1": 0.015,
+        "roi_p2": 0.062000000000000006,
+        "roi_p3": 0.18400000000000002
+      }
+    },
+    {
+      "loss": -1.1987867458275885,
+      "params": {
+        "csl_late": -0.027999999999999997,
+        "csl_mid_ratio": 2.8,
+        "csl_trail_atr_mult": 2.7,
+        "sell_fastx": 59,
+        "sell_rsi_exit": 64,
+        "sell_use_trailing": true,
+        "roi_t1": 107,
+        "roi_t2": 10,
+        "roi_t3": 25,
+        "roi_p1": 0.015,
+        "roi_p2": 0.062000000000000006,
+        "roi_p3": 0.18400000000000002
+      }
+    },
+    {
+      "loss": -1.190575623189504,
+      "params": {
+        "csl_late": -0.052,
+        "csl_mid_ratio": 2.8,
+        "csl_trail_atr_mult": 2.7,
+        "sell_fastx": 85,
+        "sell_rsi_exit": 70,
+        "sell_use_trailing": false,
+        "roi_t1": 97,
+        "roi_t2": 24,
+        "roi_t3": 17,
+        "roi_p1": 0.013000000000000001,
+        "roi_p2": 0.022,
+        "roi_p3": 0.125
+      }
+    },
+    {
+      "loss": -1.1869420770741466,
+      "params": {
+        "csl_late": -0.011999999999999997,
+        "csl_mid_ratio": 2.8,
+        "csl_trail_atr_mult": 3.2,
+        "sell_fastx": 85,
+        "sell_rsi_exit": 70,
+        "sell_use_trailing": false,
+        "roi_t1": 30,
+        "roi_t2": 24,
+        "roi_t3": 11,
+        "roi_p1": 0.035,
+        "roi_p2": 0.023,
+        "roi_p3": 0.119
+      }
+    },
+    {
+      "loss": -1.1823958672008057,
+      "params": {
+        "csl_late": -0.027999999999999997,
+        "csl_mid_ratio": 3.3000000000000003,
+        "csl_trail_atr_mult": 2.7,
+        "sell_fastx": 86,
+        "sell_rsi_exit": 73,
+        "sell_use_trailing": false,
+        "roi_t1": 30,
+        "roi_t2": 26,
+        "roi_t3": 13,
+        "roi_p1": 0.018000000000000002,
+        "roi_p2": 0.069,
+        "roi_p3": 0.18400000000000002
+      }
+    }
+  ]
+}

@@ -1,0 +1,121 @@
+{
+  "source_file": "strategy_AutoResearch_iter0003_2026-05-14_14-32-49.fthypt",
+  "total_epochs": 500,
+  "top": [
+    {
+      "loss": -0.7486965711109825,
+      "params": {
+        "buy_adx": 22,
+        "buy_ema50_ratio": 1.013,
+        "buy_rsi": 50,
+        "buy_rsi_filter": 14,
+        "buy_volume_sma_ratio": 2.45,
+        "regime_fast_ema": 48,
+        "regime_slow_ema": 165,
+        "short_adx": 25,
+        "short_ema50_ratio": 1.007,
+        "short_rsi": 53,
+        "short_rsi_filter": 7,
+        "short_volume_sma_ratio": 1.94,
+        "roi_t1": 90,
+        "roi_t2": 41,
+        "roi_t3": 22,
+        "roi_p1": 0.018000000000000002,
+        "roi_p2": 0.061000000000000006,
+        "roi_p3": 0.060000000000000005
+      }
+    },
+    {
+      "loss": -0.7286001816174796,
+      "params": {
+        "buy_adx": 22,
+        "buy_ema50_ratio": 1.01,
+        "buy_rsi": 50,
+        "buy_rsi_filter": 5,
+        "buy_volume_sma_ratio": 1.38,
+        "regime_fast_ema": 38,
+        "regime_slow_ema": 155,
+        "short_adx": 25,
+        "short_ema50_ratio": 1.017,
+        "short_rsi": 53,
+        "short_rsi_filter": 7,
+        "short_volume_sma_ratio": 1.94,
+        "roi_t1": 90,
+        "roi_t2": 46,
+        "roi_t3": 23,
+        "roi_p1": 0.020999999999999998,
+        "roi_p2": 0.048,
+        "roi_p3": 0.060000000000000005
+      }
+    },
+    {
+      "loss": -0.7104108372963864,
+      "params": {
+        "buy_adx": 22,
+        "buy_ema50_ratio": 1.007,
+        "buy_rsi": 50,
+        "buy_rsi_filter": 5,
+        "buy_volume_sma_ratio": 2.4699999999999998,
+        "regime_fast_ema": 38,
+        "regime_slow_ema": 124,
+        "short_adx": 25,
+        "short_ema50_ratio": 1.017,
+        "short_rsi": 53,
+        "short_rsi_filter": 7,
+        "short_volume_sma_ratio": 1.7000000000000002,
+        "roi_t1": 90,
+        "roi_t2": 46,
+        "roi_t3": 23,
+        "roi_p1": 0.020999999999999998,
+        "roi_p2": 0.068,
+        "roi_p3": 0.060000000000000005
+      }
+    },
+    {
+      "loss": -0.7087251761297483,
+      "params": {
+        "buy_adx": 22,
+        "buy_ema50_ratio": 1.013,
+        "buy_rsi": 50,
+        "buy_rsi_filter": 11,
+        "buy_volume_sma_ratio": 2.45,
+        "regime_fast_ema": 38,
+        "regime_slow_ema": 165,
+        "short_adx": 25,
+        "short_ema50_ratio": 1.008,
+        "short_rsi": 53,
+        "short_rsi_filter": 7,
+        "short_volume_sma_ratio": 1.94,
+        "roi_t1": 90,
+        "roi_t2": 52,
+        "roi_t3": 22,
+        "roi_p1": 0.016,
+        "roi_p2": 0.048,
+        "roi_p3": 0.060000000000000005
+      }
+    },
+    {
+      "loss": -0.7079827027203206,
+      "params": {
+        "buy_adx": 22,
+        "buy_ema50_ratio": 1.013,
+        "buy_rsi": 50,
+        "buy_rsi_filter": 14,
+        "buy_volume_sma_ratio": 2.45,
+        "regime_fast_ema": 50,
+        "regime_slow_ema": 165,
+        "short_adx": 25,
+        "short_ema50_ratio": 1.017,
+        "short_rsi": 53,
+        "short_rsi_filter": 7,
+        "short_volume_sma_ratio": 1.7000000000000002,
+        "roi_t1": 90,
+        "roi_t2": 46,
+        "roi_t3": 23,
+        "roi_p1": 0.028999999999999998,
+        "roi_p2": 0.068,
+        "roi_p3": 0.060000000000000005
+      }
+    }
+  ]
+}

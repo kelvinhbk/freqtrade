@@ -1,0 +1,86 @@
+{
+  "source_file": "strategy_AutoResearch_iter0006_2026-05-14_14-59-38.fthypt",
+  "total_epochs": 500,
+  "top": [
+    {
+      "loss": 100000.0,
+      "params": {
+        "csl_late": -0.054,
+        "csl_mid_ratio": 2.7,
+        "sell_fastx": 80,
+        "sell_trend_filter": 6,
+        "sell_trend_strength": 1.67,
+        "roi_t1": 25,
+        "roi_t2": 54,
+        "roi_t3": 10,
+        "roi_p1": 0.022,
+        "roi_p2": 0.033,
+        "roi_p3": 0.039
+      }
+    },
+    {
+      "loss": 100000.0,
+      "params": {
+        "csl_late": -0.04,
+        "csl_mid_ratio": 2.0,
+        "sell_fastx": 96,
+        "sell_trend_filter": 17,
+        "sell_trend_strength": 0.65,
+        "roi_t1": 114,
+        "roi_t2": 59,
+        "roi_t3": 29,
+        "roi_p1": 0.016,
+        "roi_p2": 0.047,
+        "roi_p3": 0.077
+      }
+    },
+    {
+      "loss": 100000.0,
+      "params": {
+        "csl_late": -0.062,
+        "csl_mid_ratio": 1.7000000000000002,
+        "sell_fastx": 71,
+        "sell_trend_filter": 19,
+        "sell_trend_strength": 1.3599999999999999,
+        "roi_t1": 44,
+        "roi_t2": 48,
+        "roi_t3": 35,
+        "roi_p1": 0.03,
+        "roi_p2": 0.024,
+        "roi_p3": 0.109
+      }
+    },
+    {
+      "loss": 100000.0,
+      "params": {
+        "csl_late": -0.078,
+        "csl_mid_ratio": 1.4,
+        "sell_fastx": 76,
+        "sell_trend_filter": 9,
+        "sell_trend_strength": 0.8,
+        "roi_t1": 27,
+        "roi_t2": 20,
+        "roi_t3": 36,
+        "roi_p1": 0.037,
+        "roi_p2": 0.055,
+        "roi_p3": 0.073
+      }
+    },
+    {
+      "loss": 100000.0,
+      "params": {
+        "csl_late": -0.048,
+        "csl_mid_ratio": 1.5,
+        "sell_fastx": 85,
+        "sell_trend_filter": 5,
+        "sell_trend_strength": 1.0899999999999999,
+        "roi_t1": 107,
+        "roi_t2": 33,
+        "roi_t3": 29,
+        "roi_p1": 0.027000000000000003,
+        "roi_p2": 0.013000000000000001,
+        "roi_p3": 0.04
+      }
+    }
+  ]
+}

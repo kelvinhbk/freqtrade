@@ -1,0 +1,106 @@
+{
+  "source_file": "strategy_macd_v4_E0007_2026-05-31_05-30-24.fthypt",
+  "total_epochs": 500,
+  "top": [
+    {
+      "loss": 0.6310278966093764,
+      "params": {
+        "min_cont_strength": 0.772,
+        "min_single_strength": 0.531,
+        "atr_sl_mult": 2.115,
+        "tier0_atr_mult": 1.8479999999999999,
+        "tier1_atr_mult": 1.7850000000000001,
+        "tier1_profit": 0.013000000000000001,
+        "tier2_atr_mult": 0.887,
+        "tier2_profit": 0.099,
+        "roi_t1": 255,
+        "roi_t2": 89,
+        "roi_t3": 91,
+        "roi_p1": 0.025,
+        "roi_p2": 0.089,
+        "roi_p3": 0.07200000000000001,
+        "stoploss": -0.22099999999999997
+      }
+    },
+    {
+      "loss": 0.6404508624894623,
+      "params": {
+        "min_cont_strength": 0.772,
+        "min_single_strength": 0.531,
+        "atr_sl_mult": 2.115,
+        "tier0_atr_mult": 1.6059999999999999,
+        "tier1_atr_mult": 1.7850000000000001,
+        "tier1_profit": 0.023,
+        "tier2_atr_mult": 0.887,
+        "tier2_profit": 0.099,
+        "roi_t1": 255,
+        "roi_t2": 89,
+        "roi_t3": 91,
+        "roi_p1": 0.025,
+        "roi_p2": 0.103,
+        "roi_p3": 0.016,
+        "stoploss": -0.22099999999999997
+      }
+    },
+    {
+      "loss": 0.6415684066512728,
+      "params": {
+        "min_cont_strength": 0.772,
+        "min_single_strength": 0.531,
+        "atr_sl_mult": 2.115,
+        "tier0_atr_mult": 1.8479999999999999,
+        "tier1_atr_mult": 1.7850000000000001,
+        "tier1_profit": 0.013000000000000001,
+        "tier2_atr_mult": 0.887,
+        "tier2_profit": 0.099,
+        "roi_t1": 255,
+        "roi_t2": 89,
+        "roi_t3": 91,
+        "roi_p1": 0.025,
+        "roi_p2": 0.089,
+        "roi_p3": 0.034,
+        "stoploss": -0.22099999999999997
+      }
+    },
+    {
+      "loss": 0.654919954187961,
+      "params": {
+        "min_cont_strength": 0.772,
+        "min_single_strength": 0.531,
+        "atr_sl_mult": 2.115,
+        "tier0_atr_mult": 1.8479999999999999,
+        "tier1_atr_mult": 1.7850000000000001,
+        "tier1_profit": 0.013000000000000001,
+        "tier2_atr_mult": 0.887,
+        "tier2_profit": 0.099,
+        "roi_t1": 255,
+        "roi_t2": 89,
+        "roi_t3": 91,
+        "roi_p1": 0.025,
+        "roi_p2": 0.089,
+        "roi_p3": 0.22799999999999998,
+        "stoploss": -0.22099999999999997
+      }
+    },
+    {
+      "loss": 0.6643771642239531,
+      "params": {
+        "min_cont_strength": 0.751,
+        "min_single_strength": 0.531,
+        "atr_sl_mult": 2.115,
+        "tier0_atr_mult": 1.8479999999999999,
+        "tier1_atr_mult": 1.7850000000000001,
+        "tier1_profit": 0.013000000000000001,
+        "tier2_atr_mult": 0.887,
+        "tier2_profit": 0.087,
+        "roi_t1": 255,
+        "roi_t2": 89,
+        "roi_t3": 91,
+        "roi_p1": 0.025,
+        "roi_p2": 0.103,
+        "roi_p3": 0.016,
+        "stoploss": -0.26599999999999996
+      }
+    }
+  ]
+}

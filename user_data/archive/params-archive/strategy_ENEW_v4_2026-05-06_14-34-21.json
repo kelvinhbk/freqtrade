@@ -1,0 +1,56 @@
+{
+  "source_file": "strategy_ENEW_v4_2026-05-06_14-34-21.fthypt",
+  "total_epochs": 384,
+  "top": [
+    {
+      "loss": -1.939914021166282,
+      "params": {
+        "csl_late": -0.047,
+        "csl_mid_ratio": 1.2,
+        "profit_guard_threshold": 0.05,
+        "sell_fastx": 91,
+        "trailing_guard_value": -0.0010000000000000009
+      }
+    },
+    {
+      "loss": -1.939914021166282,
+      "params": {
+        "csl_late": -0.069,
+        "csl_mid_ratio": 1.2,
+        "profit_guard_threshold": 0.05,
+        "sell_fastx": 91,
+        "trailing_guard_value": -0.0010000000000000009
+      }
+    },
+    {
+      "loss": -1.939914021166282,
+      "params": {
+        "csl_late": -0.038,
+        "csl_mid_ratio": 1.2,
+        "profit_guard_threshold": 0.05,
+        "sell_fastx": 91,
+        "trailing_guard_value": -0.0010000000000000009
+      }
+    },
+    {
+      "loss": -1.939914021166282,
+      "params": {
+        "csl_late": -0.034,
+        "csl_mid_ratio": 1.2,
+        "profit_guard_threshold": 0.05,
+        "sell_fastx": 91,
+        "trailing_guard_value": -0.0010000000000000009
+      }
+    },
+    {
+      "loss": -1.939914021166282,
+      "params": {
+        "csl_late": -0.079,
+        "csl_mid_ratio": 1.2,
+        "profit_guard_threshold": 0.05,
+        "sell_fastx": 91,
+        "trailing_guard_value": -0.0010000000000000009
+      }
+    }
+  ]
+}

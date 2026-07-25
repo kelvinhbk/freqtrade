@@ -1,0 +1,91 @@
+{
+  "source_file": "strategy_macd_v4_E0007_2026-05-27_03-52-44.fthypt",
+  "total_epochs": 353,
+  "top": [
+    {
+      "loss": 0.5974323352756197,
+      "params": {
+        "min_cont_strength": 0.765,
+        "min_single_strength": 0.535,
+        "atr_sl_mult": 3.8600000000000003,
+        "trail_activation": 0.08,
+        "trail_atr_mult": 2.636,
+        "roi_t1": 284,
+        "roi_t2": 110,
+        "roi_t3": 40,
+        "roi_p1": 0.015,
+        "roi_p2": 0.07200000000000001,
+        "roi_p3": 0.128,
+        "stoploss": -0.284
+      }
+    },
+    {
+      "loss": 0.6161932074414391,
+      "params": {
+        "min_cont_strength": 0.765,
+        "min_single_strength": 0.475,
+        "atr_sl_mult": 3.8600000000000003,
+        "trail_activation": 0.078,
+        "trail_atr_mult": 1.831,
+        "roi_t1": 245,
+        "roi_t2": 110,
+        "roi_t3": 85,
+        "roi_p1": 0.015,
+        "roi_p2": 0.064,
+        "roi_p3": 0.276,
+        "stoploss": -0.294
+      }
+    },
+    {
+      "loss": 0.6444870935506704,
+      "params": {
+        "min_cont_strength": 0.765,
+        "min_single_strength": 0.535,
+        "atr_sl_mult": 3.683,
+        "trail_activation": 0.08,
+        "trail_atr_mult": 2.636,
+        "roi_t1": 284,
+        "roi_t2": 110,
+        "roi_t3": 40,
+        "roi_p1": 0.015,
+        "roi_p2": 0.07200000000000001,
+        "roi_p3": 0.20700000000000002,
+        "stoploss": -0.284
+      }
+    },
+    {
+      "loss": 0.6794706225449065,
+      "params": {
+        "min_cont_strength": 0.765,
+        "min_single_strength": 0.475,
+        "atr_sl_mult": 3.8600000000000003,
+        "trail_activation": 0.077,
+        "trail_atr_mult": 1.831,
+        "roi_t1": 256,
+        "roi_t2": 110,
+        "roi_t3": 85,
+        "roi_p1": 0.015,
+        "roi_p2": 0.064,
+        "roi_p3": 0.276,
+        "stoploss": -0.294
+      }
+    },
+    {
+      "loss": 0.6861274550164831,
+      "params": {
+        "min_cont_strength": 0.765,
+        "min_single_strength": 0.535,
+        "atr_sl_mult": 3.8600000000000003,
+        "trail_activation": 0.08,
+        "trail_atr_mult": 2.636,
+        "roi_t1": 284,
+        "roi_t2": 110,
+        "roi_t3": 40,
+        "roi_p1": 0.015,
+        "roi_p2": 0.056,
+        "roi_p3": 0.128,
+        "stoploss": -0.284
+      }
+    }
+  ]
+}

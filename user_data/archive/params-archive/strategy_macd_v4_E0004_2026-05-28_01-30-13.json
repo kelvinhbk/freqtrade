@@ -1,0 +1,106 @@
+{
+  "source_file": "strategy_macd_v4_E0004_2026-05-28_01-30-13.fthypt",
+  "total_epochs": 500,
+  "top": [
+    {
+      "loss": -0.25270488267621294,
+      "params": {
+        "min_cont_strength": 0.754,
+        "min_single_strength": 0.5680000000000001,
+        "atr_sl_mult": 2.133,
+        "max_holding": 33,
+        "time_decay_rate": 0.095,
+        "time_decay_start": 31,
+        "tp1_atr_mult": 3.3890000000000002,
+        "trail_atr_mult": 3.092,
+        "roi_t1": 352,
+        "roi_t2": 110,
+        "roi_t3": 115,
+        "roi_p1": 0.054,
+        "roi_p2": 0.023,
+        "roi_p3": 0.254,
+        "stoploss": -0.13199999999999998
+      }
+    },
+    {
+      "loss": -0.25091651268089016,
+      "params": {
+        "min_cont_strength": 0.756,
+        "min_single_strength": 0.5680000000000001,
+        "atr_sl_mult": 2.133,
+        "max_holding": 33,
+        "time_decay_rate": 0.095,
+        "time_decay_start": 32,
+        "tp1_atr_mult": 3.3890000000000002,
+        "trail_atr_mult": 1.152,
+        "roi_t1": 352,
+        "roi_t2": 96,
+        "roi_t3": 115,
+        "roi_p1": 0.054,
+        "roi_p2": 0.023,
+        "roi_p3": 0.254,
+        "stoploss": -0.22299999999999998
+      }
+    },
+    {
+      "loss": -0.21984926696597917,
+      "params": {
+        "min_cont_strength": 0.777,
+        "min_single_strength": 0.5680000000000001,
+        "atr_sl_mult": 2.133,
+        "max_holding": 33,
+        "time_decay_rate": 0.095,
+        "time_decay_start": 31,
+        "tp1_atr_mult": 3.3890000000000002,
+        "trail_atr_mult": 3.092,
+        "roi_t1": 352,
+        "roi_t2": 110,
+        "roi_t3": 115,
+        "roi_p1": 0.054,
+        "roi_p2": 0.023,
+        "roi_p3": 0.254,
+        "stoploss": -0.22299999999999998
+      }
+    },
+    {
+      "loss": -0.2150091745121665,
+      "params": {
+        "min_cont_strength": 0.754,
+        "min_single_strength": 0.5680000000000001,
+        "atr_sl_mult": 2.133,
+        "max_holding": 33,
+        "time_decay_rate": 0.095,
+        "time_decay_start": 31,
+        "tp1_atr_mult": 3.3890000000000002,
+        "trail_atr_mult": 2.8920000000000003,
+        "roi_t1": 352,
+        "roi_t2": 96,
+        "roi_t3": 115,
+        "roi_p1": 0.054,
+        "roi_p2": 0.023,
+        "roi_p3": 0.254,
+        "stoploss": -0.13199999999999998
+      }
+    },
+    {
+      "loss": -0.2084330999786717,
+      "params": {
+        "min_cont_strength": 0.754,
+        "min_single_strength": 0.5680000000000001,
+        "atr_sl_mult": 1.962,
+        "max_holding": 33,
+        "time_decay_rate": 0.114,
+        "time_decay_start": 31,
+        "tp1_atr_mult": 3.3890000000000002,
+        "trail_atr_mult": 2.8920000000000003,
+        "roi_t1": 352,
+        "roi_t2": 110,
+        "roi_t3": 115,
+        "roi_p1": 0.054,
+        "roi_p2": 0.023,
+        "roi_p3": 0.254,
+        "stoploss": -0.13199999999999998
+      }
+    }
+  ]
+}

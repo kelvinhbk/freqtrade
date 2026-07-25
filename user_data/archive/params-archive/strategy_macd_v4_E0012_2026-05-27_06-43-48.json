@@ -1,0 +1,96 @@
+{
+  "source_file": "strategy_macd_v4_E0012_2026-05-27_06-43-48.fthypt",
+  "total_epochs": 113,
+  "top": [
+    {
+      "loss": 1.7863122943270262,
+      "params": {
+        "min_cont_strength": 0.722,
+        "min_single_strength": 0.496,
+        "entry_atr_mult": 1.931,
+        "max_hold_hours": 7,
+        "tp1_profit_pct": 0.041999999999999996,
+        "trail_pct": 0.019000000000000003,
+        "roi_t1": 249,
+        "roi_t2": 134,
+        "roi_t3": 42,
+        "roi_p1": 0.036000000000000004,
+        "roi_p2": 0.024,
+        "roi_p3": 0.044,
+        "stoploss": -0.08399999999999996
+      }
+    },
+    {
+      "loss": 1.7975870347773726,
+      "params": {
+        "min_cont_strength": 0.753,
+        "min_single_strength": 0.46699999999999997,
+        "entry_atr_mult": 1.981,
+        "max_hold_hours": 39,
+        "tp1_profit_pct": 0.07,
+        "trail_pct": 0.019000000000000003,
+        "roi_t1": 176,
+        "roi_t2": 42,
+        "roi_t3": 108,
+        "roi_p1": 0.032,
+        "roi_p2": 0.024,
+        "roi_p3": 0.21300000000000002,
+        "stoploss": -0.17899999999999996
+      }
+    },
+    {
+      "loss": 1.9006732917542468,
+      "params": {
+        "min_cont_strength": 0.753,
+        "min_single_strength": 0.46699999999999997,
+        "entry_atr_mult": 1.981,
+        "max_hold_hours": 7,
+        "tp1_profit_pct": 0.07,
+        "trail_pct": 0.019000000000000003,
+        "roi_t1": 176,
+        "roi_t2": 42,
+        "roi_t3": 92,
+        "roi_p1": 0.032,
+        "roi_p2": 0.024,
+        "roi_p3": 0.21300000000000002,
+        "stoploss": -0.17899999999999996
+      }
+    },
+    {
+      "loss": 1.9028133900130142,
+      "params": {
+        "min_cont_strength": 0.599,
+        "min_single_strength": 0.496,
+        "entry_atr_mult": 1.981,
+        "max_hold_hours": 7,
+        "tp1_profit_pct": 0.07,
+        "trail_pct": 0.038,
+        "roi_t1": 68,
+        "roi_t2": 42,
+        "roi_t3": 114,
+        "roi_p1": 0.026,
+        "roi_p2": 0.058,
+        "roi_p3": 0.17099999999999999,
+        "stoploss": -0.18999999999999997
+      }
+    },
+    {
+      "loss": 1.9432202799510085,
+      "params": {
+        "min_cont_strength": 0.599,
+        "min_single_strength": 0.46699999999999997,
+        "entry_atr_mult": 1.981,
+        "max_hold_hours": 7,
+        "tp1_profit_pct": 0.07,
+        "trail_pct": 0.01,
+        "roi_t1": 203,
+        "roi_t2": 42,
+        "roi_t3": 114,
+        "roi_p1": 0.049,
+        "roi_p2": 0.096,
+        "roi_p3": 0.044,
+        "stoploss": -0.16799999999999998
+      }
+    }
+  ]
+}

@@ -1,0 +1,106 @@
+{
+  "source_file": "strategy_macd_v4_E0001_2026-05-30_23-05-36.fthypt",
+  "total_epochs": 500,
+  "top": [
+    {
+      "loss": 0.35552454332542605,
+      "params": {
+        "min_cont_strength": 0.8780000000000001,
+        "min_single_strength": 0.5640000000000001,
+        "rsi_extreme_threshold": 71.102,
+        "atr_sl_mult": 2.1189999999999998,
+        "momentum_exit_candles": 28,
+        "momentum_min_move": 0.013000000000000001,
+        "tp1_atr_mult": 1.602,
+        "trail_atr_mult": 4.341,
+        "roi_t1": 182,
+        "roi_t2": 157,
+        "roi_t3": 111,
+        "roi_p1": 0.046,
+        "roi_p2": 0.025,
+        "roi_p3": 0.199,
+        "stoploss": -0.22899999999999998
+      }
+    },
+    {
+      "loss": 0.45864374906728345,
+      "params": {
+        "min_cont_strength": 0.8780000000000001,
+        "min_single_strength": 0.5640000000000001,
+        "rsi_extreme_threshold": 74.444,
+        "atr_sl_mult": 2.1189999999999998,
+        "momentum_exit_candles": 28,
+        "momentum_min_move": 0.028,
+        "tp1_atr_mult": 3.26,
+        "trail_atr_mult": 4.341,
+        "roi_t1": 236,
+        "roi_t2": 174,
+        "roi_t3": 111,
+        "roi_p1": 0.046,
+        "roi_p2": 0.025,
+        "roi_p3": 0.199,
+        "stoploss": -0.14599999999999996
+      }
+    },
+    {
+      "loss": 0.45893620403964547,
+      "params": {
+        "min_cont_strength": 0.8780000000000001,
+        "min_single_strength": 0.5640000000000001,
+        "rsi_extreme_threshold": 71.102,
+        "atr_sl_mult": 2.1189999999999998,
+        "momentum_exit_candles": 28,
+        "momentum_min_move": 0.028,
+        "tp1_atr_mult": 3.26,
+        "trail_atr_mult": 4.341,
+        "roi_t1": 182,
+        "roi_t2": 174,
+        "roi_t3": 111,
+        "roi_p1": 0.046,
+        "roi_p2": 0.025,
+        "roi_p3": 0.268,
+        "stoploss": -0.18099999999999997
+      }
+    },
+    {
+      "loss": 0.46997315070196427,
+      "params": {
+        "min_cont_strength": 0.8780000000000001,
+        "min_single_strength": 0.5640000000000001,
+        "rsi_extreme_threshold": 71.102,
+        "atr_sl_mult": 2.388,
+        "momentum_exit_candles": 28,
+        "momentum_min_move": 0.012,
+        "tp1_atr_mult": 1.592,
+        "trail_atr_mult": 3.021,
+        "roi_t1": 236,
+        "roi_t2": 157,
+        "roi_t3": 113,
+        "roi_p1": 0.048,
+        "roi_p2": 0.053,
+        "roi_p3": 0.187,
+        "stoploss": -0.22899999999999998
+      }
+    },
+    {
+      "loss": 0.5016859386464458,
+      "params": {
+        "min_cont_strength": 0.8780000000000001,
+        "min_single_strength": 0.5640000000000001,
+        "rsi_extreme_threshold": 71.102,
+        "atr_sl_mult": 2.1189999999999998,
+        "momentum_exit_candles": 28,
+        "momentum_min_move": 0.013000000000000001,
+        "tp1_atr_mult": 2.001,
+        "trail_atr_mult": 3.021,
+        "roi_t1": 236,
+        "roi_t2": 158,
+        "roi_t3": 111,
+        "roi_p1": 0.046,
+        "roi_p2": 0.025,
+        "roi_p3": 0.199,
+        "stoploss": -0.05199999999999999
+      }
+    }
+  ]
+}

@@ -1,0 +1,111 @@
+{
+  "source_file": "strategy_macd_v4_E0010_2026-05-27_06-03-33.fthypt",
+  "total_epochs": 409,
+  "top": [
+    {
+      "loss": -1.1453074223351565,
+      "params": {
+        "min_cont_strength": 0.526,
+        "min_single_strength": 0.379,
+        "rsi_overbought": 76,
+        "rsi_oversold": 25,
+        "rsi_period": 11,
+        "atr_sl_base": 1.795,
+        "atr_sl_extreme": 2.816,
+        "tp1_atr_mult": 3.156,
+        "trail_atr_mult": 3.373,
+        "roi_t1": 122,
+        "roi_t2": 102,
+        "roi_t3": 108,
+        "roi_p1": 0.022,
+        "roi_p2": 0.057,
+        "roi_p3": 0.23199999999999998,
+        "stoploss": -0.292
+      }
+    },
+    {
+      "loss": -1.1444387696186282,
+      "params": {
+        "min_cont_strength": 0.493,
+        "min_single_strength": 0.379,
+        "rsi_overbought": 76,
+        "rsi_oversold": 25,
+        "rsi_period": 11,
+        "atr_sl_base": 1.795,
+        "atr_sl_extreme": 2.816,
+        "tp1_atr_mult": 3.156,
+        "trail_atr_mult": 3.373,
+        "roi_t1": 122,
+        "roi_t2": 102,
+        "roi_t3": 108,
+        "roi_p1": 0.022,
+        "roi_p2": 0.066,
+        "roi_p3": 0.23199999999999998,
+        "stoploss": -0.292
+      }
+    },
+    {
+      "loss": -1.1436665496154288,
+      "params": {
+        "min_cont_strength": 0.526,
+        "min_single_strength": 0.379,
+        "rsi_overbought": 76,
+        "rsi_oversold": 25,
+        "rsi_period": 11,
+        "atr_sl_base": 1.899,
+        "atr_sl_extreme": 2.816,
+        "tp1_atr_mult": 3.156,
+        "trail_atr_mult": 2.92,
+        "roi_t1": 122,
+        "roi_t2": 102,
+        "roi_t3": 108,
+        "roi_p1": 0.034,
+        "roi_p2": 0.066,
+        "roi_p3": 0.23199999999999998,
+        "stoploss": -0.292
+      }
+    },
+    {
+      "loss": -1.141481767657272,
+      "params": {
+        "min_cont_strength": 0.526,
+        "min_single_strength": 0.382,
+        "rsi_overbought": 76,
+        "rsi_oversold": 25,
+        "rsi_period": 11,
+        "atr_sl_base": 1.795,
+        "atr_sl_extreme": 2.816,
+        "tp1_atr_mult": 3.156,
+        "trail_atr_mult": 2.92,
+        "roi_t1": 122,
+        "roi_t2": 102,
+        "roi_t3": 108,
+        "roi_p1": 0.034,
+        "roi_p2": 0.066,
+        "roi_p3": 0.269,
+        "stoploss": -0.22999999999999998
+      }
+    },
+    {
+      "loss": -1.141481767657272,
+      "params": {
+        "min_cont_strength": 0.493,
+        "min_single_strength": 0.382,
+        "rsi_overbought": 76,
+        "rsi_oversold": 25,
+        "rsi_period": 11,
+        "atr_sl_base": 1.234,
+        "atr_sl_extreme": 2.816,
+        "tp1_atr_mult": 3.156,
+        "trail_atr_mult": 3.373,
+        "roi_t1": 122,
+        "roi_t2": 102,
+        "roi_t3": 108,
+        "roi_p1": 0.034,
+        "roi_p2": 0.066,
+        "roi_p3": 0.199,
+        "stoploss": -0.292
+      }
+    }
+  ]
+}

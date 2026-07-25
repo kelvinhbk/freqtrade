@@ -1,0 +1,121 @@
+{
+  "source_file": "strategy_EfutureLong_v4_2026-06-13_07-35-25.fthypt",
+  "total_epochs": 500,
+  "top": [
+    {
+      "loss": -10482.893331629624,
+      "params": {
+        "csl_late": -0.038,
+        "csl_mid_ratio": 2.7,
+        "exit_adx_filter": 16,
+        "exit_volatility_filter": 1.6,
+        "sell_bb_middle_profit": 0.01,
+        "sell_macd_profit": 0.007,
+        "sell_trend_filter": 5,
+        "time_exit_1_hours": 3,
+        "time_exit_1_threshold": -0.030000000000000002,
+        "time_exit_2_hours": 9,
+        "time_exit_2_threshold": -0.028999999999999998,
+        "time_exit_3_hours": 10,
+        "trail_tier1_distance": 0.04,
+        "trail_tier1_profit": 0.03,
+        "trail_tier2_distance": 0.007,
+        "trail_tier2_profit": 0.10200000000000001,
+        "trail_tier3_distance": 0.004,
+        "trail_tier3_profit": 0.10400000000000001
+      }
+    },
+    {
+      "loss": -10353.230880643281,
+      "params": {
+        "csl_late": -0.012999999999999998,
+        "csl_mid_ratio": 2.7,
+        "exit_adx_filter": 22,
+        "exit_volatility_filter": 1.6,
+        "sell_bb_middle_profit": 0.006,
+        "sell_macd_profit": 0.007,
+        "sell_trend_filter": 5,
+        "time_exit_1_hours": 3,
+        "time_exit_1_threshold": -0.045000000000000005,
+        "time_exit_2_hours": 9,
+        "time_exit_2_threshold": -0.028999999999999998,
+        "time_exit_3_hours": 10,
+        "trail_tier1_distance": 0.04,
+        "trail_tier1_profit": 0.03,
+        "trail_tier2_distance": 0.011,
+        "trail_tier2_profit": 0.10200000000000001,
+        "trail_tier3_distance": 0.004,
+        "trail_tier3_profit": 0.10400000000000001
+      }
+    },
+    {
+      "loss": -10353.230880643281,
+      "params": {
+        "csl_late": -0.012999999999999998,
+        "csl_mid_ratio": 2.7,
+        "exit_adx_filter": 16,
+        "exit_volatility_filter": 1.6,
+        "sell_bb_middle_profit": 0.024,
+        "sell_macd_profit": 0.007,
+        "sell_trend_filter": 5,
+        "time_exit_1_hours": 3,
+        "time_exit_1_threshold": -0.045000000000000005,
+        "time_exit_2_hours": 9,
+        "time_exit_2_threshold": -0.027999999999999997,
+        "time_exit_3_hours": 10,
+        "trail_tier1_distance": 0.04,
+        "trail_tier1_profit": 0.03,
+        "trail_tier2_distance": 0.011,
+        "trail_tier2_profit": 0.10200000000000001,
+        "trail_tier3_distance": 0.004,
+        "trail_tier3_profit": 0.10400000000000001
+      }
+    },
+    {
+      "loss": -10294.887640955782,
+      "params": {
+        "csl_late": -0.068,
+        "csl_mid_ratio": 2.7,
+        "exit_adx_filter": 19,
+        "exit_volatility_filter": 1.7000000000000002,
+        "sell_bb_middle_profit": 0.008,
+        "sell_macd_profit": 0.007,
+        "sell_trend_filter": 20,
+        "time_exit_1_hours": 3,
+        "time_exit_1_threshold": -0.045000000000000005,
+        "time_exit_2_hours": 9,
+        "time_exit_2_threshold": -0.020999999999999998,
+        "time_exit_3_hours": 14,
+        "trail_tier1_distance": 0.04,
+        "trail_tier1_profit": 0.03,
+        "trail_tier2_distance": 0.025,
+        "trail_tier2_profit": 0.10200000000000001,
+        "trail_tier3_distance": 0.004,
+        "trail_tier3_profit": 0.10400000000000001
+      }
+    },
+    {
+      "loss": -10184.55332550155,
+      "params": {
+        "csl_late": -0.068,
+        "csl_mid_ratio": 2.7,
+        "exit_adx_filter": 19,
+        "exit_volatility_filter": 1.6,
+        "sell_bb_middle_profit": 0.01,
+        "sell_macd_profit": 0.007,
+        "sell_trend_filter": 5,
+        "time_exit_1_hours": 3,
+        "time_exit_1_threshold": -0.045000000000000005,
+        "time_exit_2_hours": 8,
+        "time_exit_2_threshold": -0.027999999999999997,
+        "time_exit_3_hours": 14,
+        "trail_tier1_distance": 0.04,
+        "trail_tier1_profit": 0.03,
+        "trail_tier2_distance": 0.03,
+        "trail_tier2_profit": 0.10200000000000001,
+        "trail_tier3_distance": 0.004,
+        "trail_tier3_profit": 0.10400000000000001
+      }
+    }
+  ]
+}

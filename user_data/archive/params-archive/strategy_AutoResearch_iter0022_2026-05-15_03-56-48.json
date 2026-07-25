@@ -1,0 +1,91 @@
+{
+  "source_file": "strategy_AutoResearch_iter0022_2026-05-15_03-56-48.fthypt",
+  "total_epochs": 500,
+  "top": [
+    {
+      "loss": -0.8407045268540332,
+      "params": {
+        "buy_adx_threshold": 36,
+        "buy_rsi": 47,
+        "buy_sma50_ratio": 1.037,
+        "short_adx_threshold": 24,
+        "short_rsi": 53,
+        "short_sma50_ratio": 0.967,
+        "roi_t1": 107,
+        "roi_t2": 53,
+        "roi_t3": 15,
+        "roi_p1": 0.02,
+        "roi_p2": 0.017,
+        "roi_p3": 0.060000000000000005
+      }
+    },
+    {
+      "loss": -0.8407045268540332,
+      "params": {
+        "buy_adx_threshold": 36,
+        "buy_rsi": 47,
+        "buy_sma50_ratio": 1.037,
+        "short_adx_threshold": 24,
+        "short_rsi": 53,
+        "short_sma50_ratio": 0.967,
+        "roi_t1": 49,
+        "roi_t2": 53,
+        "roi_t3": 15,
+        "roi_p1": 0.02,
+        "roi_p2": 0.017,
+        "roi_p3": 0.060000000000000005
+      }
+    },
+    {
+      "loss": -0.7799577641198226,
+      "params": {
+        "buy_adx_threshold": 33,
+        "buy_rsi": 47,
+        "buy_sma50_ratio": 1.0,
+        "short_adx_threshold": 24,
+        "short_rsi": 53,
+        "short_sma50_ratio": 0.972,
+        "roi_t1": 49,
+        "roi_t2": 41,
+        "roi_t3": 17,
+        "roi_p1": 0.02,
+        "roi_p2": 0.017,
+        "roi_p3": 0.024
+      }
+    },
+    {
+      "loss": -0.7799577641198226,
+      "params": {
+        "buy_adx_threshold": 33,
+        "buy_rsi": 47,
+        "buy_sma50_ratio": 1.039,
+        "short_adx_threshold": 24,
+        "short_rsi": 53,
+        "short_sma50_ratio": 0.982,
+        "roi_t1": 70,
+        "roi_t2": 41,
+        "roi_t3": 17,
+        "roi_p1": 0.02,
+        "roi_p2": 0.017,
+        "roi_p3": 0.024
+      }
+    },
+    {
+      "loss": -0.7692797688938017,
+      "params": {
+        "buy_adx_threshold": 30,
+        "buy_rsi": 47,
+        "buy_sma50_ratio": 1.017,
+        "short_adx_threshold": 24,
+        "short_rsi": 53,
+        "short_sma50_ratio": 1.017,
+        "roi_t1": 51,
+        "roi_t2": 54,
+        "roi_t3": 17,
+        "roi_p1": 0.019000000000000003,
+        "roi_p2": 0.018000000000000002,
+        "roi_p3": 0.024
+      }
+    }
+  ]
+}

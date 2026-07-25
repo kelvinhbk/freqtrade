@@ -1,0 +1,111 @@
+{
+  "source_file": "strategy_FreqaiExampleStrategy_v6_2026-05-05_18-42-33.fthypt",
+  "total_epochs": 300,
+  "top": [
+    {
+      "loss": -6.17149280956239,
+      "params": {
+        "buy_pred_threshold": 0.006,
+        "entry_score_threshold": -0.6,
+        "funding_weight_15m": 0.41,
+        "funding_weight_1h": 0.6,
+        "oi_weight_15m": 5.0,
+        "oi_weight_1h": 11.0,
+        "taker_weight_15m": 1.5,
+        "taker_weight_1h": 3.2,
+        "sell_pred_threshold": 0.011,
+        "roi_t1": 70,
+        "roi_t2": 167,
+        "roi_t3": 83,
+        "roi_p1": 0.047,
+        "roi_p2": 0.095,
+        "roi_p3": 0.084,
+        "stoploss": -0.17799999999999996
+      }
+    },
+    {
+      "loss": -5.751842495422625,
+      "params": {
+        "buy_pred_threshold": 0.006,
+        "entry_score_threshold": -0.7,
+        "funding_weight_15m": 0.41,
+        "funding_weight_1h": 0.1,
+        "oi_weight_15m": 14.0,
+        "oi_weight_1h": 11.0,
+        "taker_weight_15m": 1.5,
+        "taker_weight_1h": 4.2,
+        "sell_pred_threshold": 0.012,
+        "roi_t1": 338,
+        "roi_t2": 117,
+        "roi_t3": 83,
+        "roi_p1": 0.041,
+        "roi_p2": 0.095,
+        "roi_p3": 0.22499999999999998,
+        "stoploss": -0.289
+      }
+    },
+    {
+      "loss": -5.731178606072516,
+      "params": {
+        "buy_pred_threshold": 0.006,
+        "entry_score_threshold": -0.6,
+        "funding_weight_15m": 0.19,
+        "funding_weight_1h": 0.6,
+        "oi_weight_15m": 6.0,
+        "oi_weight_1h": 11.0,
+        "taker_weight_15m": 1.5,
+        "taker_weight_1h": 3.7,
+        "sell_pred_threshold": 0.012,
+        "roi_t1": 70,
+        "roi_t2": 167,
+        "roi_t3": 83,
+        "roi_p1": 0.047,
+        "roi_p2": 0.095,
+        "roi_p3": 0.084,
+        "stoploss": -0.26599999999999996
+      }
+    },
+    {
+      "loss": -5.728395210909756,
+      "params": {
+        "buy_pred_threshold": 0.006,
+        "entry_score_threshold": -0.7,
+        "funding_weight_15m": 0.19,
+        "funding_weight_1h": 0.30000000000000004,
+        "oi_weight_15m": 14.0,
+        "oi_weight_1h": 13.0,
+        "taker_weight_15m": 0.2,
+        "taker_weight_1h": 3.7,
+        "sell_pred_threshold": 0.012,
+        "roi_t1": 338,
+        "roi_t2": 135,
+        "roi_t3": 76,
+        "roi_p1": 0.057,
+        "roi_p2": 0.10200000000000001,
+        "roi_p3": 0.22499999999999998,
+        "stoploss": -0.26599999999999996
+      }
+    },
+    {
+      "loss": -5.69867697923323,
+      "params": {
+        "buy_pred_threshold": 0.006,
+        "entry_score_threshold": -0.7,
+        "funding_weight_15m": 0.21000000000000002,
+        "funding_weight_1h": 0.30000000000000004,
+        "oi_weight_15m": 14.0,
+        "oi_weight_1h": 13.0,
+        "taker_weight_15m": 1.5,
+        "taker_weight_1h": 0.5,
+        "sell_pred_threshold": 0.012,
+        "roi_t1": 338,
+        "roi_t2": 113,
+        "roi_t3": 76,
+        "roi_p1": 0.057,
+        "roi_p2": 0.041,
+        "roi_p3": 0.07300000000000001,
+        "stoploss": -0.26599999999999996
+      }
+    }
+  ]
+}

@@ -1,0 +1,86 @@
+{
+  "source_file": "strategy_ENEWv1_2026-04-21_14-48-46.fthypt",
+  "total_epochs": 3000,
+  "top": [
+    {
+      "loss": -3.7913253932174755,
+      "params": {
+        "buy_24h_max_pct": 17.3,
+        "buy_24h_min_pct": -13.0,
+        "buy_cti": -0.73,
+        "buy_rsi": 30,
+        "buy_rsi_fast": 36,
+        "buy_sma15_ratio": 0.982,
+        "csl_late": -0.066,
+        "csl_mid_ratio": 3.0,
+        "csl_profit_guard": 0.055,
+        "csl_profit_trail_ratio": 1.4,
+        "sell_fastx": 53
+      }
+    },
+    {
+      "loss": -3.7913253932174755,
+      "params": {
+        "buy_24h_max_pct": 17.3,
+        "buy_24h_min_pct": -13.0,
+        "buy_cti": -0.73,
+        "buy_rsi": 30,
+        "buy_rsi_fast": 36,
+        "buy_sma15_ratio": 0.982,
+        "csl_late": -0.059,
+        "csl_mid_ratio": 3.0,
+        "csl_profit_guard": 0.058,
+        "csl_profit_trail_ratio": 1.4,
+        "sell_fastx": 53
+      }
+    },
+    {
+      "loss": -3.7611059186469338,
+      "params": {
+        "buy_24h_max_pct": 17.3,
+        "buy_24h_min_pct": -13.0,
+        "buy_cti": -0.71,
+        "buy_rsi": 30,
+        "buy_rsi_fast": 36,
+        "buy_sma15_ratio": 0.982,
+        "csl_late": -0.066,
+        "csl_mid_ratio": 3.0,
+        "csl_profit_guard": 0.055,
+        "csl_profit_trail_ratio": 1.4,
+        "sell_fastx": 53
+      }
+    },
+    {
+      "loss": -3.7611059186469338,
+      "params": {
+        "buy_24h_max_pct": 17.3,
+        "buy_24h_min_pct": -13.0,
+        "buy_cti": -0.71,
+        "buy_rsi": 30,
+        "buy_rsi_fast": 36,
+        "buy_sma15_ratio": 0.982,
+        "csl_late": -0.066,
+        "csl_mid_ratio": 3.0,
+        "csl_profit_guard": 0.058,
+        "csl_profit_trail_ratio": 1.4,
+        "sell_fastx": 53
+      }
+    },
+    {
+      "loss": -3.7611059186469338,
+      "params": {
+        "buy_24h_max_pct": 17.3,
+        "buy_24h_min_pct": -13.0,
+        "buy_cti": -0.71,
+        "buy_rsi": 30,
+        "buy_rsi_fast": 36,
+        "buy_sma15_ratio": 0.982,
+        "csl_late": -0.066,
+        "csl_mid_ratio": 3.0,
+        "csl_profit_guard": 0.054,
+        "csl_profit_trail_ratio": 2.9000000000000004,
+        "sell_fastx": 53
+      }
+    }
+  ]
+}

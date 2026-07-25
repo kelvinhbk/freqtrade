@@ -1,0 +1,131 @@
+{
+  "source_file": "strategy_macd_v4_E0007_2026-05-28_08-09-38.fthypt",
+  "total_epochs": 500,
+  "top": [
+    {
+      "loss": 1.219895996824224,
+      "params": {
+        "min_cont_strength": 0.8180000000000001,
+        "min_single_strength": 0.6,
+        "atr_mult_tier_1": 2.363,
+        "atr_mult_tier_2": 0.528,
+        "atr_mult_tier_3": 0.359,
+        "atr_mult_tier_4": 0.389,
+        "atr_mult_tier_5": 0.003,
+        "atr_sl_mult": 1.311,
+        "profit_tier_1": 0.008,
+        "profit_tier_2": 0.036000000000000004,
+        "profit_tier_3": 0.042,
+        "profit_tier_4": 0.116,
+        "profit_tier_5": 0.154,
+        "roi_t1": 157,
+        "roi_t2": 86,
+        "roi_t3": 66,
+        "roi_p1": 0.024,
+        "roi_p2": 0.108,
+        "roi_p3": 0.257,
+        "stoploss": -0.07099999999999995
+      }
+    },
+    {
+      "loss": 1.2426004297553006,
+      "params": {
+        "min_cont_strength": 0.8180000000000001,
+        "min_single_strength": 0.6,
+        "atr_mult_tier_1": 2.363,
+        "atr_mult_tier_2": 0.528,
+        "atr_mult_tier_3": 0.359,
+        "atr_mult_tier_4": 0.389,
+        "atr_mult_tier_5": 0.003,
+        "atr_sl_mult": 1.311,
+        "profit_tier_1": 0.013000000000000001,
+        "profit_tier_2": 0.043,
+        "profit_tier_3": 0.042,
+        "profit_tier_4": 0.116,
+        "profit_tier_5": 0.154,
+        "roi_t1": 157,
+        "roi_t2": 86,
+        "roi_t3": 66,
+        "roi_p1": 0.024,
+        "roi_p2": 0.108,
+        "roi_p3": 0.257,
+        "stoploss": -0.02999999999999997
+      }
+    },
+    {
+      "loss": 1.2447036808710332,
+      "params": {
+        "min_cont_strength": 0.8180000000000001,
+        "min_single_strength": 0.595,
+        "atr_mult_tier_1": 2.363,
+        "atr_mult_tier_2": 0.536,
+        "atr_mult_tier_3": 0.359,
+        "atr_mult_tier_4": 0.42700000000000005,
+        "atr_mult_tier_5": 0.17400000000000002,
+        "atr_sl_mult": 1.135,
+        "profit_tier_1": 0.008,
+        "profit_tier_2": 0.036000000000000004,
+        "profit_tier_3": 0.042,
+        "profit_tier_4": 0.18,
+        "profit_tier_5": 0.173,
+        "roi_t1": 288,
+        "roi_t2": 86,
+        "roi_t3": 66,
+        "roi_p1": 0.024,
+        "roi_p2": 0.032,
+        "roi_p3": 0.081,
+        "stoploss": -0.07099999999999995
+      }
+    },
+    {
+      "loss": 1.2447036808710332,
+      "params": {
+        "min_cont_strength": 0.8180000000000001,
+        "min_single_strength": 0.595,
+        "atr_mult_tier_1": 2.363,
+        "atr_mult_tier_2": 0.536,
+        "atr_mult_tier_3": 0.359,
+        "atr_mult_tier_4": 0.42700000000000005,
+        "atr_mult_tier_5": 0.17400000000000002,
+        "atr_sl_mult": 1.135,
+        "profit_tier_1": 0.008,
+        "profit_tier_2": 0.036000000000000004,
+        "profit_tier_3": 0.042,
+        "profit_tier_4": 0.18,
+        "profit_tier_5": 0.173,
+        "roi_t1": 293,
+        "roi_t2": 86,
+        "roi_t3": 66,
+        "roi_p1": 0.024,
+        "roi_p2": 0.032,
+        "roi_p3": 0.081,
+        "stoploss": -0.07099999999999995
+      }
+    },
+    {
+      "loss": 1.2447036808710332,
+      "params": {
+        "min_cont_strength": 0.8180000000000001,
+        "min_single_strength": 0.595,
+        "atr_mult_tier_1": 2.363,
+        "atr_mult_tier_2": 0.536,
+        "atr_mult_tier_3": 0.359,
+        "atr_mult_tier_4": 0.331,
+        "atr_mult_tier_5": 0.17400000000000002,
+        "atr_sl_mult": 1.135,
+        "profit_tier_1": 0.008,
+        "profit_tier_2": 0.036000000000000004,
+        "profit_tier_3": 0.042,
+        "profit_tier_4": 0.18,
+        "profit_tier_5": 0.173,
+        "roi_t1": 293,
+        "roi_t2": 86,
+        "roi_t3": 66,
+        "roi_p1": 0.024,
+        "roi_p2": 0.032,
+        "roi_p3": 0.081,
+        "stoploss": -0.07099999999999995
+      }
+    }
+  ]
+}

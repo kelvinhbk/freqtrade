@@ -1,0 +1,46 @@
+{
+  "source_file": "strategy_ENEW_2026-04-18_19-51-02.fthypt",
+  "total_epochs": 500,
+  "top": [
+    {
+      "loss": -4.177565936484109,
+      "params": {
+        "csl_late": -0.018000000000000002,
+        "csl_mid_ratio": 1.2,
+        "sell_fastx": 96
+      }
+    },
+    {
+      "loss": -4.177565936484109,
+      "params": {
+        "csl_late": -0.053000000000000005,
+        "csl_mid_ratio": 1.2,
+        "sell_fastx": 96
+      }
+    },
+    {
+      "loss": -4.177565936484109,
+      "params": {
+        "csl_late": -0.017,
+        "csl_mid_ratio": 1.2,
+        "sell_fastx": 96
+      }
+    },
+    {
+      "loss": -4.177565936484109,
+      "params": {
+        "csl_late": -0.052000000000000005,
+        "csl_mid_ratio": 1.2,
+        "sell_fastx": 96
+      }
+    },
+    {
+      "loss": -4.177565936484109,
+      "params": {
+        "csl_late": -0.010999999999999996,
+        "csl_mid_ratio": 1.2,
+        "sell_fastx": 96
+      }
+    }
+  ]
+}

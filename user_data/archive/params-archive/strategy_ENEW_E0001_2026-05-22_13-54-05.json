@@ -1,0 +1,111 @@
+{
+  "source_file": "strategy_ENEW_E0001_2026-05-22_13-54-05.fthypt",
+  "total_epochs": 105,
+  "top": [
+    {
+      "loss": -1.6597849705602972,
+      "params": {
+        "csl_late": -0.010999999999999996,
+        "csl_mid_ratio": 2.4000000000000004,
+        "exit_atr_mult_profit": 4.0,
+        "exit_ema_fast_period": 8,
+        "exit_ema_slow_period": 37,
+        "exit_time_hours": 10,
+        "exit_time_profit_floor": -0.020999999999999998,
+        "exit_trend_slope_lookback": 10,
+        "exit_vol_threshold": 0.6,
+        "sell_fastx": 74,
+        "roi_t1": 83,
+        "roi_t2": 20,
+        "roi_t3": 14,
+        "roi_p1": 0.016,
+        "roi_p2": 0.04,
+        "roi_p3": 0.026000000000000002
+      }
+    },
+    {
+      "loss": -1.6594785899104565,
+      "params": {
+        "csl_late": -0.054,
+        "csl_mid_ratio": 2.4000000000000004,
+        "exit_atr_mult_profit": 3.9000000000000004,
+        "exit_ema_fast_period": 11,
+        "exit_ema_slow_period": 36,
+        "exit_time_hours": 6,
+        "exit_time_profit_floor": -0.046,
+        "exit_trend_slope_lookback": 5,
+        "exit_vol_threshold": 0.6,
+        "sell_fastx": 50,
+        "roi_t1": 89,
+        "roi_t2": 18,
+        "roi_t3": 23,
+        "roi_p1": 0.032,
+        "roi_p2": 0.059000000000000004,
+        "roi_p3": 0.17300000000000001
+      }
+    },
+    {
+      "loss": -1.6584316133266934,
+      "params": {
+        "csl_late": -0.054,
+        "csl_mid_ratio": 1.8,
+        "exit_atr_mult_profit": 3.9000000000000004,
+        "exit_ema_fast_period": 10,
+        "exit_ema_slow_period": 36,
+        "exit_time_hours": 6,
+        "exit_time_profit_floor": -0.046,
+        "exit_trend_slope_lookback": 5,
+        "exit_vol_threshold": 2.9000000000000004,
+        "sell_fastx": 50,
+        "roi_t1": 89,
+        "roi_t2": 18,
+        "roi_t3": 23,
+        "roi_p1": 0.032,
+        "roi_p2": 0.052000000000000005,
+        "roi_p3": 0.08
+      }
+    },
+    {
+      "loss": -1.6575452965525337,
+      "params": {
+        "csl_late": -0.013999999999999999,
+        "csl_mid_ratio": 1.8,
+        "exit_atr_mult_profit": 3.9000000000000004,
+        "exit_ema_fast_period": 10,
+        "exit_ema_slow_period": 51,
+        "exit_time_hours": 9,
+        "exit_time_profit_floor": -0.046,
+        "exit_trend_slope_lookback": 5,
+        "exit_vol_threshold": 2.9000000000000004,
+        "sell_fastx": 50,
+        "roi_t1": 89,
+        "roi_t2": 58,
+        "roi_t3": 23,
+        "roi_p1": 0.032,
+        "roi_p2": 0.024,
+        "roi_p3": 0.043000000000000003
+      }
+    },
+    {
+      "loss": -1.6553514223828978,
+      "params": {
+        "csl_late": -0.053000000000000005,
+        "csl_mid_ratio": 2.4000000000000004,
+        "exit_atr_mult_profit": 3.8000000000000003,
+        "exit_ema_fast_period": 11,
+        "exit_ema_slow_period": 37,
+        "exit_time_hours": 12,
+        "exit_time_profit_floor": -0.066,
+        "exit_trend_slope_lookback": 8,
+        "exit_vol_threshold": 0.6,
+        "sell_fastx": 70,
+        "roi_t1": 83,
+        "roi_t2": 20,
+        "roi_t3": 14,
+        "roi_p1": 0.016,
+        "roi_p2": 0.059000000000000004,
+        "roi_p3": 0.17300000000000001
+      }
+    }
+  ]
+}

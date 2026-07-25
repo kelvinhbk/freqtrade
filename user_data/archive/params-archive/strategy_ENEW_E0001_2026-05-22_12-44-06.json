@@ -1,0 +1,91 @@
+{
+  "source_file": "strategy_ENEW_E0001_2026-05-22_12-44-06.fthypt",
+  "total_epochs": 113,
+  "top": [
+    {
+      "loss": -1.2639288454273365,
+      "params": {
+        "csl_atr_mult": 2.9000000000000004,
+        "csl_tighten_minutes": 184,
+        "csl_tighten_mult": 0.9,
+        "sell_fastx": 66,
+        "sell_profit_atr_mult": 2.3,
+        "sell_trend_ema_period": 26,
+        "roi_t1": 107,
+        "roi_t2": 22,
+        "roi_t3": 16,
+        "roi_p1": 0.035,
+        "roi_p2": 0.056,
+        "roi_p3": 0.15100000000000002
+      }
+    },
+    {
+      "loss": -1.2628265515937598,
+      "params": {
+        "csl_atr_mult": 2.9000000000000004,
+        "csl_tighten_minutes": 184,
+        "csl_tighten_mult": 0.9,
+        "sell_fastx": 72,
+        "sell_profit_atr_mult": 2.6,
+        "sell_trend_ema_period": 26,
+        "roi_t1": 107,
+        "roi_t2": 13,
+        "roi_t3": 16,
+        "roi_p1": 0.020999999999999998,
+        "roi_p2": 0.056,
+        "roi_p3": 0.15100000000000002
+      }
+    },
+    {
+      "loss": -1.2609809831829075,
+      "params": {
+        "csl_atr_mult": 2.6,
+        "csl_tighten_minutes": 218,
+        "csl_tighten_mult": 1.4,
+        "sell_fastx": 90,
+        "sell_profit_atr_mult": 1.8,
+        "sell_trend_ema_period": 71,
+        "roi_t1": 76,
+        "roi_t2": 13,
+        "roi_t3": 11,
+        "roi_p1": 0.022,
+        "roi_p2": 0.031,
+        "roi_p3": 0.026000000000000002
+      }
+    },
+    {
+      "loss": -1.2552292346757334,
+      "params": {
+        "csl_atr_mult": 2.9000000000000004,
+        "csl_tighten_minutes": 105,
+        "csl_tighten_mult": 0.5,
+        "sell_fastx": 81,
+        "sell_profit_atr_mult": 2.9000000000000004,
+        "sell_trend_ema_period": 63,
+        "roi_t1": 114,
+        "roi_t2": 46,
+        "roi_t3": 22,
+        "roi_p1": 0.022,
+        "roi_p2": 0.045000000000000005,
+        "roi_p3": 0.136
+      }
+    },
+    {
+      "loss": -1.2487764416541056,
+      "params": {
+        "csl_atr_mult": 2.6,
+        "csl_tighten_minutes": 230,
+        "csl_tighten_mult": 1.4,
+        "sell_fastx": 90,
+        "sell_profit_atr_mult": 2.6,
+        "sell_trend_ema_period": 100,
+        "roi_t1": 91,
+        "roi_t2": 13,
+        "roi_t3": 32,
+        "roi_p1": 0.022,
+        "roi_p2": 0.031,
+        "roi_p3": 0.032
+      }
+    }
+  ]
+}

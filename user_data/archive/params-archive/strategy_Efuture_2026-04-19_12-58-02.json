@@ -1,0 +1,46 @@
+{
+  "source_file": "strategy_Efuture_2026-04-19_12-58-02.fthypt",
+  "total_epochs": 500,
+  "top": [
+    {
+      "loss": -8.89277881956093,
+      "params": {
+        "csl_late": -0.058,
+        "csl_mid_ratio": 1.0,
+        "sell_fastx": 55
+      }
+    },
+    {
+      "loss": -8.89277881956093,
+      "params": {
+        "csl_late": -0.049,
+        "csl_mid_ratio": 1.0,
+        "sell_fastx": 55
+      }
+    },
+    {
+      "loss": -8.89277881956093,
+      "params": {
+        "csl_late": -0.04,
+        "csl_mid_ratio": 1.0,
+        "sell_fastx": 55
+      }
+    },
+    {
+      "loss": -8.89277881956093,
+      "params": {
+        "csl_late": -0.042,
+        "csl_mid_ratio": 1.0,
+        "sell_fastx": 55
+      }
+    },
+    {
+      "loss": -8.89277881956093,
+      "params": {
+        "csl_late": -0.068,
+        "csl_mid_ratio": 1.0,
+        "sell_fastx": 55
+      }
+    }
+  ]
+}

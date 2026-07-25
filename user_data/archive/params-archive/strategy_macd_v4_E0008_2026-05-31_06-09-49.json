@@ -1,0 +1,28 @@
+{
+  "source_file": "strategy_macd_v4_E0008_2026-05-31_06-09-49.fthypt",
+  "total_epochs": 1,
+  "top": [
+    {
+      "loss": 2.0890631557299177,
+      "params": {
+        "min_cont_strength": 0.41800000000000004,
+        "min_single_strength": 0.316,
+        "adx_trend": 23.021,
+        "atr_sl_mult": 1.191,
+        "early_trail_mult": 2.293,
+        "early_trail_profit": 0.029,
+        "range_lookback": 25,
+        "tp1_atr_mult": 1.829,
+        "trail_atr_mult": 1.871,
+        "trend_lookback": 13,
+        "roi_t1": 235,
+        "roi_t2": 75,
+        "roi_t3": 95,
+        "roi_p1": 0.035,
+        "roi_p2": 0.075,
+        "roi_p3": 0.066,
+        "stoploss": -0.26499999999999996
+      }
+    }
+  ]
+}

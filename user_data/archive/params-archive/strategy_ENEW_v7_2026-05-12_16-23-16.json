@@ -1,0 +1,61 @@
+{
+  "source_file": "strategy_ENEW_v7_2026-05-12_16-23-16.fthypt",
+  "total_epochs": 1000,
+  "top": [
+    {
+      "loss": -4.850869601817309,
+      "params": {
+        "buy_24h_max_pct": 130.9,
+        "buy_24h_min_pct": -4.299999999999997,
+        "buy_cti": -0.52,
+        "buy_rsi": 20,
+        "buy_rsi_fast": 23,
+        "buy_sma15_ratio": 0.976
+      }
+    },
+    {
+      "loss": -4.782235486550505,
+      "params": {
+        "buy_24h_max_pct": 58.900000000000006,
+        "buy_24h_min_pct": -4.299999999999997,
+        "buy_cti": -0.52,
+        "buy_rsi": 20,
+        "buy_rsi_fast": 22,
+        "buy_sma15_ratio": 0.976
+      }
+    },
+    {
+      "loss": -4.634152187183106,
+      "params": {
+        "buy_24h_max_pct": 54.6,
+        "buy_24h_min_pct": -4.299999999999997,
+        "buy_cti": -0.52,
+        "buy_rsi": 20,
+        "buy_rsi_fast": 22,
+        "buy_sma15_ratio": 0.976
+      }
+    },
+    {
+      "loss": -4.612735534853156,
+      "params": {
+        "buy_24h_max_pct": 70.0,
+        "buy_24h_min_pct": -4.299999999999997,
+        "buy_cti": -0.51,
+        "buy_rsi": 20,
+        "buy_rsi_fast": 22,
+        "buy_sma15_ratio": 0.976
+      }
+    },
+    {
+      "loss": -4.612735534853156,
+      "params": {
+        "buy_24h_max_pct": 174.70000000000002,
+        "buy_24h_min_pct": -4.299999999999997,
+        "buy_cti": -0.51,
+        "buy_rsi": 20,
+        "buy_rsi_fast": 22,
+        "buy_sma15_ratio": 0.976
+      }
+    }
+  ]
+}

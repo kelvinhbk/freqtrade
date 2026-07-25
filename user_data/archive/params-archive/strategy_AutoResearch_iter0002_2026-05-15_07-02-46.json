@@ -1,0 +1,106 @@
+{
+  "source_file": "strategy_AutoResearch_iter0002_2026-05-15_07-02-46.fthypt",
+  "total_epochs": 10,
+  "top": [
+    {
+      "loss": -3.1230329369431606,
+      "params": {
+        "buy_24h_max_pct": 178.5,
+        "buy_24h_min_pct": -26.8,
+        "buy_adx_period": 17,
+        "buy_adx_threshold": 32,
+        "buy_cti": -0.73,
+        "buy_rsi": 46,
+        "buy_rsi_fast": 47,
+        "buy_sma15_ratio": 0.912,
+        "buy_volume_ma_period": 17,
+        "short_24h_max_pct": 8.9,
+        "short_24h_min_pct": -77.1,
+        "short_cti": 0.44999999999999996,
+        "short_rsi": 69,
+        "short_rsi_fast": 78,
+        "short_sma15_ratio": 1.005
+      }
+    },
+    {
+      "loss": -1.79716625394429,
+      "params": {
+        "buy_24h_max_pct": 192.0,
+        "buy_24h_min_pct": -5.299999999999997,
+        "buy_adx_period": 10,
+        "buy_adx_threshold": 23,
+        "buy_cti": 0.30000000000000004,
+        "buy_rsi": 16,
+        "buy_rsi_fast": 42,
+        "buy_sma15_ratio": 0.987,
+        "buy_volume_ma_period": 16,
+        "short_24h_max_pct": 18.2,
+        "short_24h_min_pct": -16.399999999999977,
+        "short_cti": -0.35,
+        "short_rsi": 63,
+        "short_rsi_fast": 45,
+        "short_sma15_ratio": 1.078
+      }
+    },
+    {
+      "loss": 1.2132716049240342,
+      "params": {
+        "buy_24h_max_pct": 150.9,
+        "buy_24h_min_pct": -28.9,
+        "buy_adx_period": 18,
+        "buy_adx_threshold": 39,
+        "buy_cti": 0.74,
+        "buy_rsi": 34,
+        "buy_rsi_fast": 47,
+        "buy_sma15_ratio": 0.9530000000000001,
+        "buy_volume_ma_period": 29,
+        "short_24h_max_pct": 9.5,
+        "short_24h_min_pct": -177.3,
+        "short_cti": 0.13000000000000012,
+        "short_rsi": 81,
+        "short_rsi_fast": 72,
+        "short_sma15_ratio": 1.028
+      }
+    },
+    {
+      "loss": 4.976640643962033,
+      "params": {
+        "buy_24h_max_pct": 59.400000000000006,
+        "buy_24h_min_pct": -26.5,
+        "buy_adx_period": 21,
+        "buy_adx_threshold": 40,
+        "buy_cti": 0.78,
+        "buy_rsi": 27,
+        "buy_rsi_fast": 24,
+        "buy_sma15_ratio": 0.9400000000000001,
+        "buy_volume_ma_period": 43,
+        "short_24h_max_pct": 11.9,
+        "short_24h_min_pct": -22.0,
+        "short_cti": -0.51,
+        "short_rsi": 79,
+        "short_rsi_fast": 76,
+        "short_sma15_ratio": 1.023
+      }
+    },
+    {
+      "loss": 6.427877657452481,
+      "params": {
+        "buy_24h_max_pct": 92.60000000000001,
+        "buy_24h_min_pct": -9.099999999999998,
+        "buy_adx_period": 25,
+        "buy_adx_threshold": 39,
+        "buy_cti": 0.9299999999999999,
+        "buy_rsi": 33,
+        "buy_rsi_fast": 32,
+        "buy_sma15_ratio": 0.9560000000000001,
+        "buy_volume_ma_period": 10,
+        "short_24h_max_pct": 22.900000000000002,
+        "short_24h_min_pct": -125.0,
+        "short_cti": -0.020000000000000018,
+        "short_rsi": 67,
+        "short_rsi_fast": 30,
+        "short_sma15_ratio": 1.024
+      }
+    }
+  ]
+}

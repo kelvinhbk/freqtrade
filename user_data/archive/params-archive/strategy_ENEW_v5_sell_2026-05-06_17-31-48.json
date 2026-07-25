@@ -1,0 +1,76 @@
+{
+  "source_file": "strategy_ENEW_v5_sell_2026-05-06_17-31-48.fthypt",
+  "total_epochs": 500,
+  "top": [
+    {
+      "loss": -2.0671480505258644,
+      "params": {
+        "csl_late": -0.04,
+        "csl_mid_ratio": 1.0,
+        "sell_fastx": 80,
+        "roi_t1": 61,
+        "roi_t2": 12,
+        "roi_t3": 18,
+        "roi_p1": 0.027000000000000003,
+        "roi_p2": 0.054,
+        "roi_p3": 0.082
+      }
+    },
+    {
+      "loss": -2.0346879720294457,
+      "params": {
+        "csl_late": -0.073,
+        "csl_mid_ratio": 1.0,
+        "sell_fastx": 76,
+        "roi_t1": 107,
+        "roi_t2": 12,
+        "roi_t3": 16,
+        "roi_p1": 0.028999999999999998,
+        "roi_p2": 0.054,
+        "roi_p3": 0.082
+      }
+    },
+    {
+      "loss": -2.0346879720294457,
+      "params": {
+        "csl_late": -0.073,
+        "csl_mid_ratio": 1.0,
+        "sell_fastx": 76,
+        "roi_t1": 107,
+        "roi_t2": 12,
+        "roi_t3": 15,
+        "roi_p1": 0.028999999999999998,
+        "roi_p2": 0.054,
+        "roi_p3": 0.095
+      }
+    },
+    {
+      "loss": -2.02796735547004,
+      "params": {
+        "csl_late": -0.06,
+        "csl_mid_ratio": 1.0,
+        "sell_fastx": 76,
+        "roi_t1": 61,
+        "roi_t2": 12,
+        "roi_t3": 16,
+        "roi_p1": 0.028000000000000004,
+        "roi_p2": 0.054,
+        "roi_p3": 0.082
+      }
+    },
+    {
+      "loss": -2.0271054991006996,
+      "params": {
+        "csl_late": -0.06,
+        "csl_mid_ratio": 1.0,
+        "sell_fastx": 76,
+        "roi_t1": 99,
+        "roi_t2": 12,
+        "roi_t3": 16,
+        "roi_p1": 0.028000000000000004,
+        "roi_p2": 0.054,
+        "roi_p3": 0.082
+      }
+    }
+  ]
+}

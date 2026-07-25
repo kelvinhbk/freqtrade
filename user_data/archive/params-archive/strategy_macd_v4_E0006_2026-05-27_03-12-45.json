@@ -1,0 +1,106 @@
+{
+  "source_file": "strategy_macd_v4_E0006_2026-05-27_03-12-45.fthypt",
+  "total_epochs": 497,
+  "top": [
+    {
+      "loss": 0.5225516236688672,
+      "params": {
+        "min_cont_strength": 0.7989999999999999,
+        "min_single_strength": 0.538,
+        "stake_pct": 0.16,
+        "atr_sl_mult": 2.293,
+        "trail_atr_mult": 3.436,
+        "trail_max_dist": 0.077,
+        "trail_profit_start": 0.062000000000000006,
+        "trail_tighten": 0.457,
+        "roi_t1": 293,
+        "roi_t2": 31,
+        "roi_t3": 119,
+        "roi_p1": 0.019,
+        "roi_p2": 0.096,
+        "roi_p3": 0.262,
+        "stoploss": -0.295
+      }
+    },
+    {
+      "loss": 0.5480664055338232,
+      "params": {
+        "min_cont_strength": 0.77,
+        "min_single_strength": 0.538,
+        "stake_pct": 0.16,
+        "atr_sl_mult": 1.939,
+        "trail_atr_mult": 3.436,
+        "trail_max_dist": 0.077,
+        "trail_profit_start": 0.063,
+        "trail_tighten": 0.457,
+        "roi_t1": 293,
+        "roi_t2": 31,
+        "roi_t3": 119,
+        "roi_p1": 0.015,
+        "roi_p2": 0.076,
+        "roi_p3": 0.262,
+        "stoploss": -0.239
+      }
+    },
+    {
+      "loss": 0.5591804576134163,
+      "params": {
+        "min_cont_strength": 0.7989999999999999,
+        "min_single_strength": 0.538,
+        "stake_pct": 0.18,
+        "atr_sl_mult": 2.293,
+        "trail_atr_mult": 3.466,
+        "trail_max_dist": 0.060000000000000005,
+        "trail_profit_start": 0.063,
+        "trail_tighten": 0.153,
+        "roi_t1": 293,
+        "roi_t2": 31,
+        "roi_t3": 119,
+        "roi_p1": 0.019,
+        "roi_p2": 0.076,
+        "roi_p3": 0.187,
+        "stoploss": -0.11699999999999997
+      }
+    },
+    {
+      "loss": 0.5603423940087127,
+      "params": {
+        "min_cont_strength": 0.7989999999999999,
+        "min_single_strength": 0.538,
+        "stake_pct": 0.174,
+        "atr_sl_mult": 2.293,
+        "trail_atr_mult": 3.056,
+        "trail_max_dist": 0.060000000000000005,
+        "trail_profit_start": 0.063,
+        "trail_tighten": 0.153,
+        "roi_t1": 293,
+        "roi_t2": 31,
+        "roi_t3": 119,
+        "roi_p1": 0.019,
+        "roi_p2": 0.076,
+        "roi_p3": 0.262,
+        "stoploss": -0.11699999999999997
+      }
+    },
+    {
+      "loss": 0.5607661061572666,
+      "params": {
+        "min_cont_strength": 0.7989999999999999,
+        "min_single_strength": 0.538,
+        "stake_pct": 0.16,
+        "atr_sl_mult": 2.293,
+        "trail_atr_mult": 3.436,
+        "trail_max_dist": 0.176,
+        "trail_profit_start": 0.063,
+        "trail_tighten": 0.457,
+        "roi_t1": 202,
+        "roi_t2": 31,
+        "roi_t3": 119,
+        "roi_p1": 0.019,
+        "roi_p2": 0.096,
+        "roi_p3": 0.262,
+        "stoploss": -0.11899999999999997
+      }
+    }
+  ]
+}

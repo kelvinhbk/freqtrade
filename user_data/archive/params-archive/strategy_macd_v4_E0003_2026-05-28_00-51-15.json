@@ -1,0 +1,91 @@
+{
+  "source_file": "strategy_macd_v4_E0003_2026-05-28_00-51-15.fthypt",
+  "total_epochs": 193,
+  "top": [
+    {
+      "loss": 0.0612542591489052,
+      "params": {
+        "min_cont_strength": 0.7590000000000001,
+        "min_single_strength": 0.6809999999999999,
+        "atr_sl_mult": 3.8,
+        "tp1_atr_mult": 1.936,
+        "trail_atr_mult": 1.7890000000000001,
+        "roi_t1": 333,
+        "roi_t2": 32,
+        "roi_t3": 90,
+        "roi_p1": 0.033,
+        "roi_p2": 0.077,
+        "roi_p3": 0.16799999999999998,
+        "stoploss": -0.35
+      }
+    },
+    {
+      "loss": 0.0612542591489052,
+      "params": {
+        "min_cont_strength": 0.7590000000000001,
+        "min_single_strength": 0.6809999999999999,
+        "atr_sl_mult": 3.8,
+        "tp1_atr_mult": 1.936,
+        "trail_atr_mult": 1.7890000000000001,
+        "roi_t1": 333,
+        "roi_t2": 32,
+        "roi_t3": 90,
+        "roi_p1": 0.033,
+        "roi_p2": 0.077,
+        "roi_p3": 0.16099999999999998,
+        "stoploss": -0.35
+      }
+    },
+    {
+      "loss": 0.09395555991909438,
+      "params": {
+        "min_cont_strength": 0.7590000000000001,
+        "min_single_strength": 0.6809999999999999,
+        "atr_sl_mult": 3.8,
+        "tp1_atr_mult": 1.936,
+        "trail_atr_mult": 1.7890000000000001,
+        "roi_t1": 323,
+        "roi_t2": 32,
+        "roi_t3": 90,
+        "roi_p1": 0.033,
+        "roi_p2": 0.107,
+        "roi_p3": 0.29400000000000004,
+        "stoploss": -0.35
+      }
+    },
+    {
+      "loss": 0.11105753829608753,
+      "params": {
+        "min_cont_strength": 0.7590000000000001,
+        "min_single_strength": 0.6809999999999999,
+        "atr_sl_mult": 3.8,
+        "tp1_atr_mult": 1.936,
+        "trail_atr_mult": 1.7890000000000001,
+        "roi_t1": 321,
+        "roi_t2": 32,
+        "roi_t3": 90,
+        "roi_p1": 0.037,
+        "roi_p2": 0.107,
+        "roi_p3": 0.29400000000000004,
+        "stoploss": -0.35
+      }
+    },
+    {
+      "loss": 0.1684320045149425,
+      "params": {
+        "min_cont_strength": 0.798,
+        "min_single_strength": 0.6809999999999999,
+        "atr_sl_mult": 4.35,
+        "tp1_atr_mult": 1.936,
+        "trail_atr_mult": 0.886,
+        "roi_t1": 310,
+        "roi_t2": 46,
+        "roi_t3": 90,
+        "roi_p1": 0.028999999999999998,
+        "roi_p2": 0.096,
+        "roi_p3": 0.29400000000000004,
+        "stoploss": -0.35
+      }
+    }
+  ]
+}

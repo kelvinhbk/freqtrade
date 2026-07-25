@@ -1,0 +1,111 @@
+{
+  "source_file": "strategy_macd_v4_E0004_2026-05-27_01-33-14.fthypt",
+  "total_epochs": 500,
+  "top": [
+    {
+      "loss": -0.4534081312274975,
+      "params": {
+        "atr_min_percentile": 10,
+        "min_cont_strength": 0.763,
+        "min_single_strength": 0.42000000000000004,
+        "rsi_oversold": 24,
+        "atr_sl_mult": 2.411,
+        "breakeven_lock": 0.014,
+        "rsi_overbought": 61,
+        "tp1_atr_mult": 1.772,
+        "trail_atr_mult": 2.779,
+        "roi_t1": 212,
+        "roi_t2": 144,
+        "roi_t3": 81,
+        "roi_p1": 0.043,
+        "roi_p2": 0.03,
+        "roi_p3": 0.21500000000000002,
+        "stoploss": -0.10099999999999998
+      }
+    },
+    {
+      "loss": -0.45128777941290427,
+      "params": {
+        "atr_min_percentile": 10,
+        "min_cont_strength": 0.763,
+        "min_single_strength": 0.42000000000000004,
+        "rsi_oversold": 24,
+        "atr_sl_mult": 1.313,
+        "breakeven_lock": 0.015,
+        "rsi_overbought": 61,
+        "tp1_atr_mult": 1.72,
+        "trail_atr_mult": 2.967,
+        "roi_t1": 202,
+        "roi_t2": 144,
+        "roi_t3": 110,
+        "roi_p1": 0.043,
+        "roi_p2": 0.064,
+        "roi_p3": 0.14200000000000002,
+        "stoploss": -0.10099999999999998
+      }
+    },
+    {
+      "loss": -0.44665325074061324,
+      "params": {
+        "atr_min_percentile": 10,
+        "min_cont_strength": 0.788,
+        "min_single_strength": 0.42000000000000004,
+        "rsi_oversold": 24,
+        "atr_sl_mult": 1.313,
+        "breakeven_lock": 0.014,
+        "rsi_overbought": 61,
+        "tp1_atr_mult": 1.72,
+        "trail_atr_mult": 2.967,
+        "roi_t1": 212,
+        "roi_t2": 125,
+        "roi_t3": 110,
+        "roi_p1": 0.043,
+        "roi_p2": 0.03,
+        "roi_p3": 0.108,
+        "stoploss": -0.10099999999999998
+      }
+    },
+    {
+      "loss": -0.4359661538179452,
+      "params": {
+        "atr_min_percentile": 10,
+        "min_cont_strength": 0.788,
+        "min_single_strength": 0.42000000000000004,
+        "rsi_oversold": 24,
+        "atr_sl_mult": 1.313,
+        "breakeven_lock": 0.01,
+        "rsi_overbought": 61,
+        "tp1_atr_mult": 1.72,
+        "trail_atr_mult": 2.706,
+        "roi_t1": 212,
+        "roi_t2": 144,
+        "roi_t3": 110,
+        "roi_p1": 0.043,
+        "roi_p2": 0.06,
+        "roi_p3": 0.108,
+        "stoploss": -0.10099999999999998
+      }
+    },
+    {
+      "loss": -0.41401283828459323,
+      "params": {
+        "atr_min_percentile": 10,
+        "min_cont_strength": 0.788,
+        "min_single_strength": 0.42000000000000004,
+        "rsi_oversold": 24,
+        "atr_sl_mult": 1.313,
+        "breakeven_lock": 0.015,
+        "rsi_overbought": 61,
+        "tp1_atr_mult": 1.72,
+        "trail_atr_mult": 1.915,
+        "roi_t1": 212,
+        "roi_t2": 144,
+        "roi_t3": 81,
+        "roi_p1": 0.043,
+        "roi_p2": 0.07300000000000001,
+        "roi_p3": 0.14200000000000002,
+        "stoploss": -0.10099999999999998
+      }
+    }
+  ]
+}
