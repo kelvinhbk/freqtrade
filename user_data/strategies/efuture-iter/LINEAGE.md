@@ -18,3 +18,11 @@
 - 决策门裁定范围：①仅 stoploss；连带项明细见报告附录。
 - 注意：所有历史回测/hyperopt 结论基于错误止损逻辑；csl_* 参数再优化列为后续任务。
 - 部署：并入 T10（待 T14 密钥轮换后启动实盘）。
+
+## 2026-07-29 T15 裁定：④暂停 efuture-iter 线实盘计划（T10）
+
+- T15 csl_* 重优化（报告 `docs/superpowers/reports/2026-07-25-efutureiter-csl-reoptimization.md`，commit `76ea8187b`）：最优 csl_mid_ratio=2.1 / csl_late=-0.059 训练窗口减半亏损（-17.24%→-8.71%，PF 0.67→0.81）但 OOS W1 更差（-2.06% vs -0.94%）。
+- 关键发现：bug 版/修复版/优化版三个变体在 26 个月长窗口**全部亏损（PF<1）**——T13 的"bug 歪打正着"是 W1/W2 有利窗口假象；策略经济基础为负，不是参数问题。
+- 用户裁定（2026-07-29）：**④暂停 T10 实盘启动，立项评估策略存续（重组/重写/退役）**。csl 优化参数不写回 EfutureIter.json（保留现值 csl_mid 1.1/csl_late -0.046）。
+- 清理：分析用临时变体 `EfutureIterBuggy.py/json` 与 `EfutureIterCslOpt.py/json` 已删除（可从 git commit `76ea8187b` 恢复；优化参数同时记录在报告与 `user_data/hyperopt_results/strategy_EfutureIterCslOpt_2026-07-25_23-37-18.fthypt`）。
+- 注意：本线实盘 config（`configs/live/EfutureIter.json` 与 `configs/dryrun/EfutureIter.json`）在评估结论出来前不得用于启动实盘。
