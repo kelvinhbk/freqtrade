@@ -51,6 +51,7 @@ user_data/
 - autoresearch 晋级规则：实验产物被采纳时才复制进策略线目录并改名升代；原实验目录保留在 experiments/ 或 autoresearch/results/ 下
 - config 规则：环境 × 策略线 = 最多一个"当前" config；proxy 等环境差异移到 shell 环境变量；config 内路径保持相对；`live/` 修改单独 commit
 - 部署快照规则：新实盘部署 = 新建 `livebot/<策略线>_v<N>_<MMDD>/`，从 configs/live/ + strategies/<线>/ 复制；复制后放 `SOURCE.md` 记录 git commit hash；旧快照不再改动，退役后整目录移入 archive/
+- 最佳策略快照规则："当前效果最好的策略"要复制一份供下一步使用时，同样走部署快照规则——新建 `livebot/<策略线>_v<N>_<MMDD>/`，含策略 .py、参数 .json、config.json、SOURCE.md 四件套；config 从源 config 复制并按实况修正（如移除已下架交易对），dry_run 保持 true；SOURCE.md 必须记录来源路径、git commit hash、验证依据与启动命令（策略在 strategies/ 之外，启动须带 `--strategy-path`）。当前快照：`livebot/efuture-long-kelvin_v12_2x_0729/`（2026-07-29，依据见 efuture-long-kelvin/LINEAGE.md）
 
 ## 两条核心原则
 
