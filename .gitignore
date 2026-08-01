@@ -21,6 +21,9 @@ user_data/*
 
 # 密钥与本地私有配置永不入库
 user_data/configs/secrets.local.json
+# 命名密钥片段目录：全部忽略，仅放行说明文档 README.md
+user_data/configs/secrets/*
+!user_data/configs/secrets/README.md
 user_data/autoresearch/.env
 
 # 归档备份中含明文密钥的历史配置（T7 归档时剔除，待密钥轮换后再决定是否入库）

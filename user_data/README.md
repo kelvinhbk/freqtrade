@@ -18,7 +18,7 @@ user_data/
 │   ├── live/                    # dry_run=false；每策略线最多一个主 config
 │   ├── dryrun/                  # dry_run=true
 │   ├── backtest/                # 回测/循环优化用 config
-│   ├── secrets.local.json       # 密钥（gitignored，启动用多个 -c 合并）
+│   ├── secrets/                # 命名密钥片段目录（gitignored，按 binance./telegram./apiserver.<名称> 区分，启动用多个 -c 按名叠加，仅其 README.md 入库）
 │   └── README.md                # config 清单：用途、策略线、最后验证日期
 ├── autoresearch/                # 框架代码 + evolution_config_*.json 保留原位
 ├── archive/

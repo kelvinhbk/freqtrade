@@ -20,7 +20,7 @@ import requests
 
 BASE = "https://fapi.binance.com"
 ROOT = Path(__file__).resolve().parent.parent
-SECRETS = ROOT / "user_data/configs/secrets.local.json"
+SECRETS = ROOT / "user_data/configs/secrets/binance.main.json"
 OUT = ROOT / "user_data/data/tradfi_leverage_brackets.json"
 CONFIG = ROOT / "user_data/configs/backtest/TradFi.json"
 EXTRA_INDEX = ["BTCDOMUSDT", "ALLUSDT"]
@@ -38,7 +38,7 @@ def main() -> int:
     creds = json.loads(SECRETS.read_text())["exchange"]
     key, secret = creds.get("key", ""), creds.get("secret", "")
     if not key or not secret:
-        print("ERROR: secrets.local.json 中 exchange.key/secret 为空, 请先填入只读 API key")
+        print("ERROR: secrets/binance.main.json 中 exchange.key/secret 为空, 请先填入只读 API key")
         return 1
 
     sess = requests.Session()

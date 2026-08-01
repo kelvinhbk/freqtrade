@@ -127,7 +127,7 @@ All user-customizable components are loaded via resolvers inheriting from `IReso
 
 ## user_data 组织规范
 
-策略按线组织：`strategies/<线名>/`（efuture-iter、efuture-long、efuture-long-kelvin、efuture-short、enew、freqai-v6），实验产物在 `strategies/experiments/`。config 按环境三分：`configs/live|dryrun|backtest/`，密钥在 `configs/secrets.local.json`（不入库，启动用多 -c 合并）。
+策略按线组织：`strategies/<线名>/`（efuture-iter、efuture-long、efuture-long-kelvin、efuture-short、enew、freqai-v6），实验产物在 `strategies/experiments/`。config 按环境三分：`configs/live|dryrun|backtest/`，密钥在 `configs/secrets/` 命名片段目录（不入库，按 `binance.<名称>`/`telegram.<名称>`/`apiserver.<名称>` 区分，启动用多 -c 按名叠加，见 `configs/secrets/README.md`）。
 
 命名：文件名只表达"是什么"——代际 `_v<N>` 表达版本，目录表达状态，实验号仅在 autoresearch 产物中存在。每线谱系见各目录 LINEAGE.md，完整规范见 user_data/README.md。
 

@@ -22,9 +22,11 @@
 ```bash
 freqtrade trade \
   -c livebot/efuture-long-kelvin_v12_2x_0729/config.json \
-  -c user_data/configs/secrets.local.json \
+  -c user_data/configs/secrets/binance.main.json \
+  -c user_data/configs/secrets/telegram.efuture_kelvin.json \
+  -c user_data/configs/secrets/apiserver.efuture_kelvin.json \
   --strategy-path livebot/efuture-long-kelvin_v12_2x_0729 \
   --strategy EfutureLongKelvin_v12_2x_lock
 ```
 
-注意：策略在 `user_data/strategies/` 之外，必须带 `--strategy-path`；参数文件与策略同目录同基名，自动加载。上实盘前把 config.json 的 `dry_run` 改为 `false` 并确认 secrets.local.json 中的交易所密钥（T14 密钥轮换是前置）。
+注意：策略在 `user_data/strategies/` 之外，必须带 `--strategy-path`；参数文件与策略同目录同基名，自动加载。密钥用 `user_data/configs/secrets/` 命名片段按名叠加（测试换 `binance.test`/`telegram.test`，见该目录 README）。上实盘前把 config.json 的 `dry_run` 改为 `false`，并确认 `binance.main.json` 已填入轮换后的新 key（T14 密钥轮换是前置）。
