@@ -26,6 +26,9 @@ user_data/configs/secrets/*
 !user_data/configs/secrets/README.md
 user_data/autoresearch/.env
 
+# 部署备份目录：含合并后的明文密钥 config，永不入库
+livebot/*/deploy/
+
 # 归档备份中含明文密钥的历史配置（T7 归档时剔除，待密钥轮换后再决定是否入库）
 user_data/archive/backup/config.json
 user_data/archive/backup/config_base.json
