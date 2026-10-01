@@ -26,7 +26,7 @@ user_data/
 │   ├── backup/
 │   ├── before-live-bot/
 │   └── params-archive/          # 删除大产物前导出的 top-5 参数存档
-├── livebot/                     # 部署快照（保留，命名与 SOURCE.md 规则见下）
+├── livebotBackup/               # 旧部署快照备份（2026-08-02 由 livebot/ 改名，不再新增；现役快照在仓库根 livebot/）
 └── README.md                    # 本文档
 ```
 
